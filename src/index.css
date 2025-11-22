@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+:root {
+  --color-primary: #ff6600;
+  --color-primary-dark: #cc5200;
+  --color-secondary: #001f5f;
+  --color-secondary-dark: #001440;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
