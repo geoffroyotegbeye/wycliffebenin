@@ -1,16 +1,10 @@
-import { useState } from 'react';
 import { Phone, Mail, Search } from 'lucide-react';
-import SearchModal from './SearchModal';
 
 const FirstNav = () => {
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-
   return (
-    <>
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-      <div style={{ backgroundColor: '#001f5f' }} className="py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+    <div style={{ backgroundColor: '#001f5f' }} className="py-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
 
           {/* Contact Info */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-white">
@@ -114,7 +108,6 @@ const FirstNav = () => {
 
             {/* Search Icon */}
             <button
-              onClick={() => setIsSearchOpen(true)}
               className="transition-colors ml-2 pl-4 border-l border-white border-opacity-30"
               style={{ color: '#ffffff' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#ff6600'}
@@ -126,8 +119,7 @@ const FirstNav = () => {
           </div>
         </div>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 
