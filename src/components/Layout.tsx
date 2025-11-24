@@ -1,11 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import Nav from './Nav';
+import FirstNav from './FirstNav';
+import SecondNav from './SecondNav';
 import Footer from './Footer';
 
 const Layout = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <Nav />
+      <FirstNav />
+      <SecondNav />
       <main>
         <Outlet />
       </main>

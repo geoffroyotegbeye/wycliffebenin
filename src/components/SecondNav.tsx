@@ -23,8 +23,15 @@ const Nav = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/accueil" className="text-2xl font-bold" style={{ color: '#001f5f' }}>
-              Wycliffe BENIN
+            <Link to="/accueil" className="flex items-center gap-3">
+              <img
+                src="/images/logo-wycliffebenin.png"
+                alt="Wycliffe BENIN"
+                className="h-12 w-auto"
+              />
+              <span className="text-2xl font-bold hidden sm:block" style={{ color: '#001f5f' }}>
+                Wycliffe BENIN
+              </span>
             </Link>
           </div>
 
@@ -50,10 +57,9 @@ const Nav = () => {
 
                 {/* Dropdown Level 1 */}
                 {item.children && item.children.length > 0 && (
-                  <div 
-                    className={`absolute mt-0 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-4 py-2 ${
-                      index >= navigationData.length - 2 ? 'right-0' : 'left-0'
-                    }`} 
+                  <div
+                    className={`absolute mt-0 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-4 py-2 ${index >= navigationData.length - 2 ? 'right-0' : 'left-0'
+                      }`}
                     style={{ borderTopColor: '#ff6600' }}
                   >
                     {item.children.map((child) => (
@@ -184,9 +190,8 @@ const Nav = () => {
                       style={{ color: '#001f5f' }}
                     >
                       <svg
-                        className={`h-5 w-5 transform transition-transform ${
-                          openSubmenu === item.label ? 'rotate-180' : ''
-                        }`}
+                        className={`h-5 w-5 transform transition-transform ${openSubmenu === item.label ? 'rotate-180' : ''
+                          }`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -235,9 +240,8 @@ const Nav = () => {
                               style={{ color: '#001f5f' }}
                             >
                               <svg
-                                className={`h-4 w-4 transform transition-transform ${
-                                  openNestedSubmenu === child.label ? 'rotate-180' : ''
-                                }`}
+                                className={`h-4 w-4 transform transition-transform ${openNestedSubmenu === child.label ? 'rotate-180' : ''
+                                  }`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
