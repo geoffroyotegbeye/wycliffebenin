@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Search, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { gsap } from 'gsap';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -32,10 +32,26 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
+      
+      // Animation d'entrée avec GSAP
+      if (overlayRef.current && modalRef.current) {
+        gsap.fromTo(
+          overlayRef.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.3, ease: 'power2.out' }
+        );
+        gsap.fromTo(
+          modalRef.current,
+          { scale: 0.9, opacity: 0, y: -20 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.5)' }
+        );
+      }
     }
   }, [isOpen]);
 
@@ -70,24 +86,39 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
     };
   }, [isOpen, onClose]);
 
+  const handleClose = () => {
+    if (overlayRef.current && modalRef.current) {
+      gsap.to(modalRef.current, {
+        scale: 0.9,
+        opacity: 0,
+        y: -20,
+        duration: 0.3,
+        ease: 'power2.in'
+      });
+      gsap.to(overlayRef.current, {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power2.in',
+        onComplete: onClose
+      });
+    } else {
+      onClose();
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-start justify-center pt-20 px-4"
-        onClick={onClose}
+    <div
+      ref={overlayRef}
+      className="fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-start justify-center pt-20 px-4"
+      onClick={handleClose}
+    >
+      <div
+        ref={modalRef}
+        className="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
       >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden"
-          onClick={(e) => e.stopPropagation()}
-        >
           {/* Search Input */}
           <div className="flex items-center gap-3 p-4 border-b border-gray-200">
             <Search className="text-gray-400" size={24} />
@@ -100,7 +131,7 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
               className="flex-1 text-lg outline-none"
             />
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="p-2 hover:bg-gray-100 rounded-full transition"
             >
               <X size={20} />
@@ -123,7 +154,7 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
                   <Link
                     key={index}
                     to={result.path}
-                    onClick={onClose}
+                    onClick={handleClose}
                     className="block px-4 py-3 hover:bg-gray-50 transition border-l-4 border-transparent hover:border-primary"
                   >
                     <div className="flex items-start justify-between gap-3">
@@ -150,9 +181,8 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             <span>Utilisez ↑↓ pour naviguer</span>
             <span>ESC pour fermer</span>
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </div>
   );
 };
 

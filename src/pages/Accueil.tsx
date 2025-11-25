@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { gsap } from 'gsap';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
 
@@ -182,55 +182,58 @@ const Accueil = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
 
+  const slideRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (slideRef.current && contentRef.current) {
+      gsap.fromTo(
+        slideRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        contentRef.current,
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, delay: 0.2, ease: 'power2.out' }
+      );
+    }
+  }, [currentSlide]);
+
   return (
     <div className="w-full">
       {/* Hero Carousel */}
       <div className="relative h-[calc(100vh-4rem)] overflow-hidden bg-secondary">
-        <AnimatePresence mode="wait">
-          {heroSlides.map((slide, index) => (
-            index === currentSlide && (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0"
-              >
-                {/* Image de fond */}
-                <LazyImage 
-                  src={slide.image} 
-                  alt={slide.title}
-                  className="absolute inset-0 w-full h-full"
-                />
-                {/* Overlay sombre pour améliorer la lisibilité du texte */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
-                
-                {/* Contenu texte */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white px-4 max-w-5xl">
-                    <motion.h1 
-                      initial={{ y: 30, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.3, duration: 0.8 }}
-                      className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl"
-                    >
-                      {slide.title}
-                    </motion.h1>
-                    <motion.p 
-                      initial={{ y: 30, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.5, duration: 0.8 }}
-                      className="text-xl md:text-3xl drop-shadow-xl"
-                    >
-                      {slide.subtitle}
-                    </motion.p>
-                  </div>
+        {heroSlides.map((slide, index) => (
+          index === currentSlide && (
+            <div
+              key={index}
+              ref={slideRef}
+              className="absolute inset-0"
+            >
+              {/* Image de fond */}
+              <LazyImage 
+                src={slide.image} 
+                alt={slide.title}
+                className="absolute inset-0 w-full h-full"
+              />
+              {/* Overlay sombre pour améliorer la lisibilité du texte */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60"></div>
+              
+              {/* Contenu texte */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div ref={contentRef} className="text-center text-white px-4 max-w-5xl">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-2xl">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-3xl drop-shadow-xl">
+                    {slide.subtitle}
+                  </p>
                 </div>
-              </motion.div>
-            )
-          ))}
-        </AnimatePresence>
+              </div>
+            </div>
+          )
+        ))}
 
             {/* Navigation Buttons */}
             <button

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { navigationData } from '../data/navigationData';
-import type { NavItem } from '../data/navigationData';
+
 
 const Nav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

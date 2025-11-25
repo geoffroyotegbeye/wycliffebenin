@@ -1,5 +1,6 @@
+import { useEffect, useRef } from 'react';
 import { TrendingUp, Users, BookOpen, Globe, Award, Target } from 'lucide-react';
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { gsap } from 'gsap';
 import ScrollAnimation from '../components/ScrollAnimation';
 import AnimatedCounter from '../components/AnimatedCounter';
 import LazyImage from '../components/LazyImage';
@@ -9,28 +10,28 @@ const Statistiques = () => {
     {
       categorie: "Traduction Biblique",
       donnees: [
-        { label: "Langues en cours de traduction", valeur: "15", icon: <BookOpen className="text-primary" size={24} /> },
-        { label: "Traductions complétées", valeur: "8", icon: <Award className="text-secondary" size={24} /> },
-        { label: "Traducteurs formés", valeur: "45", icon: <Users className="text-primary" size={24} /> },
-        { label: "Chapitres traduits (2024)", valeur: "320", icon: <Target className="text-secondary" size={24} /> }
+        { label: "Langues en cours de traduction", valeur: 15, suffix: "", icon: <BookOpen className="text-primary" size={24} /> },
+        { label: "Traductions complétées", valeur: 8, suffix: "", icon: <Award className="text-secondary" size={24} /> },
+        { label: "Traducteurs formés", valeur: 45, suffix: "", icon: <Users className="text-primary" size={24} /> },
+        { label: "Chapitres traduits (2024)", valeur: 320, suffix: "", icon: <Target className="text-secondary" size={24} /> }
       ]
     },
     {
       categorie: "Alphabétisation",
       donnees: [
-        { label: "Centres d'alphabétisation", valeur: "28", icon: <Globe className="text-primary" size={24} /> },
-        { label: "Apprenants actifs", valeur: "1,250", icon: <Users className="text-secondary" size={24} /> },
-        { label: "Formateurs certifiés", valeur: "62", icon: <Award className="text-primary" size={24} /> },
-        { label: "Taux de réussite", valeur: "87%", icon: <TrendingUp className="text-secondary" size={24} /> }
+        { label: "Centres d'alphabétisation", valeur: 28, suffix: "", icon: <Globe className="text-primary" size={24} /> },
+        { label: "Apprenants actifs", valeur: 1250, suffix: "", icon: <Users className="text-secondary" size={24} /> },
+        { label: "Formateurs certifiés", valeur: 62, suffix: "", icon: <Award className="text-primary" size={24} /> },
+        { label: "Taux de réussite", valeur: 87, suffix: "%", icon: <TrendingUp className="text-secondary" size={24} /> }
       ]
     },
     {
       categorie: "Impact Communautaire",
       donnees: [
-        { label: "Communautés touchées", valeur: "85", icon: <Globe className="text-primary" size={24} /> },
-        { label: "Bénéficiaires directs", valeur: "50,000+", icon: <Users className="text-secondary" size={24} /> },
-        { label: "Églises partenaires", valeur: "120", icon: <Target className="text-primary" size={24} /> },
-        { label: "Bénévoles actifs", valeur: "180", icon: <Users className="text-secondary" size={24} /> }
+        { label: "Communautés touchées", valeur: 85, suffix: "", icon: <Globe className="text-primary" size={24} /> },
+        { label: "Bénéficiaires directs", valeur: 50000, suffix: "+", icon: <Users className="text-secondary" size={24} /> },
+        { label: "Églises partenaires", valeur: 120, suffix: "", icon: <Target className="text-primary" size={24} /> },
+        { label: "Bénévoles actifs", valeur: 180, suffix: "", icon: <Users className="text-secondary" size={24} /> }
       ]
     }
   ];
@@ -43,13 +44,6 @@ const Statistiques = () => {
     { annee: "2024", traductions: 15, alphabetises: 1250, communautes: 85 }
   ];
 
-  const chartData = evolutionAnnuelle.map(item => ({
-    annee: item.annee,
-    'Projets de Traduction': item.traductions,
-    'Personnes Alphabétisées': Math.floor(item.alphabetises / 100),
-    'Communautés': item.communautes
-  }));
-
   const languesParRegion = [
     { region: "Atacora-Donga", langues: 4, population: "120,000" },
     { region: "Borgou-Alibori", langues: 3, population: "95,000" },
@@ -57,6 +51,127 @@ const Statistiques = () => {
     { region: "Ouémé-Plateau", langues: 3, population: "110,000" },
     { region: "Zou-Collines", langues: 3, population: "88,000" }
   ];
+
+  const BarChart = ({ data }: { data: typeof evolutionAnnuelle }) => {
+    const barsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+      barsRef.current.forEach((bar, index) => {
+        if (bar) {
+          gsap.fromTo(
+            bar,
+            { height: 0 },
+            { 
+              height: '100%', 
+              duration: 1, 
+              delay: index * 0.1,
+              ease: 'power3.out'
+            }
+          );
+        }
+      });
+    }, []);
+
+    const maxValue = Math.max(...data.map(d => d.communautes));
+
+    return (
+      <div className="bg-white rounded-card p-8 shadow-card">
+        <h3 className="text-xl font-bold text-secondary mb-6">Communautés Touchées par Année</h3>
+        <div className="flex items-end justify-between gap-4 h-64">
+          {data.map((item, index) => {
+            const heightPercent = (item.communautes / maxValue) * 100;
+            return (
+              <div key={index} className="flex-1 flex flex-col items-center gap-2">
+                <div className="w-full bg-gray-100 rounded-t-lg relative overflow-hidden" style={{ height: '100%' }}>
+                  <div
+                    ref={el => { barsRef.current[index] = el; }}
+                    className="absolute bottom-0 w-full bg-gradient-to-t from-primary to-primary-400 rounded-t-lg flex items-end justify-center pb-2"
+                  >
+                    <span className="text-white font-bold text-sm">{item.communautes}</span>
+                  </div>
+                </div>
+                <span className="text-sm font-semibold text-secondary">{item.annee}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  const LineChart = ({ data }: { data: typeof evolutionAnnuelle }) => {
+    const lineRef = useRef<SVGPolylineElement>(null);
+
+    useEffect(() => {
+      if (lineRef.current) {
+        const length = lineRef.current.getTotalLength();
+        gsap.fromTo(
+          lineRef.current,
+          { strokeDasharray: length, strokeDashoffset: length },
+          { strokeDashoffset: 0, duration: 2, ease: 'power2.out' }
+        );
+      }
+    }, []);
+
+    const maxTraductions = Math.max(...data.map(d => d.traductions));
+    const width = 600;
+    const height = 200;
+    const padding = 40;
+
+    const points = data.map((item, index) => {
+      const x = padding + (index / (data.length - 1)) * (width - 2 * padding);
+      const y = height - padding - ((item.traductions / maxTraductions) * (height - 2 * padding));
+      return `${x},${y}`;
+    }).join(' ');
+
+    return (
+      <div className="bg-white rounded-card p-8 shadow-card">
+        <h3 className="text-xl font-bold text-secondary mb-6">Évolution des Projets de Traduction</h3>
+        <svg viewBox={`0 0 ${width} ${height}`} className="w-full">
+          {/* Grille */}
+          {[0, 1, 2, 3, 4].map(i => (
+            <line
+              key={i}
+              x1={padding}
+              y1={padding + (i * (height - 2 * padding) / 4)}
+              x2={width - padding}
+              y2={padding + (i * (height - 2 * padding) / 4)}
+              stroke="#e5e7eb"
+              strokeWidth="1"
+            />
+          ))}
+          
+          {/* Ligne */}
+          <polyline
+            ref={lineRef}
+            points={points}
+            fill="none"
+            stroke="#ff6600"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          
+          {/* Points */}
+          {data.map((item, index) => {
+            const x = padding + (index / (data.length - 1)) * (width - 2 * padding);
+            const y = height - padding - ((item.traductions / maxTraductions) * (height - 2 * padding));
+            return (
+              <g key={index}>
+                <circle cx={x} cy={y} r="6" fill="#ff6600" />
+                <text x={x} y={height - 10} textAnchor="middle" className="text-xs fill-secondary font-semibold">
+                  {item.annee}
+                </text>
+                <text x={x} y={y - 15} textAnchor="middle" className="text-sm fill-primary font-bold">
+                  {item.traductions}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+    );
+  };
 
   return (
     <div className="w-full">
@@ -99,8 +214,8 @@ const Statistiques = () => {
                       {stat.icon}
                       <div className="text-3xl font-bold text-secondary">
                         <AnimatedCounter 
-                          end={parseInt(stat.valeur.replace(/[^0-9]/g, ''))} 
-                          suffix={stat.valeur.includes('%') ? '%' : stat.valeur.includes('+') ? '+' : ''}
+                          end={stat.valeur} 
+                          suffix={stat.suffix}
                         />
                       </div>
                     </div>
@@ -114,7 +229,7 @@ const Statistiques = () => {
           </section>
         ))}
 
-        {/* Évolution Annuelle avec Graphiques */}
+        {/* Graphiques */}
         <section className="mb-20 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation animation="slideUp">
@@ -123,68 +238,20 @@ const Statistiques = () => {
               </h2>
             </ScrollAnimation>
 
-            {/* Graphique en ligne */}
-            <ScrollAnimation animation="slideUp" delay={0.2}>
-              <div className="bg-white rounded-card p-8 shadow-card mb-8">
-                <h3 className="text-xl font-bold text-secondary mb-6">Croissance des Projets</h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={chartData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                    <XAxis dataKey="annee" stroke="#001f5f" />
-                    <YAxis stroke="#001f5f" />
-                    <Tooltip 
-                      contentStyle={{ 
-                        backgroundColor: '#fff', 
-                        border: '2px solid #ff6600',
-                        borderRadius: '8px'
-                      }}
-                    />
-                    <Legend />
-                    <Line 
-                      type="monotone" 
-                      dataKey="Projets de Traduction" 
-                      stroke="#ff6600" 
-                      strokeWidth={3}
-                      dot={{ fill: '#ff6600', r: 6 }}
-                    />
-                    <Line 
-                      type="monotone" 
-                      dataKey="Personnes Alphabétisées" 
-                      stroke="#001f5f" 
-                      strokeWidth={3}
-                      dot={{ fill: '#001f5f', r: 6 }}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </div>
-            </ScrollAnimation>
+            <div className="grid md:grid-cols-1 gap-8 mb-8">
+              <ScrollAnimation animation="slideUp" delay={0.2}>
+                <LineChart data={evolutionAnnuelle} />
+              </ScrollAnimation>
 
-            {/* Graphique en barres */}
-            <ScrollAnimation animation="slideUp" delay={0.3}>
-              <div className="bg-white rounded-card p-8 shadow-card mb-8">
-                <h3 className="text-xl font-bold text-secondary mb-6">Communautés Touchées</h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={chartData}>
-                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                    <XAxis dataKey="annee" stroke="#001f5f" />
-                    <YAxis stroke="#001f5f" />
-                    <Tooltip 
-                      contentStyle={{ 
-                        backgroundColor: '#fff', 
-                        border: '2px solid #ff6600',
-                        borderRadius: '8px'
-                      }}
-                    />
-                    <Legend />
-                    <Bar dataKey="Communautés" fill="#ff6600" radius={[8, 8, 0, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </ScrollAnimation>
+              <ScrollAnimation animation="slideUp" delay={0.3}>
+                <BarChart data={evolutionAnnuelle} />
+              </ScrollAnimation>
+            </div>
 
             {/* Tableau */}
             <ScrollAnimation animation="slideUp" delay={0.4}>
               <div className="bg-white rounded-card p-8 shadow-card">
+                <h3 className="text-xl font-bold text-secondary mb-6">Tableau Récapitulatif</h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
@@ -260,7 +327,7 @@ const Statistiques = () => {
           </div>
         </section>
 
-        {/* Graphique Visuel */}
+        {/* Image & Texte */}
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <ScrollAnimation animation="slideRight">
@@ -289,18 +356,23 @@ const Statistiques = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-primary to-primary-600 rounded-2xl p-12 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Faites Partie de l'Histoire
-          </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
-            Votre soutien nous permet de continuer à étendre notre impact et à toucher 
-            encore plus de communautés avec la Parole de Dieu.
-          </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
-            Soutenir Notre Mission
-          </button>
-        </section>
+        <ScrollAnimation animation="scale">
+          <section className="bg-gradient-to-r from-primary to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Faites Partie de l'Histoire
+            </h2>
+            <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
+              Votre soutien nous permet de continuer à étendre notre impact et à toucher 
+              encore plus de communautés avec la Parole de Dieu.
+            </p>
+            <a
+              href="/donnez"
+              className="inline-block bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
+            >
+              Soutenir Notre Mission
+            </a>
+          </section>
+        </ScrollAnimation>
 
       </div>
     </div>

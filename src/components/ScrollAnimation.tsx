@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { type ReactNode, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { gsap } from 'gsap';
 
 interface ScrollAnimationProps {
   children: ReactNode;
@@ -10,33 +10,6 @@ interface ScrollAnimationProps {
   className?: string;
 }
 
-const animations = {
-  fadeIn: {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 }
-  },
-  slideUp: {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 }
-  },
-  slideDown: {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 }
-  },
-  slideLeft: {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 }
-  },
-  slideRight: {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 }
-  },
-  scale: {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
-  }
-};
-
 const ScrollAnimation = ({ 
   children, 
   animation = 'fadeIn', 
@@ -44,24 +17,95 @@ const ScrollAnimation = ({
   duration = 0.6,
   className = ''
 }: ScrollAnimationProps) => {
-  const { ref, inView } = useInView({
+  const elementRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
+  const { ref: inViewRef, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.01, // Très bas pour déclencher rapidement
+    rootMargin: '100px', // Grande marge pour anticiper
   });
 
-  const selectedAnimation = animations[animation];
+  // Combine refs
+  const setRefs = (element: HTMLDivElement | null) => {
+    elementRef.current = element;
+    inViewRef(element);
+  };
+
+  useEffect(() => {
+    if (inView && elementRef.current && !hasAnimated.current) {
+      hasAnimated.current = true;
+      const element = elementRef.current;
+
+      // Configuration des animations selon le type
+      const animations: Record<string, gsap.TweenVars> = {
+        fadeIn: {
+          opacity: 1,
+          duration,
+          delay,
+          ease: 'power2.out'
+        },
+        slideUp: {
+          opacity: 1,
+          y: 0,
+          duration,
+          delay,
+          ease: 'power2.out'
+        },
+        slideDown: {
+          opacity: 1,
+          y: 0,
+          duration,
+          delay,
+          ease: 'power2.out'
+        },
+        slideLeft: {
+          opacity: 1,
+          x: 0,
+          duration,
+          delay,
+          ease: 'power2.out'
+        },
+        slideRight: {
+          opacity: 1,
+          x: 0,
+          duration,
+          delay,
+          ease: 'power2.out'
+        },
+        scale: {
+          opacity: 1,
+          scale: 1,
+          duration,
+          delay,
+          ease: 'power2.out'
+        }
+      };
+
+      gsap.to(element, animations[animation]);
+    }
+  }, [inView, animation, delay, duration]);
+
+  // États initiaux selon le type d'animation
+  const getInitialStyle = (): React.CSSProperties => {
+    const styles: Record<string, React.CSSProperties> = {
+      fadeIn: { opacity: 0 },
+      slideUp: { opacity: 0, transform: 'translateY(30px)' },
+      slideDown: { opacity: 0, transform: 'translateY(-30px)' },
+      slideLeft: { opacity: 0, transform: 'translateX(30px)' },
+      slideRight: { opacity: 0, transform: 'translateX(-30px)' },
+      scale: { opacity: 0, transform: 'scale(0.95)' }
+    };
+    return styles[animation];
+  };
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      variants={selectedAnimation}
-      transition={{ duration, delay }}
+    <div
+      ref={setRefs}
+      style={getInitialStyle()}
       className={className}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 

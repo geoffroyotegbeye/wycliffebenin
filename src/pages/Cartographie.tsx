@@ -2,7 +2,6 @@ import { MapPin, Users, BookOpen, TrendingUp } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
-import AnimatedCounter from '../components/AnimatedCounter';
 
 const Cartographie = () => {
   const departements = [

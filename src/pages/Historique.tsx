@@ -1,7 +1,6 @@
 import { Calendar, Award, Users, BookOpen } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
-import AnimatedCounter from '../components/AnimatedCounter';
 import LazyImage from '../components/LazyImage';
 
 const Historique = () => {

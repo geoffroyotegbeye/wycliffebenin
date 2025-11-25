@@ -13,12 +13,12 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "A propos",
-    link: "/a-propos",
+    link: "/vision",
     children: [
       { label: "Vision", link: "/vision" },
       {
         label: "Equipe",
-        link: "/equipe",
+        link: "/conseil-administration",
         hasSubmenu: true,
         children: [
           { label: "Conseil d'Administration", link: "/conseil-administration" },
@@ -31,7 +31,7 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "Activités",
-    link: "/activites",
+    link: "/pourquoi-traduire",
     children: [
       { label: "Pourquoi et comment traduire?", link: "/pourquoi-traduire" },
       { label: "Cartographie linguistique du BENIN", link: "/cartographie" },
@@ -39,7 +39,7 @@ export const navigationData: NavItem[] = [
       { label: "Traduction en langue des signes (Alogbe)", link: "/traduction-alogbe" },
       {
         label: "Autres traductions",
-        link: "/autres-traductions",
+        link: "/traduction-ecrite",
         hasSubmenu: true,
         children: [
           { label: "Traduction écrite", link: "/traduction-ecrite" },
@@ -53,7 +53,7 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "Rejoignez-nous!",
-    link: "/rejoignez-nous",
+    link: "/intercedez",
     children: [
       { label: "Intercédez!", link: "/intercedez" },
       { label: "Engagez-vous!", link: "/engagez-vous" },
@@ -64,9 +64,8 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "Ressources",
-    link: "/ressources",
+    link: "/services",
     children: [
-      { label: "Projets", link: "/projets" },
       { label: "Services au public", link: "/services" },
       { label: "Offres de partenariat", link: "/partenariat" },
       { label: "Recrutement missionnaire", link: "/recrutement" },
@@ -76,7 +75,7 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "Témoignages",
-    link: "/temoignages",
+    link: "/temoignage-transformation",
     children: [
       { label: "Transformation Communautaire", link: "/temoignage-transformation" },
       { label: "Traduction", link: "/temoignage-traduction" },
@@ -86,7 +85,7 @@ export const navigationData: NavItem[] = [
   },
   {
     label: "Blog",
-    link: "/blog",
+    link: "/actualites",
     children: [
       { label: "Actualités au siège", link: "/actualites" },
       { label: "Missions à l'extérieur", link: "/missions-exterieur" },

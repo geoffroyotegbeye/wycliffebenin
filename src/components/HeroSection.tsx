@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { type ReactNode, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import LazyImage from './LazyImage';
 
 interface HeroSectionProps {
@@ -19,6 +19,8 @@ const HeroSection = ({
   overlay = 'medium',
   children 
 }: HeroSectionProps) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+
   const heightClasses = {
     small: 'h-[300px]',
     medium: 'h-[400px]',
@@ -32,6 +34,25 @@ const HeroSection = ({
     dark: 'bg-gradient-to-r from-secondary via-secondary to-secondary/80'
   };
 
+  useEffect(() => {
+    if (contentRef.current) {
+      gsap.fromTo(
+        contentRef.current,
+        { 
+          y: 20, 
+          opacity: 0 
+        },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 0.8,
+          delay: 0.1,
+          ease: 'power2.out'
+        }
+      );
+    }
+  }, [title]);
+
   return (
     <div className={`relative ${heightClasses[height]} overflow-hidden`}>
       <LazyImage 
@@ -42,12 +63,7 @@ const HeroSection = ({
       <div className={`absolute inset-0 ${overlayClasses[overlay]}`}></div>
       <div className="absolute inset-0 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
+          <div ref={contentRef} className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               {title}
             </h1>
@@ -57,7 +73,7 @@ const HeroSection = ({
               </p>
             )}
             {children}
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
