@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { Heart, Users, Calendar, Send, ArrowRight } from 'lucide-react';
+import { Heart, Users, Send } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 

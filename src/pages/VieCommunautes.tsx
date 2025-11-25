@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import { Heart, Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Heart, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';

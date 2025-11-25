@@ -41,13 +41,13 @@ const Actualites = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
+
         <ScrollAnimation animation="slideUp">
           <div className="mb-16 bg-white rounded-card shadow-elevated overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-96">
-                <LazyImage 
-                  src={actualites[0].image} 
+                <LazyImage
+                  src={actualites[0].image}
                   alt={actualites[0].titre}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -75,8 +75,8 @@ const Actualites = () => {
           {actualites.slice(1).map((article, index) => (
             <ScrollAnimation key={article.id} animation="scale" delay={index * 0.1}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
-                <LazyImage 
-                  src={article.image} 
+                <LazyImage
+                  src={article.image}
                   alt={article.titre}
                   className="w-full h-48 object-cover"
                 />

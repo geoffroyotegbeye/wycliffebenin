@@ -1,6 +1,6 @@
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Quote, BookOpen, Heart, Users } from 'lucide-react';
+import { Quote, BookOpen } from 'lucide-react';
 
 const TemoignageTraduction = () => {
   const temoignages = [

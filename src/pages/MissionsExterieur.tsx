@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Users, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';

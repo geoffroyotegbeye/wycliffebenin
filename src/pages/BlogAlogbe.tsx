@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Video, Users, BookOpen, ArrowRight, Play } from 'lucide-react';
+import { Video, Users, ArrowRight, Play } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';

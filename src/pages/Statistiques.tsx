@@ -72,14 +72,11 @@ const Statistiques = () => {
       });
     }, []);
 
-    const maxValue = Math.max(...data.map(d => d.communautes));
-
     return (
       <div className="bg-white rounded-card p-8 shadow-card">
         <h3 className="text-xl font-bold text-secondary mb-6">Communautés Touchées par Année</h3>
         <div className="flex items-end justify-between gap-4 h-64">
           {data.map((item, index) => {
-            const heightPercent = (item.communautes / maxValue) * 100;
             return (
               <div key={index} className="flex-1 flex flex-col items-center gap-2">
                 <div className="w-full bg-gray-100 rounded-t-lg relative overflow-hidden" style={{ height: '100%' }}>

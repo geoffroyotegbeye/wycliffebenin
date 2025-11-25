@@ -1,6 +1,6 @@
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { Calendar, Users, Wifi, Coffee, Projector, Music, CheckCircle, Clock } from 'lucide-react';
+import { Calendar, Users, Coffee, Projector, Music, CheckCircle, Clock } from 'lucide-react';
 
 const Booking = () => {
   const espaces = [

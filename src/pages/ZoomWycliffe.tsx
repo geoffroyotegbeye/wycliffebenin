@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Target, Users, Globe, TrendingUp, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
