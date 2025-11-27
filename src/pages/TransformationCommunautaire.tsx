@@ -5,7 +5,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Développement Spirituel",
       description: "L'accès à la Bible transforme la vie spirituelle des individus et des communautés.",
-      icon: <Heart className="text-primary" size={40} />,
+      icon: <Heart className="text-orange-600" size={40} />,
       impacts: [
         "Croissance de la foi personnelle",
         "Renforcement des églises locales",
@@ -17,7 +17,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Éducation",
       description: "L'alphabétisation ouvre des portes vers l'éducation et le développement personnel.",
-      icon: <GraduationCap className="text-secondary" size={40} />,
+      icon: <GraduationCap className="text-blue-900" size={40} />,
       impacts: [
         "Taux d'alphabétisation accru",
         "Meilleure scolarisation des enfants",
@@ -29,7 +29,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Économie",
       description: "Les compétences en lecture et écriture améliorent les opportunités économiques.",
-      icon: <TrendingUp className="text-primary" size={40} />,
+      icon: <TrendingUp className="text-orange-600" size={40} />,
       impacts: [
         "Meilleure gestion financière",
         "Accès au crédit et aux services",
@@ -41,7 +41,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Santé",
       description: "L'alphabétisation améliore la compréhension des informations de santé.",
-      icon: <Sprout className="text-secondary" size={40} />,
+      icon: <Sprout className="text-blue-900" size={40} />,
       impacts: [
         "Meilleure hygiène",
         "Prévention des maladies",
@@ -53,7 +53,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Cohésion Sociale",
       description: "La valorisation de la langue renforce l'identité et l'unité communautaire.",
-      icon: <Users className="text-primary" size={40} />,
+      icon: <Users className="text-orange-600" size={40} />,
       impacts: [
         "Fierté culturelle renforcée",
         "Dialogue intergénérationnel",
@@ -65,7 +65,7 @@ const TransformationCommunautaire = () => {
     {
       titre: "Vie Familiale",
       description: "Les valeurs bibliques transforment les relations familiales.",
-      icon: <Home className="text-secondary" size={40} />,
+      icon: <Home className="text-blue-900" size={40} />,
       impacts: [
         "Mariages plus solides",
         "Meilleure éducation des enfants",
@@ -110,7 +110,7 @@ const TransformationCommunautaire = () => {
           alt="Transformation Communautaire"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/90 to-transparent"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
@@ -132,7 +132,7 @@ const TransformationCommunautaire = () => {
         {/* Introduction */}
         <section className="mb-20">
           <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-6">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">
               Un Impact Holistique
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -146,7 +146,7 @@ const TransformationCommunautaire = () => {
 
         {/* Domaines de Transformation */}
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
             Domaines de Transformation
           </h2>
           
@@ -155,13 +155,13 @@ const TransformationCommunautaire = () => {
               <div 
                 key={index}
                 className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition border-t-4 ${
-                  domaine.color === 'primary' ? 'border-primary' : 'border-secondary'
+                  domaine.color === 'primary' ? 'border-orange-600' : 'border-blue-900'
                 }`}
               >
                 <div className="mb-4">
                   {domaine.icon}
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
                   {domaine.titre}
                 </h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
@@ -170,7 +170,7 @@ const TransformationCommunautaire = () => {
                 <ul className="space-y-2">
                   {domaine.impacts.map((impact, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                      <span className={`${domaine.color === 'primary' ? 'text-primary' : 'text-secondary'} mt-1`}>✓</span>
+                      <span className={`${domaine.color === 'primary' ? 'text-orange-600' : 'text-blue-900'} mt-1`}>✓</span>
                       <span>{impact}</span>
                     </li>
                   ))}
@@ -183,7 +183,7 @@ const TransformationCommunautaire = () => {
         {/* Statistiques d'Impact */}
         <section className="mb-20 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Impact Mesurable
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -192,7 +192,7 @@ const TransformationCommunautaire = () => {
                   key={index}
                   className="bg-white rounded-lg p-6 shadow-lg text-center"
                 >
-                  <div className="text-5xl font-bold text-primary mb-2">
+                  <div className="text-5xl font-bold text-orange-600 mb-2">
                     {stat.valeur}
                   </div>
                   <p className="text-gray-700 font-medium">
@@ -206,7 +206,7 @@ const TransformationCommunautaire = () => {
 
         {/* Témoignages */}
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
             Témoignages de Transformation
           </h2>
           
@@ -227,7 +227,7 @@ const TransformationCommunautaire = () => {
                   <p className="text-gray-700 italic mb-4 leading-relaxed">
                     "{temoignage.texte}"
                   </p>
-                  <p className="text-secondary font-semibold">
+                  <p className="text-blue-900 font-semibold">
                     - {temoignage.auteur}
                   </p>
                 </div>
@@ -245,43 +245,43 @@ const TransformationCommunautaire = () => {
               className="rounded-lg shadow-2xl"
             />
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Comment Ça Fonctionne ?
               </h2>
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
                     1
                   </div>
                   <div>
-                    <h4 className="font-bold text-secondary mb-1">Traduction</h4>
+                    <h4 className="font-bold text-blue-900 mb-1">Traduction</h4>
                     <p className="text-gray-700 text-sm">La Bible est traduite dans la langue locale</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
                     2
                   </div>
                   <div>
-                    <h4 className="font-bold text-secondary mb-1">Alphabétisation</h4>
+                    <h4 className="font-bold text-blue-900 mb-1">Alphabétisation</h4>
                     <p className="text-gray-700 text-sm">Les gens apprennent à lire dans leur langue</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
                     3
                   </div>
                   <div>
-                    <h4 className="font-bold text-secondary mb-1">Appropriation</h4>
+                    <h4 className="font-bold text-blue-900 mb-1">Appropriation</h4>
                     <p className="text-gray-700 text-sm">La communauté s'approprie la Parole de Dieu</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold">
                     4
                   </div>
                   <div>
-                    <h4 className="font-bold text-secondary mb-1">Transformation</h4>
+                    <h4 className="font-bold text-blue-900 mb-1">Transformation</h4>
                     <p className="text-gray-700 text-sm">Les vies et la communauté sont transformées</p>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ const TransformationCommunautaire = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-secondary to-secondary-600 rounded-2xl overflow-hidden shadow-2xl">
+        <section className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-2xl overflow-hidden shadow-2xl">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="p-12 flex flex-col justify-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -302,10 +302,10 @@ const TransformationCommunautaire = () => {
                 nous pouvons apporter espoir et changement durable.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition shadow-lg">
+                <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition shadow-lg">
                   Faire un don
                 </button>
-                <button className="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                <button className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                   En savoir plus
                 </button>
               </div>

@@ -29,9 +29,9 @@ const HeroSection = ({
   };
 
   const overlayClasses = {
-    light: 'bg-gradient-to-r from-secondary/60 via-secondary/50 to-transparent',
-    medium: 'bg-gradient-to-r from-secondary via-secondary/90 to-transparent',
-    dark: 'bg-gradient-to-r from-secondary via-secondary to-secondary/80'
+    light: 'bg-gradient-to-r from-blue-900/60 via-secondary/50 to-transparent',
+    medium: 'bg-gradient-to-r from-blue-900 via-secondary/90 to-transparent',
+    dark: 'bg-gradient-to-r from-blue-900 via-secondary to-blue-900/80'
   };
 
   useEffect(() => {

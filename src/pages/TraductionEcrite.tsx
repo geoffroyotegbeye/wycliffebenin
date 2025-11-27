@@ -60,7 +60,7 @@ const TraductionEcrite = () => {
       {/* Hero */}
       <div className="relative h-[400px] overflow-hidden">
         <img src="/images/images1.jpeg" alt="Traduction Écrite" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/90 to-transparent"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
@@ -78,24 +78,24 @@ const TraductionEcrite = () => {
         {/* Stats */}
         <section className="mb-20">
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-primary">
-              <BookOpen className="mx-auto mb-4 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">15+</div>
+            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-orange-600">
+              <BookOpen className="mx-auto mb-4 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">15+</div>
               <p className="text-gray-700">Langues en traduction</p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-secondary">
-              <Users className="mx-auto mb-4 text-secondary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">45</div>
+            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-blue-900">
+              <Users className="mx-auto mb-4 text-blue-900" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">45</div>
               <p className="text-gray-700">Traducteurs formés</p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-primary">
-              <CheckCircle className="mx-auto mb-4 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">8</div>
+            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-orange-600">
+              <CheckCircle className="mx-auto mb-4 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">8</div>
               <p className="text-gray-700">Traductions complètes</p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-secondary">
-              <FileText className="mx-auto mb-4 text-secondary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">320</div>
+            <div className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-blue-900">
+              <FileText className="mx-auto mb-4 text-blue-900" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">320</div>
               <p className="text-gray-700">Chapitres traduits (2024)</p>
             </div>
           </div>
@@ -103,13 +103,13 @@ const TraductionEcrite = () => {
 
         {/* Processus */}
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Processus de Traduction</h2>
+          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">Processus de Traduction</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {etapes.map((etape, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition">
                 <div className="text-5xl mb-4">{etape.icon}</div>
-                <div className="text-3xl font-bold text-primary mb-2">{etape.numero}</div>
-                <h3 className="text-lg font-bold text-secondary mb-2">{etape.titre}</h3>
+                <div className="text-3xl font-bold text-orange-600 mb-2">{etape.numero}</div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2">{etape.titre}</h3>
                 <p className="text-sm text-gray-600">{etape.description}</p>
               </div>
             ))}
@@ -119,12 +119,12 @@ const TraductionEcrite = () => {
         {/* Projets Actifs */}
         <section className="mb-20 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Projets Actifs</h2>
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">Projets Actifs</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projetsActifs.map((projet, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
                   <div className="flex justify-between items-center mb-4">
-                    <h3 className="text-xl font-bold text-secondary">{projet.langue}</h3>
+                    <h3 className="text-xl font-bold text-blue-900">{projet.langue}</h3>
                     <span className={`text-xs px-3 py-1 rounded-full font-semibold ${
                       projet.statut === 'Complété' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
                     }`}>
@@ -134,7 +134,7 @@ const TraductionEcrite = () => {
                   <div className="mb-2">
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-gray-600">Progression</span>
-                      <span className="font-bold text-secondary">{projet.progression}%</span>
+                      <span className="font-bold text-blue-900">{projet.progression}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div 
@@ -154,7 +154,7 @@ const TraductionEcrite = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img src="/images/images2.jpeg" alt="Traduction" className="rounded-lg shadow-2xl" />
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">L'Importance de l'Écrit</h2>
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">L'Importance de l'Écrit</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                 La traduction écrite permet aux gens de lire et relire la Parole de Dieu, de l'étudier 
                 en profondeur et de la méditer personnellement.

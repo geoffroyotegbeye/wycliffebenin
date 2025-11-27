@@ -1,5 +1,6 @@
 import { Heart, Globe, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -9,25 +10,25 @@ const PourquoiTraduire = () => {
     {
       titre: "Accès à la Parole de Dieu",
       description: "Chaque personne mérite de lire et comprendre la Bible dans sa langue maternelle, la langue de son cœur.",
-      icon: <Heart className="text-primary" size={40} />,
+      icon: <Heart className="text-orange-600" size={40} />,
       color: "primary"
     },
     {
       titre: "Préservation Culturelle",
       description: "La traduction biblique contribue à la préservation et au développement des langues locales.",
-      icon: <Globe className="text-secondary" size={40} />,
+      icon: <Globe className="text-blue-900" size={40} />,
       color: "secondary"
     },
     {
       titre: "Transformation Communautaire",
       description: "L'accès aux Écritures transforme les individus, les familles et les communautés entières.",
-      icon: <Users className="text-primary" size={40} />,
+      icon: <Users className="text-orange-600" size={40} />,
       color: "primary"
     },
     {
       titre: "Compréhension Profonde",
       description: "On comprend mieux la Parole de Dieu quand elle est dans notre langue maternelle.",
-      icon: <BookOpen className="text-secondary" size={40} />,
+      icon: <BookOpen className="text-blue-900" size={40} />,
       color: "secondary"
     }
   ];
@@ -112,6 +113,12 @@ const PourquoiTraduire = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Pourquoi et Comment Traduire - Wycliffe Bénin | Processus de Traduction Biblique"
+        description="Découvrez pourquoi la traduction biblique est essentielle et comment nous traduisons la Bible dans les langues locales du Bénin. Un processus rigoureux en 6 étapes pour transformer des vies."
+        keywords="traduction biblique, pourquoi traduire, processus traduction, langue maternelle, Wycliffe Bénin, méthodologie, étapes traduction"
+        url="https://wycliffebenin.org/pourquoi-traduire"
+      />
       {/* Hero Section */}
       <HeroSection
         title="Pourquoi et Comment Traduire ?"
@@ -128,7 +135,7 @@ const PourquoiTraduire = () => {
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-secondary mb-4">
+              <h2 className="text-4xl font-bold text-blue-900 mb-4">
                 Pourquoi Traduire la Bible ?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -142,12 +149,12 @@ const PourquoiTraduire = () => {
             {raisons.map((raison, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 0.1}>
                 <div className={`bg-white rounded-card p-8 shadow-card hover:shadow-card-hover transition border-l-4 ${
-                  raison.color === 'primary' ? 'border-primary' : 'border-secondary'
+                  raison.color === 'primary' ? 'border-orange-600' : 'border-blue-900'
                 }`}>
                 <div className="mb-4">
                   {raison.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-3">
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">
                   {raison.titre}
                 </h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -162,7 +169,7 @@ const PourquoiTraduire = () => {
         {/* Citation */}
         <ScrollAnimation animation="slideUp">
           <section className="mb-20">
-            <div className="bg-primary-50 border-l-4 border-primary p-8 rounded-r-card">
+            <div className="bg-primary-50 border-l-4 border-orange-600 p-8 rounded-r-card">
             <blockquote className="text-2xl text-gray-800 italic mb-4">
               "La langue maternelle est la langue du cœur. C'est dans cette langue que 
               Dieu nous parle le plus profondément."
@@ -184,7 +191,7 @@ const PourquoiTraduire = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
               <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 L'Impact de la Traduction
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -197,8 +204,8 @@ const PourquoiTraduire = () => {
                 individus trouvent espoir et direction pour leur vie.
               </p>
               <Link 
-                to="/temoignages" 
-                className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group"
+                to="/temoignage-traduction" 
+                className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group"
               >
                 Lire les témoignages
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -213,7 +220,7 @@ const PourquoiTraduire = () => {
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation animation="slideUp">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-secondary mb-4">
+                <h2 className="text-4xl font-bold text-blue-900 mb-4">
                   Comment Traduisons-nous ?
                 </h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -229,7 +236,7 @@ const PourquoiTraduire = () => {
                   <div className="bg-white rounded-card shadow-card overflow-hidden hover:shadow-card-hover transition">
                   <div className="md:flex">
                     <div className={`md:w-1/4 p-8 flex items-center justify-center ${
-                      index % 2 === 0 ? 'bg-primary' : 'bg-secondary'
+                      index % 2 === 0 ? 'bg-orange-600' : 'bg-blue-900'
                     }`}>
                       <div className="text-center text-white">
                         <div className="text-6xl font-bold mb-2">{etape.etape}</div>
@@ -237,7 +244,7 @@ const PourquoiTraduire = () => {
                       </div>
                     </div>
                     <div className="md:w-3/4 p-8">
-                      <h3 className="text-2xl font-bold text-secondary mb-3">
+                      <h3 className="text-2xl font-bold text-blue-900 mb-3">
                         {etape.titre}
                       </h3>
                       <p className="text-gray-700 mb-4 leading-relaxed">
@@ -246,7 +253,7 @@ const PourquoiTraduire = () => {
                       <ul className="grid md:grid-cols-2 gap-2">
                         {etape.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-600">
-                            <CheckCircle className="text-primary mt-1 flex-shrink-0" size={16} />
+                            <CheckCircle className="text-orange-600 mt-1 flex-shrink-0" size={16} />
                             <span className="text-sm">{detail}</span>
                           </li>
                         ))}
@@ -265,7 +272,7 @@ const PourquoiTraduire = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Nos Principes de Traduction
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -275,7 +282,7 @@ const PourquoiTraduire = () => {
               <ul className="space-y-3">
                 {principes.map((principe, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="bg-primary text-white rounded-full p-1 mt-1">
+                    <div className="bg-orange-600 text-white rounded-full p-1 mt-1">
                       <CheckCircle size={16} />
                     </div>
                     <span className="text-gray-700 font-medium">{principe}</span>
@@ -296,26 +303,26 @@ const PourquoiTraduire = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="slideUp">
-          <section className="bg-gradient-to-r from-secondary to-secondary-600 rounded-card overflow-hidden shadow-elevated">
+          <section className="bg-white rounded-card overflow-hidden shadow-elevated border-2 border-gray-200">
           <div className="grid md:grid-cols-2 gap-0">
-            <div className="p-12 flex flex-col justify-center text-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="p-12 flex flex-col justify-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-900">
                 Participez à cette Mission
               </h2>
-              <p className="text-lg mb-8 text-white/90">
+              <p className="text-lg mb-8 text-gray-700">
                 Vous pouvez faire partie de cette œuvre extraordinaire qui transforme des vies. 
                 Que ce soit par la prière, le don ou l'engagement, votre soutien est précieux.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 
                   to="/donnez" 
-                  className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition shadow-lg"
+                  className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition shadow-lg"
                 >
                   Faire un don
                 </Link>
                 <Link 
                   to="/contact" 
-                  className="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                  className="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-950 transition"
                 >
                   Nous contacter
                 </Link>

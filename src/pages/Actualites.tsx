@@ -53,16 +53,16 @@ const Actualites = () => {
                 />
               </div>
               <div className="p-8 flex flex-col justify-center">
-                <span className="bg-primary-50 text-primary px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block w-fit">
+                <span className="bg-primary-50 text-orange-600 px-3 py-1 rounded-full text-sm font-medium mb-4 inline-block w-fit">
                   {actualites[0].categorie}
                 </span>
-                <h2 className="text-3xl font-bold text-secondary mb-4">
+                <h2 className="text-3xl font-bold text-blue-900 mb-4">
                   {actualites[0].titre}
                 </h2>
                 <p className="text-gray-700 mb-6">
                   {actualites[0].extrait}
                 </p>
-                <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                   Lire plus
                   <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                 </button>
@@ -81,16 +81,16 @@ const Actualites = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <span className="bg-secondary-50 text-secondary px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-secondary-50 text-blue-900 px-3 py-1 rounded-full text-xs font-medium">
                     {article.categorie}
                   </span>
-                  <h3 className="text-xl font-bold text-secondary my-3">
+                  <h3 className="text-xl font-bold text-blue-900 my-3">
                     {article.titre}
                   </h3>
                   <p className="text-gray-700 mb-4">
                     {article.extrait}
                   </p>
-                  <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                  <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                     Lire l'article
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                   </button>
@@ -101,7 +101,7 @@ const Actualites = () => {
         </div>
 
         <ScrollAnimation animation="slideUp">
-          <div className="bg-gradient-to-r from-primary to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
+          <div className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
             <TrendingUp className="mx-auto mb-6 text-white" size={48} />
             <h2 className="text-3xl font-bold mb-4">Restez Informé</h2>
             <p className="text-xl mb-8 text-white/90">
@@ -113,7 +113,7 @@ const Actualites = () => {
                 placeholder="Votre email"
                 className="flex-1 px-4 py-3 rounded-button text-gray-900"
               />
-              <button className="bg-secondary text-white px-6 py-3 rounded-button font-semibold">
+              <button className="bg-white text-blue-900 border-2 border-blue-900 px-6 py-3 rounded-button font-semibold">
                 S'inscrire
               </button>
             </div>

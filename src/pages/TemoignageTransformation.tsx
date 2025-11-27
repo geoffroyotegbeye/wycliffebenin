@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Quote, Heart, Users, TrendingUp } from 'lucide-react';
@@ -84,6 +85,12 @@ const TemoignageTransformation = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Témoignages de Transformation - Wycliffe Bénin | Vies Changées par la Parole"
+        description="Lisez les témoignages bouleversants de communautés transformées par la traduction biblique et l'alphabétisation. 85+ communautés touchées, 50 000+ vies changées au Bénin."
+        keywords="témoignages, transformation, vies changées, impact, Wycliffe Bénin, histoires, conversion, communautés"
+        url="https://wycliffebenin.org/temoignage-transformation"
+      />
       <HeroSection
         title="Témoignages de Transformation"
         subtitle="Des vies et des communautés transformées par la Parole de Dieu"
@@ -97,7 +104,7 @@ const TemoignageTransformation = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-secondary mb-6">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">
               Des Histoires qui Inspirent
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -110,24 +117,24 @@ const TemoignageTransformation = () => {
         {/* Statistiques d'Impact */}
         <ScrollAnimation animation="slideUp">
           <div className="grid md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-primary">
-              <Users className="mx-auto mb-3 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">85+</div>
+            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-orange-600">
+              <Users className="mx-auto mb-3 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">85+</div>
               <div className="text-gray-700 font-medium">Communautés Touchées</div>
             </div>
-            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-primary">
-              <Heart className="mx-auto mb-3 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">50,000+</div>
+            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-orange-600">
+              <Heart className="mx-auto mb-3 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">50,000+</div>
               <div className="text-gray-700 font-medium">Vies Transformées</div>
             </div>
-            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-primary">
-              <TrendingUp className="mx-auto mb-3 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">120+</div>
+            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-orange-600">
+              <TrendingUp className="mx-auto mb-3 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">120+</div>
               <div className="text-gray-700 font-medium">Églises Plantées</div>
             </div>
-            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-primary">
-              <Quote className="mx-auto mb-3 text-primary" size={40} />
-              <div className="text-4xl font-bold text-secondary mb-2">1,250+</div>
+            <div className="bg-white rounded-card shadow-card p-6 text-center border-t-4 border-orange-600">
+              <Quote className="mx-auto mb-3 text-orange-600" size={40} />
+              <div className="text-4xl font-bold text-blue-900 mb-2">1,250+</div>
               <div className="text-gray-700 font-medium">Témoignages Recueillis</div>
             </div>
           </div>
@@ -138,9 +145,9 @@ const TemoignageTransformation = () => {
           {temoignages.map((temoignage, index) => (
             <ScrollAnimation key={index} animation="slideUp" delay={index * 0.1}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
-                <div className="bg-gradient-to-r from-primary to-primary-600 p-6">
+                <div className="bg-gradient-to-r from-orange-600 to-primary-600 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-orange-600 font-bold text-xl flex-shrink-0">
                       {temoignage.photo}
                     </div>
                     <div className="flex-grow text-white">
@@ -156,7 +163,7 @@ const TemoignageTransformation = () => {
 
                 <div className="p-8">
                   <div className="mb-6">
-                    <Quote className="text-primary mb-4" size={40} />
+                    <Quote className="text-orange-600 mb-4" size={40} />
                     <div className="space-y-4">
                       {temoignage.contenu.map((paragraphe, idx) => (
                         <p key={idx} className="text-gray-700 leading-relaxed text-lg">
@@ -167,14 +174,14 @@ const TemoignageTransformation = () => {
                   </div>
 
                   <div className="bg-gray-50 rounded-card p-6">
-                    <h4 className="font-bold text-secondary mb-4 flex items-center gap-2">
-                      <TrendingUp className="text-primary" size={20} />
+                    <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                      <TrendingUp className="text-orange-600" size={20} />
                       Impact Mesurable
                     </h4>
                     <div className="grid md:grid-cols-2 gap-3">
                       {temoignage.impact.map((item, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                           <span className="text-gray-700">{item}</span>
                         </div>
                       ))}
@@ -188,25 +195,25 @@ const TemoignageTransformation = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="scale">
-          <div className="mt-16 bg-gradient-to-r from-secondary to-secondary-600 rounded-card shadow-elevated p-12 text-center">
+          <div className="mt-16 bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card shadow-elevated p-12 text-center">
             <Heart className="mx-auto mb-6 text-white" size={64} />
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold mb-6">
               Faites Partie de l'Histoire
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Votre soutien peut créer d'autres histoires de transformation comme celles-ci. 
               Rejoignez-nous dans cette mission extraordinaire !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/donnez"
-                className="inline-block bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-primary-600 transition shadow-lg"
+                className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Faire un Don
               </a>
               <a
                 href="/engagez-vous"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-secondary transition"
+                className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-blue-900 transition"
               >
                 S'Engager
               </a>

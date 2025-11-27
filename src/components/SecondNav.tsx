@@ -66,7 +66,7 @@ const Nav = () => {
                       <div key={child.label} className="relative group/nested">
                         <Link
                           to={child.link}
-                          className="block px-4 py-2 text-sm transition-colors hover:bg-opacity-10"
+                          className="block px-4 py-2 text-sm transition-colors hover:bg-opacity-10 relative"
                           style={{ color: '#001f5f' }}
                           onMouseEnter={(e) => {
                             e.currentTarget.style.backgroundColor = '#ff6600';
@@ -83,28 +83,33 @@ const Nav = () => {
                           )}
                         </Link>
 
-                        {/* Dropdown Level 2 (Nested) */}
+                        {/* Dropdown Level 2 (Nested) - Avec zone de pont invisible */}
                         {child.hasSubmenu && child.children && child.children.length > 0 && (
-                          <div className="absolute left-full top-0 ml-1 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-200 border-t-4 py-2" style={{ borderTopColor: '#ff6600', zIndex: 100 }}>
-                            {child.children.map((grandchild) => (
-                              <Link
-                                key={grandchild.label}
-                                to={grandchild.link}
-                                className="block px-4 py-2 text-sm transition-colors"
-                                style={{ color: '#001f5f' }}
-                                onMouseEnter={(e) => {
-                                  e.currentTarget.style.backgroundColor = '#ff6600';
-                                  e.currentTarget.style.color = '#ffffff';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.currentTarget.style.backgroundColor = 'transparent';
-                                  e.currentTarget.style.color = '#001f5f';
-                                }}
-                              >
-                                {grandchild.label}
-                              </Link>
-                            ))}
-                          </div>
+                          <>
+                            {/* Zone de pont invisible pour faciliter le passage */}
+                            <div className="absolute left-full top-0 w-2 h-full opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible" style={{ zIndex: 99 }}></div>
+                            
+                            <div className="absolute left-full top-0 -ml-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover/nested:opacity-100 group-hover/nested:visible transition-all duration-150 border-t-4 py-2" style={{ borderTopColor: '#ff6600', zIndex: 100 }}>
+                              {child.children.map((grandchild) => (
+                                <Link
+                                  key={grandchild.label}
+                                  to={grandchild.link}
+                                  className="block px-4 py-2 text-sm transition-colors"
+                                  style={{ color: '#001f5f' }}
+                                  onMouseEnter={(e) => {
+                                    e.currentTarget.style.backgroundColor = '#ff6600';
+                                    e.currentTarget.style.color = '#ffffff';
+                                  }}
+                                  onMouseLeave={(e) => {
+                                    e.currentTarget.style.backgroundColor = 'transparent';
+                                    e.currentTarget.style.color = '#001f5f';
+                                  }}
+                                >
+                                  {grandchild.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </>
                         )}
                       </div>
                     ))}

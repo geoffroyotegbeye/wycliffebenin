@@ -47,7 +47,7 @@ const MissionsExterieur = () => {
         
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               Nos Missions Récentes
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -66,27 +66,27 @@ const MissionsExterieur = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {mission.titre}
                   </h3>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-gray-600 text-sm">
-                      <MapPin size={16} className="text-primary" />
+                      <MapPin size={16} className="text-orange-600" />
                       <span>{mission.lieu}</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-600 text-sm">
-                      <Calendar size={16} className="text-primary" />
+                      <Calendar size={16} className="text-orange-600" />
                       <span>{mission.date}</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-600 text-sm">
-                      <Users size={16} className="text-primary" />
+                      <Users size={16} className="text-orange-600" />
                       <span>{mission.participants} participants</span>
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
                     {mission.description}
                   </p>
-                  <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                  <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                     En savoir plus
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                   </button>

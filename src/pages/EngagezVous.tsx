@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Users, Heart, BookOpen, Globe, Briefcase, GraduationCap, HandHeart, Laptop } from 'lucide-react';
@@ -6,7 +7,7 @@ const EngagezVous = () => {
   const opportunities = [
     {
       title: "Traducteur Bénévole",
-      icon: <BookOpen className="text-primary" size={40} />,
+      icon: <BookOpen className="text-orange-600" size={40} />,
       description: "Participez directement à la traduction de la Bible dans les langues locales.",
       requirements: [
         "Maîtrise d'une langue locale",
@@ -15,11 +16,11 @@ const EngagezVous = () => {
         "Disponibilité régulière"
       ],
       commitment: "10-20h/semaine",
-      color: "border-primary"
+      color: "border-orange-600"
     },
     {
       title: "Formateur en Alphabétisation",
-      icon: <GraduationCap className="text-secondary" size={40} />,
+      icon: <GraduationCap className="text-blue-900" size={40} />,
       description: "Enseignez la lecture et l'écriture dans les communautés rurales.",
       requirements: [
         "Expérience en enseignement",
@@ -28,11 +29,11 @@ const EngagezVous = () => {
         "Mobilité géographique"
       ],
       commitment: "Temps plein ou partiel",
-      color: "border-secondary"
+      color: "border-blue-900"
     },
     {
       title: "Coordinateur de Projet",
-      icon: <Briefcase className="text-primary" size={40} />,
+      icon: <Briefcase className="text-orange-600" size={40} />,
       description: "Gérez et coordonnez les projets de traduction sur le terrain.",
       requirements: [
         "Compétences en gestion",
@@ -41,11 +42,11 @@ const EngagezVous = () => {
         "Sens de l'organisation"
       ],
       commitment: "Temps plein",
-      color: "border-primary"
+      color: "border-orange-600"
     },
     {
       title: "Technicien Informatique",
-      icon: <Laptop className="text-secondary" size={40} />,
+      icon: <Laptop className="text-blue-900" size={40} />,
       description: "Supportez les équipes avec les outils technologiques de traduction.",
       requirements: [
         "Compétences IT",
@@ -54,11 +55,11 @@ const EngagezVous = () => {
         "Formation des utilisateurs"
       ],
       commitment: "Temps partiel",
-      color: "border-secondary"
+      color: "border-blue-900"
     },
     {
       title: "Mobilisateur Communautaire",
-      icon: <Users className="text-primary" size={40} />,
+      icon: <Users className="text-orange-600" size={40} />,
       description: "Sensibilisez et mobilisez les communautés autour des projets.",
       requirements: [
         "Excellente communication",
@@ -67,11 +68,11 @@ const EngagezVous = () => {
         "Créativité"
       ],
       commitment: "Flexible",
-      color: "border-primary"
+      color: "border-orange-600"
     },
     {
       title: "Conseiller Spirituel",
-      icon: <Heart className="text-secondary" size={40} />,
+      icon: <Heart className="text-blue-900" size={40} />,
       description: "Accompagnez spirituellement les équipes et les communautés.",
       requirements: [
         "Formation théologique",
@@ -80,7 +81,7 @@ const EngagezVous = () => {
         "Discernement"
       ],
       commitment: "Selon disponibilité",
-      color: "border-secondary"
+      color: "border-blue-900"
     }
   ];
 
@@ -109,6 +110,12 @@ const EngagezVous = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Engagez-vous - Wycliffe Bénin | Devenez Bénévole ou Missionnaire"
+        description="Rejoignez notre mission ! Découvrez les opportunités de service : traducteur, formateur, coordinateur, technicien. Utilisez vos talents pour transformer des vies au Bénin."
+        keywords="bénévolat, engagement, mission, volontariat, Wycliffe Bénin, opportunités, service, traducteur bénévole"
+        url="https://wycliffebenin.org/engagez-vous"
+      />
       <HeroSection
         title="Engagez-vous avec Nous"
         subtitle="Rejoignez notre mission de rendre la Parole de Dieu accessible à tous"
@@ -122,7 +129,7 @@ const EngagezVous = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-secondary mb-6">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">
               Votre Appel, Notre Mission
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -135,7 +142,7 @@ const EngagezVous = () => {
 
         {/* Verset */}
         <ScrollAnimation animation="scale" delay={0.2}>
-          <div className="bg-gradient-to-r from-secondary to-secondary-600 rounded-card shadow-elevated p-8 mb-16 text-center">
+          <div className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card shadow-elevated p-8 mb-16 text-center">
             <p className="text-2xl text-white font-medium italic mb-4">
               "Comment croiront-ils en celui dont ils n'ont pas entendu parler ? 
               Et comment en entendront-ils parler, s'il n'y a personne qui prêche ?"
@@ -149,7 +156,7 @@ const EngagezVous = () => {
         {/* Opportunités de Service */}
         <div className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Opportunités de Service
             </h2>
           </ScrollAnimation>
@@ -160,7 +167,7 @@ const EngagezVous = () => {
                 <div className={`bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 border-t-4 ${opp.color} h-full flex flex-col`}>
                   <div className="flex items-center gap-3 mb-4">
                     {opp.icon}
-                    <h3 className="text-xl font-bold text-secondary">
+                    <h3 className="text-xl font-bold text-blue-900">
                       {opp.title}
                     </h3>
                   </div>
@@ -168,18 +175,18 @@ const EngagezVous = () => {
                     {opp.description}
                   </p>
                   <div className="mb-4">
-                    <h4 className="font-semibold text-secondary mb-2">Profil recherché :</h4>
+                    <h4 className="font-semibold text-blue-900 mb-2">Profil recherché :</h4>
                     <ul className="space-y-1">
                       {opp.requirements.map((req, idx) => (
                         <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span>
+                          <span className="text-orange-600 mt-1">•</span>
                           <span>{req}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="pt-4 border-t border-gray-200">
-                    <span className="text-sm font-medium text-primary">
+                    <span className="text-sm font-medium text-orange-600">
                       Engagement : {opp.commitment}
                     </span>
                   </div>
@@ -192,7 +199,7 @@ const EngagezVous = () => {
         {/* Avantages */}
         <div className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Pourquoi Nous Rejoindre ?
             </h2>
           </ScrollAnimation>
@@ -201,10 +208,10 @@ const EngagezVous = () => {
             {benefits.map((benefit, index) => (
               <ScrollAnimation key={index} animation="slideUp" delay={index * 0.1}>
                 <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-50 rounded-full mb-4 text-primary">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-50 rounded-full mb-4 text-orange-600">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-secondary mb-2">
+                  <h3 className="text-xl font-bold text-blue-900 mb-2">
                     {benefit.title}
                   </h3>
                   <p className="text-gray-700">
@@ -219,42 +226,42 @@ const EngagezVous = () => {
         {/* Processus de Candidature */}
         <ScrollAnimation animation="fadeIn">
           <div className="bg-gray-50 rounded-card p-8 mb-16">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Comment Postuler ?
             </h2>
             <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   1
                 </div>
-                <h3 className="font-bold text-secondary mb-2">Candidature</h3>
+                <h3 className="font-bold text-blue-900 mb-2">Candidature</h3>
                 <p className="text-gray-700 text-sm">
                   Remplissez le formulaire en ligne avec vos motivations
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   2
                 </div>
-                <h3 className="font-bold text-secondary mb-2">Entretien</h3>
+                <h3 className="font-bold text-blue-900 mb-2">Entretien</h3>
                 <p className="text-gray-700 text-sm">
                   Échange avec notre équipe pour mieux vous connaître
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   3
                 </div>
-                <h3 className="font-bold text-secondary mb-2">Formation</h3>
+                <h3 className="font-bold text-blue-900 mb-2">Formation</h3>
                 <p className="text-gray-700 text-sm">
                   Participez à notre programme d'orientation et de formation
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   4
                 </div>
-                <h3 className="font-bold text-secondary mb-2">Mission</h3>
+                <h3 className="font-bold text-blue-900 mb-2">Mission</h3>
                 <p className="text-gray-700 text-sm">
                   Commencez votre service dans l'équipe qui vous correspond
                 </p>
@@ -266,7 +273,7 @@ const EngagezVous = () => {
         {/* Témoignages */}
         <div className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Ils Témoignent
             </h2>
           </ScrollAnimation>
@@ -279,11 +286,11 @@ const EngagezVous = () => {
                   de la Parole de Dieu dans ma communauté est indescriptible."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary font-bold">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
                     JK
                   </div>
                   <div>
-                    <div className="font-bold text-secondary">Jean Koffi</div>
+                    <div className="font-bold text-blue-900">Jean Koffi</div>
                     <div className="text-sm text-gray-600">Traducteur Fon-Gbe</div>
                   </div>
                 </div>
@@ -297,11 +304,11 @@ const EngagezVous = () => {
                   découvrir la Bible pour la première fois. C'est un privilège immense."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-secondary font-bold">
+                  <div className="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-blue-900 font-bold">
                     MA
                   </div>
                   <div>
-                    <div className="font-bold text-secondary">Marie Assogba</div>
+                    <div className="font-bold text-blue-900">Marie Assogba</div>
                     <div className="text-sm text-gray-600">Formatrice</div>
                   </div>
                 </div>
@@ -315,11 +322,11 @@ const EngagezVous = () => {
                   professionnelles pour le Royaume. Chaque jour est une aventure."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary font-bold">
+                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
                     PD
                   </div>
                   <div>
-                    <div className="font-bold text-secondary">Paul Dossou</div>
+                    <div className="font-bold text-blue-900">Paul Dossou</div>
                     <div className="text-sm text-gray-600">Coordinateur</div>
                   </div>
                 </div>
@@ -330,25 +337,25 @@ const EngagezVous = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="scale">
-          <div className="bg-gradient-to-r from-primary to-primary-600 rounded-card shadow-elevated p-12 text-center">
-            <HandHeart className="mx-auto mb-6 text-white" size={64} />
+          <div className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card shadow-elevated p-12 text-center">
+            <HandHeart className="mx-auto mb-6" size={64} />
             <h2 className="text-4xl font-bold text-white mb-6">
               Prêt à Faire la Différence ?
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl  mb-8 max-w-2xl mx-auto">
               Rejoignez notre équipe et participez à une mission qui change des vies 
               pour l'éternité. Votre engagement compte !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-block bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
+                className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
               >
                 Postuler Maintenant
               </a>
               <a
                 href="/nos-formations"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-primary transition"
+                className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-orange-600 transition"
               >
                 Découvrir les Formations
               </a>

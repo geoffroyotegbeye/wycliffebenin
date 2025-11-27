@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
 
@@ -96,25 +98,19 @@ const AdministrationGenerale = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <div className="relative h-[300px] overflow-hidden">
-        <LazyImage 
-          src="/images/images1.jpeg" 
-          alt="Administration Générale"
-          className="absolute inset-0 w-full h-full"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-transparent"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Administration Générale
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl">
-              Une équipe dévouée au service de la mission
-            </p>
-          </div>
-        </div>
-      </div>
+      <SEO 
+        title="Administration Générale - Wycliffe Bénin | Notre Équipe de Direction"
+        description="Découvrez l'équipe administrative de Wycliffe Bénin : directeurs, coordinateurs et responsables dévoués au service de la mission. Contactez-nous pour rejoindre notre équipe."
+        keywords="administration, équipe, direction, Wycliffe Bénin, staff, personnel, organisation, management"
+        url="https://wycliffebenin.org/administration-generale"
+      />
+      <HeroSection
+        title="Administration Générale"
+        subtitle="Une équipe dévouée au service de la mission"
+        image="/images/images1.jpeg"
+        height="medium"
+        overlay="dark"
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -124,7 +120,7 @@ const AdministrationGenerale = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <div>
-                <h2 className="text-4xl font-bold text-secondary mb-6">
+                <h2 className="text-4xl font-bold text-blue-900 mb-6">
                   Notre Équipe Administrative
                 </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -138,22 +134,22 @@ const AdministrationGenerale = () => {
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
-              <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-card">
-              <h3 className="text-xl font-bold text-secondary mb-4">Contact</h3>
+              <div className="bg-primary-50 border-l-4 border-orange-600 p-6 rounded-r-card">
+              <h3 className="text-xl font-bold text-blue-900 mb-4">Contact</h3>
               <div className="space-y-3 text-gray-700">
                 <div className="flex items-start gap-3">
-                  <MapPin className="text-primary mt-1" size={20} />
+                  <MapPin className="text-orange-600 mt-1" size={20} />
                   <span>Cotonou, Bénin</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="text-primary mt-1" size={20} />
-                  <a href="tel:+22997000000" className="hover:text-primary transition">
+                  <Phone className="text-orange-600 mt-1" size={20} />
+                  <a href="tel:+22997000000" className="hover:text-orange-600 transition">
                     +229 97 00 00 00
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="text-primary mt-1" size={20} />
-                  <a href="mailto:info@wycliffebenin.org" className="hover:text-primary transition">
+                  <Mail className="text-orange-600 mt-1" size={20} />
+                  <a href="mailto:info@wycliffebenin.org" className="hover:text-orange-600 transition">
                     info@wycliffebenin.org
                   </a>
                 </div>
@@ -166,7 +162,7 @@ const AdministrationGenerale = () => {
         {/* Équipe */}
         <section className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Membres de l'Équipe
             </h2>
           </ScrollAnimation>
@@ -184,10 +180,10 @@ const AdministrationGenerale = () => {
                   </div>
                 <div className="p-6">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-secondary mb-1">
+                    <h3 className="text-xl font-bold text-blue-900 mb-1">
                       {membre.nom}
                     </h3>
-                    <span className="inline-block bg-secondary-50 text-secondary text-sm px-3 py-1 rounded-full font-medium">
+                    <span className="inline-block bg-secondary-50 text-blue-900 text-sm px-3 py-1 rounded-full font-medium">
                       {membre.poste}
                     </span>
                   </div>
@@ -197,14 +193,14 @@ const AdministrationGenerale = () => {
                   <div className="space-y-2 pt-4 border-t border-gray-100">
                     <a 
                       href={`mailto:${membre.email}`}
-                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition"
+                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-orange-600 transition"
                     >
                       <Mail size={16} />
                       <span className="truncate">{membre.email}</span>
                     </a>
                     <a 
                       href={`tel:${membre.phone}`}
-                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary transition"
+                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-orange-600 transition"
                     >
                       <Phone size={16} />
                       <span>{membre.phone}</span>
@@ -221,7 +217,7 @@ const AdministrationGenerale = () => {
         <section className="mb-16 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation animation="slideUp">
-              <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+              <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
                 Nos Départements
               </h2>
             </ScrollAnimation>
@@ -230,12 +226,12 @@ const AdministrationGenerale = () => {
               {departements.map((dept, index) => (
                 <ScrollAnimation key={index} animation="scale" delay={index * 0.1}>
                   <div className={`bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 ${
-                    dept.color === 'primary' ? 'border-primary' :
-                    dept.color === 'secondary' ? 'border-secondary' :
+                    dept.color === 'primary' ? 'border-orange-600' :
+                    dept.color === 'secondary' ? 'border-blue-900' :
                     'border-gray-800'
                   }`}>
                   <div className="text-4xl mb-4">{dept.icon}</div>
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {dept.nom}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -250,24 +246,24 @@ const AdministrationGenerale = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="slideUp">
-          <section className="bg-gradient-to-r from-primary to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
+          <section className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card p-12 text-center  shadow-elevated">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Rejoignez Notre Équipe
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
+          <p className="text-lg mb-8 max-w-2xl mx-auto ">
             Nous recherchons constamment des personnes talentueuses et passionnées 
             pour rejoindre notre équipe et contribuer à notre mission.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
               to="/recrutement" 
-              className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
               Voir les offres
             </Link>
             <Link 
               to="/contact" 
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition"
+              className="bg-transparent border-2 border px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition"
             >
               Nous contacter
             </Link>

@@ -75,25 +75,25 @@ const Historique = () => {
       nombre: "15+",
       titre: "Langues en Traduction",
       description: "Projets de traduction biblique actifs",
-      icon: <BookOpen className="text-primary" size={32} />
+      icon: <BookOpen className="text-orange-600" size={32} />
     },
     {
       nombre: "40+",
       titre: "Années d'Expérience",
       description: "Au service des communautés",
-      icon: <Calendar className="text-secondary" size={32} />
+      icon: <Calendar className="text-blue-900" size={32} />
     },
     {
       nombre: "50,000+",
       titre: "Personnes Touchées",
       description: "Bénéficiaires de nos programmes",
-      icon: <Users className="text-primary" size={32} />
+      icon: <Users className="text-orange-600" size={32} />
     },
     {
       nombre: "8",
       titre: "Dédicaces Bibliques",
       description: "Nouveaux Testaments dédiés",
-      icon: <Award className="text-secondary" size={32} />
+      icon: <Award className="text-blue-900" size={32} />
     }
   ];
 
@@ -115,14 +115,14 @@ const Historique = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {realisations.map((item, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 0.1}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition text-center border-t-4 border-primary">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition text-center border-t-4 border-orange-600">
                   <div className="flex justify-center mb-4">
                     {item.icon}
                   </div>
-                  <div className="text-4xl font-bold text-secondary mb-2">
+                  <div className="text-4xl font-bold text-blue-900 mb-2">
                     {item.nombre}
                   </div>
-                  <h3 className="text-lg font-bold text-secondary mb-2">
+                  <h3 className="text-lg font-bold text-blue-900 mb-2">
                     {item.titre}
                   </h3>
                   <p className="text-sm text-gray-600">
@@ -137,7 +137,7 @@ const Historique = () => {
         {/* Timeline */}
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Notre Parcours
             </h2>
           </ScrollAnimation>
@@ -159,15 +159,15 @@ const Historique = () => {
                     {/* Contenu */}
                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
                       <div className={`bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-l-4 ${
-                        event.color === 'primary' ? 'border-primary' : 'border-secondary'
+                        event.color === 'primary' ? 'border-orange-600' : 'border-blue-900'
                       }`}>
                       <div className="text-4xl mb-3">{event.icon}</div>
                       <div className={`text-3xl font-bold mb-2 ${
-                        event.color === 'primary' ? 'text-primary' : 'text-secondary'
+                        event.color === 'primary' ? 'text-orange-600' : 'text-blue-900'
                       }`}>
                         {event.annee}
                       </div>
-                      <h3 className="text-xl font-bold text-secondary mb-2">
+                      <h3 className="text-xl font-bold text-blue-900 mb-2">
                         {event.titre}
                       </h3>
                         <p className="text-gray-600">
@@ -178,7 +178,7 @@ const Historique = () => {
                     
                     {/* Point central */}
                     <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden md:block ${
-                      event.color === 'primary' ? 'bg-primary' : 'bg-secondary'
+                      event.color === 'primary' ? 'bg-orange-600' : 'bg-blue-900'
                     } border-4 border-white shadow-lg`}></div>
                   </div>
                 </ScrollAnimation>
@@ -199,7 +199,7 @@ const Historique = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
               <div className="flex flex-col justify-center">
-                <h2 className="text-3xl font-bold text-secondary mb-6">
+                <h2 className="text-3xl font-bold text-blue-900 mb-6">
                   Une Histoire de Transformation
                 </h2>
                 <p className="text-lg text-gray-700 mb-4 leading-relaxed">

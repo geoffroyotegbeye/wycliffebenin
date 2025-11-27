@@ -53,7 +53,7 @@ const Footer = () => {
                 placeholder="Votre email"
                 className="px-4 py-3 rounded-l-button w-full md:w-80 text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="bg-secondary text-white px-6 py-3 rounded-r-button font-semibold hover:bg-secondary-600 transition flex items-center gap-2">
+              <button className="bg-blue-900 text-white px-6 py-3 rounded-r-button font-semibold hover:bg-blue-950 transition flex items-center gap-2">
                 <Send size={18} />
                 <span className="hidden sm:inline">S'inscrire</span>
               </button>
@@ -105,14 +105,14 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-4 text-white relative inline-block">
                 Liens Rapides
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-primary"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-orange-600"></span>
               </h3>
               <ul className="space-y-3 mt-6">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <Link 
                       to={link.path} 
-                      className="text-gray-300 hover:text-primary transition-all duration-200 text-sm flex items-center group"
+                      className="text-gray-300 hover:text-orange-600 transition-all duration-200 text-sm flex items-center group"
                     >
                       <ArrowRight size={16} className="mr-2 group-hover:translate-x-1 transition-transform" />
                       {link.label}
@@ -126,27 +126,27 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-4 text-white relative inline-block">
                 Contactez-nous
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-primary"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-orange-600"></span>
               </h3>
               <ul className="space-y-4 mt-6">
                 <li className="flex items-start text-gray-300 text-sm group">
-                  <MapPin size={20} className="mr-3 mt-0.5 flex-shrink-0 text-primary group-hover:scale-110 transition-transform" />
+                  <MapPin size={20} className="mr-3 mt-0.5 flex-shrink-0 text-orange-600 group-hover:scale-110 transition-transform" />
                   <span>Cotonou, Bénin</span>
                 </li>
                 <li className="flex items-start text-gray-300 text-sm group">
-                  <Phone size={20} className="mr-3 mt-0.5 flex-shrink-0 text-primary group-hover:scale-110 transition-transform" />
-                  <a href="tel:+22997000000" className="hover:text-primary transition">
+                  <Phone size={20} className="mr-3 mt-0.5 flex-shrink-0 text-orange-600 group-hover:scale-110 transition-transform" />
+                  <a href="tel:+22997000000" className="hover:text-orange-600 transition">
                     +229 97 00 00 00
                   </a>
                 </li>
                 <li className="flex items-start text-gray-300 text-sm group">
-                  <Mail size={20} className="mr-3 mt-0.5 flex-shrink-0 text-primary group-hover:scale-110 transition-transform" />
-                  <a href="mailto:info@wycliffebenin.org" className="hover:text-primary transition break-all">
+                  <Mail size={20} className="mr-3 mt-0.5 flex-shrink-0 text-orange-600 group-hover:scale-110 transition-transform" />
+                  <a href="mailto:info@wycliffebenin.org" className="hover:text-orange-600 transition break-all">
                     info@wycliffebenin.org
                   </a>
                 </li>
                 <li className="flex items-start text-gray-300 text-sm group">
-                  <Clock size={20} className="mr-3 mt-0.5 flex-shrink-0 text-primary group-hover:scale-110 transition-transform" />
+                  <Clock size={20} className="mr-3 mt-0.5 flex-shrink-0 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p>Lun - Ven: 8h00 - 16h30</p>
                     <p className="text-xs text-gray-400 mt-1">Sam - Dim: Fermé</p>
@@ -159,17 +159,17 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-bold mb-4 text-white relative inline-block">
                 Articles Récents
-                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-primary"></span>
+                <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-orange-600"></span>
               </h3>
               <ul className="space-y-4 mt-6">
                 {recentPosts.map((post, index) => (
                   <li key={index}>
                     <Link to="/blog" className="group block">
-                      <p className="text-sm font-medium text-gray-300 group-hover:text-primary transition-colors line-clamp-2">
+                      <p className="text-sm font-medium text-gray-300 group-hover:text-orange-600 transition-colors line-clamp-2">
                         {post.title}
                       </p>
                       <div className="flex items-center gap-2 mt-2">
-                        <Clock size={12} className="text-primary" />
+                        <Clock size={12} className="text-orange-600" />
                         <p className="text-xs text-gray-400">{post.date}</p>
                       </div>
                     </Link>
@@ -189,15 +189,15 @@ const Footer = () => {
               © {new Date().getFullYear()} Wycliffe BENIN. Tous droits réservés.
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <Link to="/politique-confidentialite" className="text-sm text-gray-300 hover:text-primary transition">
+              <Link to="/politique-confidentialite" className="text-sm text-gray-300 hover:text-orange-600 transition">
                 Politique de confidentialité
               </Link>
               <span className="text-gray-600">•</span>
-              <Link to="/conditions-utilisation" className="text-sm text-gray-300 hover:text-primary transition">
+              <Link to="/conditions-utilisation" className="text-sm text-gray-300 hover:text-orange-600 transition">
                 Conditions d'utilisation
               </Link>
               <span className="text-gray-600">•</span>
-              <Link to="/mentions-legales" className="text-sm text-gray-300 hover:text-primary transition">
+              <Link to="/mentions-legales" className="text-sm text-gray-300 hover:text-orange-600 transition">
                 Mentions légales
               </Link>
             </div>

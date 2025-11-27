@@ -105,10 +105,10 @@ const TemoignageAlphabetisation = () => {
   ];
 
   const statistiques = [
-    { valeur: 1250, label: "Apprenants formés", icon: <Users className="text-primary" size={32} /> },
-    { valeur: 87, label: "Taux de réussite", suffix: "%", icon: <TrendingUp className="text-secondary" size={32} /> },
-    { valeur: 28, label: "Villages touchés", icon: <Heart className="text-primary" size={32} /> },
-    { valeur: 15, label: "Langues locales", icon: <BookOpen className="text-secondary" size={32} /> }
+    { valeur: 1250, label: "Apprenants formés", icon: <Users className="text-orange-600" size={32} /> },
+    { valeur: 87, label: "Taux de réussite", suffix: "%", icon: <TrendingUp className="text-blue-900" size={32} /> },
+    { valeur: 28, label: "Villages touchés", icon: <Heart className="text-orange-600" size={32} /> },
+    { valeur: 15, label: "Langues locales", icon: <BookOpen className="text-blue-900" size={32} /> }
   ];
 
   return (
@@ -126,8 +126,8 @@ const TemoignageAlphabetisation = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <Quote className="mx-auto mb-6 text-primary" size={48} />
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
+            <Quote className="mx-auto mb-6 text-orange-600" size={48} />
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
               Histoires de Transformation
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -140,7 +140,7 @@ const TemoignageAlphabetisation = () => {
         {/* Statistiques */}
         <section className="mb-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-card p-12">
           <ScrollAnimation animation="slideUp">
-            <h3 className="text-2xl font-bold text-secondary mb-8 text-center">
+            <h3 className="text-2xl font-bold text-blue-900 mb-8 text-center">
               Notre Impact en Chiffres
             </h3>
           </ScrollAnimation>
@@ -151,7 +151,7 @@ const TemoignageAlphabetisation = () => {
                   <div className="flex justify-center mb-3">
                     {stat.icon}
                   </div>
-                  <div className="text-4xl font-bold text-secondary mb-2">
+                  <div className="text-4xl font-bold text-blue-900 mb-2">
                     {stat.valeur}{stat.suffix || ''}
                   </div>
                   <div className="text-gray-700 font-medium">{stat.label}</div>
@@ -180,7 +180,7 @@ const TemoignageAlphabetisation = () => {
                         alt={temoignage.nom}
                         className="rounded-card shadow-elevated h-96 w-full object-cover"
                       />
-                      <div className="absolute top-4 right-4 bg-primary text-white px-4 py-2 rounded-full font-bold">
+                      <div className="absolute top-4 right-4 bg-white text-orange-600 border-2 border-orange-600 px-4 py-2 rounded-full font-bold">
                         {temoignage.annee}
                       </div>
                     </div>
@@ -190,19 +190,19 @@ const TemoignageAlphabetisation = () => {
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
                     <div className="flex items-center gap-2 mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="text-primary fill-primary" size={20} />
+                        <Star key={i} className="text-orange-600 fill-primary" size={20} />
                       ))}
                     </div>
                     
-                    <h3 className="text-3xl font-bold text-secondary mb-2">
+                    <h3 className="text-3xl font-bold text-blue-900 mb-2">
                       {temoignage.nom}
                     </h3>
                     
                     <div className="flex flex-wrap gap-3 mb-4">
-                      <span className="bg-primary-50 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-primary-50 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
                         {temoignage.age} ans
                       </span>
-                      <span className="bg-secondary-50 text-secondary px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-secondary-50 text-blue-900 px-3 py-1 rounded-full text-sm font-medium">
                         Langue: {temoignage.langue}
                       </span>
                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
@@ -210,8 +210,8 @@ const TemoignageAlphabetisation = () => {
                       </span>
                     </div>
 
-                    <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-card mb-6">
-                      <Quote className="text-primary mb-3" size={24} />
+                    <div className="bg-primary-50 border-l-4 border-orange-600 p-6 rounded-r-card mb-6">
+                      <Quote className="text-orange-600 mb-3" size={24} />
                       <p className="text-gray-800 italic text-lg leading-relaxed">
                         "{temoignage.citation}"
                       </p>
@@ -222,14 +222,14 @@ const TemoignageAlphabetisation = () => {
                     </p>
 
                     <div className="bg-white rounded-card p-6 shadow-card">
-                      <h4 className="font-bold text-secondary mb-4 flex items-center gap-2">
-                        <TrendingUp className="text-primary" size={20} />
+                      <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <TrendingUp className="text-orange-600" size={20} />
                         Impact Concret
                       </h4>
                       <ul className="space-y-2">
                         {temoignage.impact.map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-gray-700">
-                            <span className="text-primary mt-1">✓</span>
+                            <span className="text-orange-600 mt-1">✓</span>
                             <span>{item}</span>
                           </li>
                         ))}
@@ -244,14 +244,14 @@ const TemoignageAlphabetisation = () => {
 
         {/* Vidéo témoignage (placeholder) */}
         <ScrollAnimation animation="slideUp">
-          <section className="mb-20 bg-gradient-to-r from-secondary to-secondary-600 rounded-card p-12 text-center text-white">
+          <section className="mb-20 bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card p-12 text-center text-white">
             <h2 className="text-3xl font-bold mb-6">Regardez Leurs Histoires</h2>
             <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
               Découvrez en vidéo comment l'alphabétisation transforme des vies
             </p>
             <div className="bg-black/20 rounded-card h-96 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition">
+                <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:scale-110 transition">
                   <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
@@ -265,8 +265,8 @@ const TemoignageAlphabetisation = () => {
         {/* Call to Action */}
         <ScrollAnimation animation="scale">
           <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-card p-12 text-center">
-            <Heart className="mx-auto mb-6 text-primary" size={60} />
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
+            <Heart className="mx-auto mb-6 text-orange-600" size={60} />
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
               Vous Aussi, Transformez des Vies
             </h2>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -276,14 +276,14 @@ const TemoignageAlphabetisation = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/donnez"
-                className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-primary-600 transition shadow-lg hover:scale-105"
+                className="inline-flex items-center justify-center bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg hover:scale-105"
               >
                 Parrainer un Apprenant
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link
                 to="/alphabetisation"
-                className="inline-flex items-center justify-center bg-secondary text-white px-8 py-3 rounded-button font-semibold hover:bg-secondary-600 transition"
+                className="inline-flex items-center justify-center bg-white text-blue-900 border-2 border-blue-900 px-8 py-3 rounded-button font-semibold hover:bg-blue-950 transition"
               >
                 En Savoir Plus
               </Link>

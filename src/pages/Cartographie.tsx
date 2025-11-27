@@ -67,25 +67,25 @@ const Cartographie = () => {
       titre: "Langues Identifiées",
       valeur: "60+",
       description: "Langues locales au Bénin",
-      icon: <BookOpen className="text-primary" size={32} />
+      icon: <BookOpen className="text-orange-600" size={32} />
     },
     {
       titre: "Locuteurs Totaux",
       valeur: "6M+",
       description: "Personnes parlant ces langues",
-      icon: <Users className="text-secondary" size={32} />
+      icon: <Users className="text-blue-900" size={32} />
     },
     {
       titre: "Projets Actifs",
       valeur: "15",
       description: "Traductions en cours",
-      icon: <TrendingUp className="text-primary" size={32} />
+      icon: <TrendingUp className="text-orange-600" size={32} />
     },
     {
       titre: "Traductions Complètes",
       valeur: "8",
       description: "Nouveaux Testaments dédiés",
-      icon: <MapPin className="text-secondary" size={32} />
+      icon: <MapPin className="text-blue-900" size={32} />
     }
   ];
 
@@ -120,14 +120,14 @@ const Cartographie = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {statistiquesGlobales.map((stat, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 0.1}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-primary text-center">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-orange-600 text-center">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
                   </div>
-                  <div className="text-4xl font-bold text-secondary mb-2">
+                  <div className="text-4xl font-bold text-blue-900 mb-2">
                     {stat.valeur}
                   </div>
-                  <h3 className="text-lg font-bold text-secondary mb-1">
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">
                     {stat.titre}
                   </h3>
                   <p className="text-sm text-gray-600">
@@ -142,8 +142,8 @@ const Cartographie = () => {
         {/* Introduction */}
         <ScrollAnimation animation="slideUp">
           <section className="mb-20">
-            <div className="bg-primary-50 border-l-4 border-primary p-8 rounded-r-card">
-              <h2 className="text-2xl font-bold text-secondary mb-4">
+            <div className="bg-primary-50 border-l-4 border-orange-600 p-8 rounded-r-card">
+              <h2 className="text-2xl font-bold text-blue-900 mb-4">
                 La Diversité Linguistique du Bénin
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -163,7 +163,7 @@ const Cartographie = () => {
         {/* Cartographie par Département */}
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Langues par Département
             </h2>
           </ScrollAnimation>
@@ -173,7 +173,7 @@ const Cartographie = () => {
               <ScrollAnimation key={deptIndex} animation="slideUp" delay={deptIndex * 0.1}>
                 <div className="bg-white rounded-card shadow-card overflow-hidden hover:shadow-card-hover transition">
                 <div className={`p-6 ${
-                  dept.color === 'primary' ? 'bg-primary' : 'bg-secondary'
+                  dept.color === 'primary' ? 'bg-orange-600' : 'bg-blue-900'
                 }`}>
                   <div className="flex items-center gap-3">
                     <MapPin className="text-white" size={28} />
@@ -192,7 +192,7 @@ const Cartographie = () => {
                       >
                         <div className="flex justify-between items-start mb-3">
                           <div>
-                            <h4 className="text-xl font-bold text-secondary mb-1">
+                            <h4 className="text-xl font-bold text-blue-900 mb-1">
                               {langue.nom}
                             </h4>
                             <p className="text-sm text-gray-600 flex items-center gap-1">
@@ -209,7 +209,7 @@ const Cartographie = () => {
                         <div className="mt-4">
                           <div className="flex justify-between items-center mb-2">
                             <span className="text-sm font-medium text-gray-700">Progression</span>
-                            <span className="text-sm font-bold text-secondary">{langue.progression}%</span>
+                            <span className="text-sm font-bold text-blue-900">{langue.progression}%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2.5">
                             <div 
@@ -236,28 +236,28 @@ const Cartographie = () => {
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
             <div className="bg-gray-50 rounded-card p-8">
-              <h3 className="text-2xl font-bold text-secondary mb-6 text-center">
+              <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
                 Légende des Statuts
               </h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 bg-green-500 rounded-full"></div>
                   <div>
-                    <p className="font-bold text-secondary">Complété</p>
+                    <p className="font-bold text-blue-900">Complété</p>
                     <p className="text-sm text-gray-600">Nouveau Testament traduit et dédié</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
                   <div>
-                    <p className="font-bold text-secondary">En cours</p>
+                    <p className="font-bold text-blue-900">En cours</p>
                     <p className="text-sm text-gray-600">Traduction activement en cours</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-4 h-4 bg-gray-400 rounded-full"></div>
                   <div>
-                    <p className="font-bold text-secondary">Planifié</p>
+                    <p className="font-bold text-blue-900">Planifié</p>
                     <p className="text-sm text-gray-600">Projet en phase de planification</p>
                   </div>
                 </div>
@@ -278,7 +278,7 @@ const Cartographie = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
               <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Chaque Langue Compte
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -298,7 +298,7 @@ const Cartographie = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="slideUp">
-          <section className="bg-gradient-to-r from-primary to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
+          <section className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card p-12 text-center text-white shadow-elevated">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Aidez-nous à Atteindre Toutes les Langues
           </h2>
@@ -306,7 +306,7 @@ const Cartographie = () => {
             Il reste encore beaucoup de langues sans accès aux Écritures. Votre soutien 
               peut faire la différence pour ces communautés.
             </p>
-            <button className="bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg hover:scale-105">
+            <button className="bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg hover:scale-105">
               Soutenir un Projet
             </button>
           </section>

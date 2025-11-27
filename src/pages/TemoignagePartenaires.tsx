@@ -9,7 +9,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "Église Évangélique Grace",
       type: "Église Locale",
-      logo: <Church className="text-primary" size={40} />,
+      logo: <Church className="text-orange-600" size={40} />,
       responsable: "Pasteur Emmanuel KOFFI",
       fonction: "Pasteur Principal",
       photo: "/images/images1.jpeg",
@@ -29,7 +29,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "SIL International",
       type: "Organisation Internationale",
-      logo: <Globe className="text-secondary" size={40} />,
+      logo: <Globe className="text-blue-900" size={40} />,
       responsable: "Dr. Sarah JOHNSON",
       fonction: "Directrice Régionale Afrique de l'Ouest",
       photo: "/images/images2.jpeg",
@@ -49,7 +49,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "Ministère de l'Éducation du Bénin",
       type: "Gouvernement",
-      logo: <Building className="text-primary" size={40} />,
+      logo: <Building className="text-orange-600" size={40} />,
       responsable: "M. Didier ASSOGBA",
       fonction: "Directeur de l'Alphabétisation",
       photo: "/images/images3.jpeg",
@@ -69,7 +69,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "Fondation Internationale pour le Développement",
       type: "ONG Internationale",
-      logo: <Heart className="text-secondary" size={40} />,
+      logo: <Heart className="text-blue-900" size={40} />,
       responsable: "Mme. Claire DUBOIS",
       fonction: "Responsable Programmes Afrique",
       photo: "/images/images1.jpeg",
@@ -89,7 +89,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "Union des Églises Baptistes",
       type: "Réseau d'Églises",
-      logo: <Church className="text-primary" size={40} />,
+      logo: <Church className="text-orange-600" size={40} />,
       responsable: "Révérend Pierre DOSSOU",
       fonction: "Président de l'Union",
       photo: "/images/images2.jpeg",
@@ -109,7 +109,7 @@ const TemoignagePartenaires = () => {
     {
       organisation: "Entreprise TechBénin",
       type: "Secteur Privé",
-      logo: <Building className="text-secondary" size={40} />,
+      logo: <Building className="text-blue-900" size={40} />,
       responsable: "M. Kossi AGBODJAN",
       fonction: "Directeur Général",
       photo: "/images/images3.jpeg",
@@ -143,8 +143,8 @@ const TemoignagePartenaires = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <Handshake className="mx-auto mb-6 text-primary" size={48} />
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
+            <Handshake className="mx-auto mb-6 text-orange-600" size={48} />
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
               Nos Partenaires Témoignent
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -159,29 +159,29 @@ const TemoignagePartenaires = () => {
           <div className="grid md:grid-cols-4 gap-6">
             <ScrollAnimation animation="scale" delay={0.1}>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Users className="mx-auto mb-3 text-primary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">45+</div>
+                <Users className="mx-auto mb-3 text-orange-600" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">45+</div>
                 <div className="text-gray-700 font-medium">Partenaires Actifs</div>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="scale" delay={0.2}>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Globe className="mx-auto mb-3 text-secondary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">12</div>
+                <Globe className="mx-auto mb-3 text-blue-900" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">12</div>
                 <div className="text-gray-700 font-medium">Pays Représentés</div>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="scale" delay={0.3}>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Award className="mx-auto mb-3 text-primary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">25</div>
+                <Award className="mx-auto mb-3 text-orange-600" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">25</div>
                 <div className="text-gray-700 font-medium">Projets Soutenus</div>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animation="scale" delay={0.4}>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Heart className="mx-auto mb-3 text-secondary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">98%</div>
+                <Heart className="mx-auto mb-3 text-blue-900" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">98%</div>
                 <div className="text-gray-700 font-medium">Satisfaction</div>
               </div>
             </ScrollAnimation>
@@ -215,14 +215,14 @@ const TemoignagePartenaires = () => {
                     <div className="md:col-span-2 p-8">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-2xl font-bold text-secondary mb-2">
+                          <h3 className="text-2xl font-bold text-blue-900 mb-2">
                             {temoignage.organisation}
                           </h3>
                           <div className="flex flex-wrap gap-2 mb-3">
-                            <span className="bg-primary-50 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                            <span className="bg-primary-50 text-orange-600 px-3 py-1 rounded-full text-sm font-medium">
                               {temoignage.type}
                             </span>
-                            <span className="bg-secondary-50 text-secondary px-3 py-1 rounded-full text-sm font-medium">
+                            <span className="bg-secondary-50 text-blue-900 px-3 py-1 rounded-full text-sm font-medium">
                               {temoignage.partenariat}
                             </span>
                             <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
@@ -232,22 +232,22 @@ const TemoignagePartenaires = () => {
                         </div>
                         <div className="flex gap-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="text-primary fill-primary" size={16} />
+                            <Star key={i} className="text-orange-600 fill-primary" size={16} />
                           ))}
                         </div>
                       </div>
 
-                      <div className="bg-primary-50 border-l-4 border-primary p-4 rounded-r-card mb-4">
-                        <Quote className="text-primary mb-2" size={20} />
+                      <div className="bg-primary-50 border-l-4 border-orange-600 p-4 rounded-r-card mb-4">
+                        <Quote className="text-orange-600 mb-2" size={20} />
                         <p className="text-gray-800 italic leading-relaxed">
                           "{temoignage.citation}"
                         </p>
                         <div className="mt-3 flex items-center gap-3">
-                          <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary font-bold">
+                          <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-orange-600 font-bold">
                             {temoignage.responsable.split(' ')[0][0]}
                           </div>
                           <div>
-                            <p className="font-semibold text-secondary text-sm">
+                            <p className="font-semibold text-blue-900 text-sm">
                               {temoignage.responsable}
                             </p>
                             <p className="text-xs text-gray-600">{temoignage.fonction}</p>
@@ -261,13 +261,13 @@ const TemoignagePartenaires = () => {
 
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="bg-gray-50 rounded-card p-4">
-                          <h4 className="font-bold text-secondary mb-3 text-sm">
+                          <h4 className="font-bold text-blue-900 mb-3 text-sm">
                             Impact du Partenariat
                           </h4>
                           <ul className="space-y-2">
                             {temoignage.impact.map((item, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-gray-700 text-sm">
-                                <span className="text-primary mt-0.5">✓</span>
+                                <span className="text-orange-600 mt-0.5">✓</span>
                                 <span>{item}</span>
                               </li>
                             ))}
@@ -275,14 +275,14 @@ const TemoignagePartenaires = () => {
                         </div>
 
                         <div className="bg-gray-50 rounded-card p-4">
-                          <h4 className="font-bold text-secondary mb-3 text-sm">
+                          <h4 className="font-bold text-blue-900 mb-3 text-sm">
                             Projets Soutenus
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {temoignage.projets.map((projet, idx) => (
                               <span 
                                 key={idx}
-                                className="bg-white text-secondary px-3 py-1 rounded-full text-xs font-medium border border-secondary-200"
+                                className="bg-white text-blue-900 px-3 py-1 rounded-full text-xs font-medium border border-secondary-200"
                               >
                                 {projet}
                               </span>
@@ -290,7 +290,7 @@ const TemoignagePartenaires = () => {
                           </div>
                           <div className="mt-4 pt-4 border-t border-gray-200">
                             <p className="text-xs text-gray-600">Contribution annuelle</p>
-                            <p className="text-lg font-bold text-primary">{temoignage.montant}</p>
+                            <p className="text-lg font-bold text-orange-600">{temoignage.montant}</p>
                           </div>
                         </div>
                       </div>
@@ -305,28 +305,28 @@ const TemoignagePartenaires = () => {
         {/* Types de partenaires */}
         <ScrollAnimation animation="slideUp">
           <section className="mb-20 bg-gray-50 rounded-card p-12">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Nos Différents Types de Partenaires
             </h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Church className="mx-auto mb-4 text-primary" size={40} />
-                <h3 className="font-bold text-secondary mb-2">Églises</h3>
+                <Church className="mx-auto mb-4 text-orange-600" size={40} />
+                <h3 className="font-bold text-blue-900 mb-2">Églises</h3>
                 <p className="text-gray-700 text-sm">25 églises et réseaux</p>
               </div>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Globe className="mx-auto mb-4 text-secondary" size={40} />
-                <h3 className="font-bold text-secondary mb-2">ONG</h3>
+                <Globe className="mx-auto mb-4 text-blue-900" size={40} />
+                <h3 className="font-bold text-blue-900 mb-2">ONG</h3>
                 <p className="text-gray-700 text-sm">12 organisations</p>
               </div>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Building className="mx-auto mb-4 text-primary" size={40} />
-                <h3 className="font-bold text-secondary mb-2">Entreprises</h3>
+                <Building className="mx-auto mb-4 text-orange-600" size={40} />
+                <h3 className="font-bold text-blue-900 mb-2">Entreprises</h3>
                 <p className="text-gray-700 text-sm">5 entreprises RSE</p>
               </div>
               <div className="bg-white rounded-card p-6 text-center shadow-card">
-                <Users className="mx-auto mb-4 text-secondary" size={40} />
-                <h3 className="font-bold text-secondary mb-2">Institutions</h3>
+                <Users className="mx-auto mb-4 text-blue-900" size={40} />
+                <h3 className="font-bold text-blue-900 mb-2">Institutions</h3>
                 <p className="text-gray-700 text-sm">3 institutions publiques</p>
               </div>
             </div>
@@ -335,7 +335,7 @@ const TemoignagePartenaires = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="scale">
-          <div className="bg-gradient-to-r from-secondary to-secondary-600 rounded-card p-12 text-center text-white shadow-elevated">
+          <div className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card p-12 text-center text-white shadow-elevated">
             <Handshake className="mx-auto mb-6 text-white" size={60} />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Rejoignez Nos Partenaires
@@ -347,14 +347,14 @@ const TemoignagePartenaires = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/partenariat"
-                className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-primary-600 transition shadow-lg"
+                className="inline-flex items-center justify-center bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Devenir Partenaire
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-secondary transition"
+                className="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-blue-900 transition"
               >
                 Nous Contacter
               </Link>

@@ -41,8 +41,8 @@ const ZoomWycliffe = () => {
         
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-12">
-            <Globe className="mx-auto mb-4 text-primary" size={48} />
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <Globe className="mx-auto mb-4 text-orange-600" size={48} />
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               À la Une
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -61,16 +61,16 @@ const ZoomWycliffe = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <span className="bg-primary-50 text-primary px-3 py-1 rounded-full text-xs font-medium mb-3 inline-block">
+                  <span className="bg-primary-50 text-orange-600 px-3 py-1 rounded-full text-xs font-medium mb-3 inline-block">
                     {item.date}
                   </span>
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {item.titre}
                   </h3>
                   <p className="text-gray-700 mb-4">
                     {item.description}
                   </p>
-                  <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                  <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                     Lire plus
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                   </button>
@@ -84,23 +84,23 @@ const ZoomWycliffe = () => {
           <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-card p-12">
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
-                <Target className="mx-auto mb-3 text-primary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">15</div>
+                <Target className="mx-auto mb-3 text-orange-600" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">15</div>
                 <div className="text-gray-700">Projets Actifs</div>
               </div>
               <div>
-                <Users className="mx-auto mb-3 text-secondary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">85</div>
+                <Users className="mx-auto mb-3 text-blue-900" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">85</div>
                 <div className="text-gray-700">Membres d'Équipe</div>
               </div>
               <div>
-                <Globe className="mx-auto mb-3 text-primary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">60+</div>
+                <Globe className="mx-auto mb-3 text-orange-600" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">60+</div>
                 <div className="text-gray-700">Langues Locales</div>
               </div>
               <div>
-                <TrendingUp className="mx-auto mb-3 text-secondary" size={40} />
-                <div className="text-4xl font-bold text-secondary mb-2">50K+</div>
+                <TrendingUp className="mx-auto mb-3 text-blue-900" size={40} />
+                <div className="text-4xl font-bold text-blue-900 mb-2">50K+</div>
                 <div className="text-gray-700">Vies Touchées</div>
               </div>
             </div>

@@ -44,8 +44,8 @@ const VieCommunautes = () => {
         
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-12">
-            <Heart className="mx-auto mb-4 text-primary" size={48} />
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <Heart className="mx-auto mb-4 text-orange-600" size={48} />
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               Histoires de Transformation
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -64,21 +64,21 @@ const VieCommunautes = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <span className="bg-primary-50 text-primary px-3 py-1 rounded-full text-xs font-medium mb-3 inline-block">
+                  <span className="bg-primary-50 text-orange-600 px-3 py-1 rounded-full text-xs font-medium mb-3 inline-block">
                     {histoire.communaute}
                   </span>
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {histoire.titre}
                   </h3>
                   <p className="text-gray-700 mb-4">
                     {histoire.description}
                   </p>
                   <div className="bg-secondary-50 rounded-button p-3 mb-4">
-                    <p className="text-secondary font-semibold text-sm">
+                    <p className="text-blue-900 font-semibold text-sm">
                       Impact: {histoire.impact}
                     </p>
                   </div>
-                  <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                  <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                     Lire l'histoire
                     <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                   </button>

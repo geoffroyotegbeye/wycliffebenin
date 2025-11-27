@@ -81,7 +81,7 @@ const TemoignageTraduction = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-secondary mb-6">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">
               Quand Dieu Parle Votre Langue
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -93,7 +93,7 @@ const TemoignageTraduction = () => {
 
         {/* Verset Clé */}
         <ScrollAnimation animation="scale">
-          <div className="bg-gradient-to-r from-primary to-primary-600 rounded-card shadow-elevated p-8 mb-16 text-center">
+          <div className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card shadow-elevated p-8 mb-16 text-center">
             <p className="text-2xl text-white font-medium italic mb-4">
               "Toute Écriture est inspirée de Dieu, et utile pour enseigner, 
               pour convaincre, pour corriger, pour instruire dans la justice."
@@ -107,9 +107,9 @@ const TemoignageTraduction = () => {
           {temoignages.map((temoignage, index) => (
             <ScrollAnimation key={index} animation="slideUp" delay={index * 0.1}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
-                <div className="bg-gradient-to-r from-secondary to-secondary-600 p-6">
+                <div className="bg-gradient-to-r from-blue-900 to-secondary-600 p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-secondary font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-blue-900 font-bold text-xl flex-shrink-0">
                       {temoignage.photo}
                     </div>
                     <div className="flex-grow text-white">
@@ -126,7 +126,7 @@ const TemoignageTraduction = () => {
 
                 <div className="p-8">
                   <div className="mb-6">
-                    <Quote className="text-primary mb-4" size={40} />
+                    <Quote className="text-orange-600 mb-4" size={40} />
                     <div className="space-y-4">
                       {temoignage.contenu.map((paragraphe, idx) => (
                         <p key={idx} className="text-gray-700 leading-relaxed text-lg">
@@ -137,14 +137,14 @@ const TemoignageTraduction = () => {
                   </div>
 
                   <div className="bg-primary-50 rounded-card p-6">
-                    <h4 className="font-bold text-secondary mb-4 flex items-center gap-2">
-                      <BookOpen className="text-primary" size={20} />
+                    <h4 className="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                      <BookOpen className="text-orange-600" size={20} />
                       Impact du Projet
                     </h4>
                     <div className="grid md:grid-cols-2 gap-3">
                       {temoignage.impact.map((item, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
+                          <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                           <span className="text-gray-700">{item}</span>
                         </div>
                       ))}
@@ -158,7 +158,7 @@ const TemoignageTraduction = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="scale">
-          <div className="mt-16 bg-gradient-to-r from-primary to-primary-600 rounded-card shadow-elevated p-12 text-center">
+          <div className="mt-16 bg-gradient-to-r from-orange-600 to-primary-600 rounded-card shadow-elevated p-12 text-center">
             <BookOpen className="mx-auto mb-6 text-white" size={64} />
             <h2 className="text-4xl font-bold text-white mb-6">
               Soutenez la Traduction Biblique
@@ -169,7 +169,7 @@ const TemoignageTraduction = () => {
             </p>
             <a
               href="/donnez"
-              className="inline-block bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
+              className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Faire un Don
             </a>

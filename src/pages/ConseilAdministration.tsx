@@ -1,4 +1,5 @@
 import { Mail, Linkedin } from 'lucide-react';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
 
@@ -50,20 +51,13 @@ const ConseilAdministration = () => {
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <div className="relative h-[300px] overflow-hidden bg-secondary">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary to-secondary-600"></div>
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
-              Conseil d'Administration
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl">
-              Des leaders dévoués qui guident notre organisation vers l'accomplissement de sa mission
-            </p>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        title="Conseil d'Administration"
+        subtitle="Des leaders dévoués qui guident notre organisation vers l'accomplissement de sa mission"
+        image="/images/images1.jpeg"
+        height="medium"
+        overlay="dark"
+      />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -71,8 +65,8 @@ const ConseilAdministration = () => {
         {/* Introduction */}
         <ScrollAnimation animation="slideUp">
           <section className="mb-16">
-            <div className="bg-primary-50 border-l-4 border-primary p-6 rounded-r-card">
-              <h2 className="text-2xl font-bold text-secondary mb-4">
+            <div className="bg-primary-50 border-l-4 border-orange-600 p-6 rounded-r-card">
+              <h2 className="text-2xl font-bold text-blue-900 mb-4">
                 Rôle du Conseil d'Administration
               </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -92,7 +86,7 @@ const ConseilAdministration = () => {
         {/* Membres du Conseil */}
         <section className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Membres du Conseil
             </h2>
           </ScrollAnimation>
@@ -110,10 +104,10 @@ const ConseilAdministration = () => {
                 </div>
                 <div className="p-6">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-secondary mb-1">
+                    <h3 className="text-xl font-bold text-blue-900 mb-1">
                       {membre.nom}
                     </h3>
-                    <span className="inline-block bg-primary-50 text-primary text-sm px-3 py-1 rounded-full font-medium">
+                    <span className="inline-block bg-primary-50 text-orange-600 text-sm px-3 py-1 rounded-full font-medium">
                       {membre.poste}
                     </span>
                   </div>
@@ -123,14 +117,14 @@ const ConseilAdministration = () => {
                   <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                     <a 
                       href={`mailto:${membre.email}`}
-                      className="text-primary hover:text-primary-600 transition"
+                      className="text-orange-600 hover:text-orange-700 transition"
                       title="Envoyer un email"
                     >
                       <Mail size={20} />
                     </a>
                     <a 
                       href="#"
-                      className="text-primary hover:text-primary-600 transition"
+                      className="text-orange-600 hover:text-orange-700 transition"
                       title="Profil LinkedIn"
                     >
                       <Linkedin size={20} />
@@ -147,26 +141,26 @@ const ConseilAdministration = () => {
         <section className="mb-16 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation animation="slideUp">
-              <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+              <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
                 Responsabilités du Conseil
               </h2>
             </ScrollAnimation>
             
             <div className="grid md:grid-cols-2 gap-8">
               <ScrollAnimation animation="slideRight" delay={0.1}>
-                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-primary">
-                <h3 className="text-xl font-bold text-secondary mb-4">Gouvernance Stratégique</h3>
+                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-orange-600">
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Gouvernance Stratégique</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Définir la vision et les orientations stratégiques</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Approuver les plans d'action annuels</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Évaluer les performances de l'organisation</span>
                   </li>
                 </ul>
@@ -174,19 +168,19 @@ const ConseilAdministration = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.2}>
-                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-secondary">
-                <h3 className="text-xl font-bold text-secondary mb-4">Supervision Financière</h3>
+                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-blue-900">
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Supervision Financière</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Approuver les budgets annuels</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Superviser la gestion financière</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-secondary mt-1">✓</span>
+                    <span className="text-blue-900 mt-1">✓</span>
                     <span>Assurer la transparence et la redevabilité</span>
                   </li>
                 </ul>
@@ -195,7 +189,7 @@ const ConseilAdministration = () => {
 
               <ScrollAnimation animation="slideRight" delay={0.3}>
                 <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-gray-800">
-                <h3 className="text-xl font-bold text-secondary mb-4">Développement Orga
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Développement Orga
 nisationnel</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
@@ -215,19 +209,19 @@ nisationnel</h3>
               </ScrollAnimation>
 
               <ScrollAnimation animation="slideLeft" delay={0.4}>
-                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-primary">
-                <h3 className="text-xl font-bold text-secondary mb-4">Relations Externes</h3>
+                <div className="bg-white rounded-card p-6 shadow-card border-l-4 border-orange-600">
+                <h3 className="text-xl font-bold text-blue-900 mb-4">Relations Externes</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Représenter l'organisation auprès des partenaires</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Développer des partenariats stratégiques</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">✓</span>
+                    <span className="text-orange-600 mt-1">✓</span>
                     <span>Promouvoir la mission de l'organisation</span>
                   </li>
                 </ul>

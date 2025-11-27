@@ -155,18 +155,18 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
                     key={index}
                     to={result.path}
                     onClick={handleClose}
-                    className="block px-4 py-3 hover:bg-gray-50 transition border-l-4 border-transparent hover:border-primary"
+                    className="block px-4 py-3 hover:bg-gray-50 transition border-l-4 border-transparent hover:border-orange-600"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex-1">
-                        <h3 className="font-semibold text-secondary mb-1">
+                        <h3 className="font-semibold text-blue-900 mb-1">
                           {result.title}
                         </h3>
                         <p className="text-sm text-gray-600">
                           {result.description}
                         </p>
                       </div>
-                      <span className="text-xs bg-primary-50 text-primary px-2 py-1 rounded-full whitespace-nowrap">
+                      <span className="text-xs bg-primary-50 text-orange-600 px-2 py-1 rounded-full whitespace-nowrap">
                         {result.category}
                       </span>
                     </div>

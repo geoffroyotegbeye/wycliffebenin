@@ -23,10 +23,10 @@ const Vision = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <div>
-                <div className="inline-block bg-primary-50 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-primary-50 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   Notre Vision
                 </div>
-                <h2 className="text-4xl font-bold text-secondary mb-6">
+                <h2 className="text-4xl font-bold text-blue-900 mb-6">
                   Transformer des vies par la Parole de Dieu
                 </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -40,8 +40,8 @@ const Vision = () => {
                 mais aussi leur communauté entière.
               </p>
               <Link 
-                to="/activites" 
-                className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition group"
+                to="/pourquoi-traduire" 
+                className="inline-flex items-center bg-white text-orange-600 border-2 border-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition group"
               >
                 Découvrir nos activités
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -55,7 +55,7 @@ const Vision = () => {
                   alt="Vision de Wycliffe"
                   className="rounded-card shadow-elevated h-96"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-card shadow-elevated max-w-xs">
+                <div className="absolute -bottom-6 -left-6 bg-orange-600 text-white p-6 rounded-card shadow-elevated max-w-xs">
                   <p className="font-bold text-2xl mb-1">60+</p>
                   <p className="text-sm">Langues locales au Bénin</p>
                 </div>
@@ -69,7 +69,7 @@ const Vision = () => {
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation animation="slideUp">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-secondary mb-4">Nos Valeurs Fondamentales</h2>
+                <h2 className="text-4xl font-bold text-blue-900 mb-4">Nos Valeurs Fondamentales</h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                   Ces valeurs guident notre travail et nos relations avec les communautés que nous servons
                 </p>
@@ -79,11 +79,11 @@ const Vision = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Value 1 */}
               <ScrollAnimation animation="scale" delay={0.1}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-primary">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-orange-600">
                 <div className="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                  <Heart className="text-primary" size={28} />
+                  <Heart className="text-orange-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Amour et Compassion</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Amour et Compassion</h3>
                 <p className="text-gray-600">
                   Nous servons avec amour, compassion et respect pour chaque personne et chaque culture.
                 </p>
@@ -92,11 +92,11 @@ const Vision = () => {
 
               {/* Value 2 */}
               <ScrollAnimation animation="scale" delay={0.2}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-secondary">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-blue-900">
                 <div className="bg-secondary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                  <Target className="text-secondary" size={28} />
+                  <Target className="text-blue-900" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Excellence</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Excellence</h3>
                 <p className="text-gray-600">
                   Nous nous engageons à l'excellence dans tout ce que nous faisons, de la traduction à la formation.
                 </p>
@@ -109,7 +109,7 @@ const Vision = () => {
                 <div className="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   <Users className="text-gray-800" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Collaboration</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Collaboration</h3>
                 <p className="text-gray-600">
                   Nous travaillons en partenariat avec les églises locales et les communautés.
                 </p>
@@ -118,11 +118,11 @@ const Vision = () => {
 
               {/* Value 4 */}
               <ScrollAnimation animation="scale" delay={0.4}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-primary">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-orange-600">
                 <div className="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                  <BookOpen className="text-primary" size={28} />
+                  <BookOpen className="text-orange-600" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Fidélité à la Parole</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Fidélité à la Parole</h3>
                 <p className="text-gray-600">
                   Nous sommes fidèles à l'autorité et à l'intégrité des Écritures dans toutes nos traductions.
                 </p>
@@ -131,11 +131,11 @@ const Vision = () => {
 
               {/* Value 5 */}
               <ScrollAnimation animation="scale" delay={0.5}>
-                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-secondary">
+                <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition border-t-4 border-blue-900">
                 <div className="bg-secondary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
-                  <Globe className="text-secondary" size={28} />
+                  <Globe className="text-blue-900" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Impact Durable</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Impact Durable</h3>
                 <p className="text-gray-600">
                   Nous visons un impact à long terme qui transforme les communautés de manière durable.
                 </p>
@@ -148,7 +148,7 @@ const Vision = () => {
                 <div className="bg-gray-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   <Lightbulb className="text-gray-800" size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-secondary mb-3">Innovation</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">Innovation</h3>
                 <p className="text-gray-600">
                   Nous adoptons des méthodes innovantes pour rendre la traduction plus efficace et accessible.
                 </p>
@@ -168,7 +168,7 @@ const Vision = () => {
                   alt="Notre Mission"
                   className="rounded-card shadow-elevated h-96"
                 />
-                <div className="absolute -top-6 -right-6 bg-secondary text-white p-6 rounded-card shadow-elevated">
+                <div className="absolute -top-6 -right-6 bg-blue-900 text-white p-6 rounded-card shadow-elevated">
                   <p className="font-bold text-3xl mb-1">15+</p>
                   <p className="text-sm">Projets actifs</p>
                 </div>
@@ -176,10 +176,10 @@ const Vision = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft" className="order-1 md:order-2">
               <div>
-                <div className="inline-block bg-secondary-50 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-secondary-50 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   Notre Mission
                 </div>
-                <h2 className="text-4xl font-bold text-secondary mb-6">
+                <h2 className="text-4xl font-bold text-blue-900 mb-6">
                   Faciliter l'accès aux Écritures
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
@@ -189,43 +189,43 @@ const Vision = () => {
                 </p>
                 <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary text-white rounded-full p-1 mt-1">
+                  <div className="bg-orange-600 text-white rounded-full p-1 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    <strong className="text-secondary">Traduire</strong> la Bible dans les langues locales du Bénin
+                    <strong className="text-blue-900">Traduire</strong> la Bible dans les langues locales du Bénin
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary text-white rounded-full p-1 mt-1">
+                  <div className="bg-orange-600 text-white rounded-full p-1 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    <strong className="text-secondary">Former</strong> des traducteurs et alphabétiseurs locaux
+                    <strong className="text-blue-900">Former</strong> des traducteurs et alphabétiseurs locaux
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary text-white rounded-full p-1 mt-1">
+                  <div className="bg-orange-600 text-white rounded-full p-1 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    <strong className="text-secondary">Développer</strong> des programmes d'alphabétisation holistique
+                    <strong className="text-blue-900">Développer</strong> des programmes d'alphabétisation holistique
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="bg-primary text-white rounded-full p-1 mt-1">
+                  <div className="bg-orange-600 text-white rounded-full p-1 mt-1">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    <strong className="text-secondary">Transformer</strong> les communautés par la Parole de Dieu
+                    <strong className="text-blue-900">Transformer</strong> les communautés par la Parole de Dieu
                   </p>
                 </div>
               </div>
@@ -238,24 +238,24 @@ const Vision = () => {
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
             <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-card p-12">
-              <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+              <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
                 Notre Impact en Chiffres
               </h2>
               <div className="grid md:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-primary mb-2">60+</div>
+                  <div className="text-5xl font-bold text-orange-600 mb-2">60+</div>
                   <p className="text-gray-700 font-medium">Langues locales</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-secondary mb-2">15</div>
+                  <div className="text-5xl font-bold text-blue-900 mb-2">15</div>
                   <p className="text-gray-700 font-medium">Projets actifs</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-primary mb-2">50K+</div>
+                  <div className="text-5xl font-bold text-orange-600 mb-2">50K+</div>
                   <p className="text-gray-700 font-medium">Personnes touchées</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-secondary mb-2">40+</div>
+                  <div className="text-5xl font-bold text-blue-900 mb-2">40+</div>
                   <p className="text-gray-700 font-medium">Années d'expérience</p>
                 </div>
               </div>
@@ -265,26 +265,26 @@ const Vision = () => {
 
         {/* Call to Action */}
         <ScrollAnimation animation="slideUp">
-          <section className="bg-gradient-to-r from-secondary to-secondary-600 rounded-card overflow-hidden shadow-elevated">
+          <section className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card overflow-hidden shadow-elevated">
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="p-12 flex flex-col justify-center text-white">
+              <div className="p-12 flex flex-col justify-center  text-white">
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Rejoignez notre vision
                 </h2>
-                <p className="text-lg mb-8 text-white/90">
+                <p className="text-lg mb-8  text-white">
                   Ensemble, nous pouvons faire en sorte que chaque personne au Bénin ait accès 
                   à la Parole de Dieu dans sa langue maternelle. Votre soutien fait la différence.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
                     to="/donnez" 
-                    className="bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary-600 transition shadow-lg hover:scale-105"
+                    className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg hover:scale-105"
                   >
                     Faire un don
                   </Link>
                   <Link 
-                    to="/rejoignez-nous" 
-                    className="bg-white text-secondary px-6 py-3 rounded-button font-semibold hover:bg-gray-100 transition hover:scale-105"
+                    to="/intercedez" 
+                    className="bg-white text-blue-900 px-6 py-3 rounded-button font-semibold hover:bg-gray-100 transition hover:scale-105"
                   >
                     S'engager
                   </Link>

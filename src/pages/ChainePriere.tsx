@@ -44,8 +44,8 @@ const ChainePriere = () => {
         
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-12">
-            <Heart className="mx-auto mb-4 text-primary" size={48} />
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <Heart className="mx-auto mb-4 text-orange-600" size={48} />
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               Priez Avec Nous
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -59,12 +59,12 @@ const ChainePriere = () => {
             <ScrollAnimation key={sujet.id} animation="slideUp" delay={index * 0.1}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-secondary">
+                  <h3 className="text-xl font-bold text-blue-900">
                     {sujet.titre}
                   </h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                     sujet.urgence === 'Urgent' ? 'bg-red-100 text-red-700' :
-                    sujet.urgence === 'Important' ? 'bg-primary-50 text-primary' :
+                    sujet.urgence === 'Important' ? 'bg-primary-50 text-orange-600' :
                     'bg-gray-100 text-gray-700'
                   }`}>
                     {sujet.urgence}
@@ -73,7 +73,7 @@ const ChainePriere = () => {
                 <p className="text-gray-700 mb-4">
                   {sujet.description}
                 </p>
-                <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                   Je prie pour cela
                   <Heart className="ml-2 group-hover:scale-110 transition-transform" size={16} />
                 </button>
@@ -83,7 +83,7 @@ const ChainePriere = () => {
         </div>
 
         <ScrollAnimation animation="scale">
-          <div className="bg-gradient-to-r from-secondary to-secondary-600 rounded-card p-12 text-center text-white">
+          <div className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card p-12 text-center text-white">
             <Users className="mx-auto mb-6 text-white" size={60} />
             <h2 className="text-3xl font-bold mb-4">
               Rejoignez Notre Chaîne de Prière
@@ -97,7 +97,7 @@ const ChainePriere = () => {
                 placeholder="Votre email"
                 className="flex-1 px-4 py-3 rounded-button text-gray-900"
               />
-              <button className="bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary-600 transition flex items-center justify-center gap-2">
+              <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-3 rounded-button font-semibold hover:bg-orange-700 transition flex items-center justify-center gap-2">
                 <Send size={20} />
                 S'inscrire
               </button>

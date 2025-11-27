@@ -13,22 +13,22 @@ const ProjetJesusFilm = () => {
     {
       valeur: "5",
       label: "Langues disponibles",
-      icon: <Globe className="text-primary" size={32} />
+      icon: <Globe className="text-orange-600" size={32} />
     },
     {
       valeur: "100,000+",
       label: "Personnes touchées",
-      icon: <Users className="text-secondary" size={32} />
+      icon: <Users className="text-blue-900" size={32} />
     },
     {
       valeur: "250+",
       label: "Projections organisées",
-      icon: <Film className="text-primary" size={32} />
+      icon: <Film className="text-orange-600" size={32} />
     },
     {
       valeur: "15,000+",
       label: "Téléchargements",
-      icon: <Download className="text-secondary" size={32} />
+      icon: <Download className="text-blue-900" size={32} />
     }
   ];
 
@@ -59,12 +59,12 @@ const ProjetJesusFilm = () => {
     <div className="w-full">
       <div className="relative h-[500px] overflow-hidden">
         <img src="/images/images1.jpeg" alt="Projet JESUS Film" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/95 to-blue-900/80"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <Film className="text-primary" size={60} />
+                <Film className="text-orange-600" size={60} />
                 <h1 className="text-5xl md:text-6xl font-bold text-white">Projet JESUS Film</h1>
               </div>
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-6">
@@ -85,9 +85,9 @@ const ProjetJesusFilm = () => {
         <section className="mb-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {statistiques.map((stat, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-primary">
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg text-center border-t-4 border-orange-600">
                 <div className="flex justify-center mb-4">{stat.icon}</div>
-                <div className="text-4xl font-bold text-secondary mb-2">{stat.valeur}</div>
+                <div className="text-4xl font-bold text-blue-900 mb-2">{stat.valeur}</div>
                 <p className="text-gray-700 font-medium">{stat.label}</p>
               </div>
             ))}
@@ -95,8 +95,8 @@ const ProjetJesusFilm = () => {
         </section>
 
         <section className="mb-20">
-          <div className="bg-primary-50 border-l-4 border-primary p-8 rounded-r-lg">
-            <h2 className="text-2xl font-bold text-secondary mb-4">À Propos du Film JESUS</h2>
+          <div className="bg-primary-50 border-l-4 border-orange-600 p-8 rounded-r-lg">
+            <h2 className="text-2xl font-bold text-blue-900 mb-4">À Propos du Film JESUS</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Le film JESUS est une adaptation cinématographique de l'Évangile de Luc. Il raconte 
               la vie, le ministère, la mort et la résurrection de Jésus-Christ de manière fidèle 
@@ -110,12 +110,12 @@ const ProjetJesusFilm = () => {
         </section>
 
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Langues Disponibles</h2>
+          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">Langues Disponibles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {languesDisponibles.map((item, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-secondary">
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-blue-900">
                 <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-xl font-bold text-secondary">{item.langue}</h3>
+                  <h3 className="text-xl font-bold text-blue-900">{item.langue}</h3>
                   <span className={`text-xs px-3 py-1 rounded-full font-semibold ${
                     item.statut === 'Disponible' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
                   }`}>
@@ -130,12 +130,12 @@ const ProjetJesusFilm = () => {
 
         <section className="mb-20 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Utilisations</h2>
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">Utilisations</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {utilisations.map((item, index) => (
                 <div key={index} className="bg-white rounded-lg p-6 shadow-lg text-center">
                   <div className="text-5xl mb-4">{item.icon}</div>
-                  <h3 className="text-lg font-bold text-secondary mb-2">{item.titre}</h3>
+                  <h3 className="text-lg font-bold text-blue-900 mb-2">{item.titre}</h3>
                   <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
               ))}
@@ -147,7 +147,7 @@ const ProjetJesusFilm = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img src="/images/images2.jpeg" alt="Projection" className="rounded-lg shadow-2xl" />
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">Impact du Film</h2>
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">Impact du Film</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
                 Le film JESUS a un impact profond sur ceux qui le regardent. Beaucoup découvrent 
                 pour la première fois qui est Jésus et ce qu'il a fait pour eux.
@@ -160,13 +160,13 @@ const ProjetJesusFilm = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-secondary to-secondary-600 rounded-2xl p-12 text-center text-white">
-          <Play className="mx-auto mb-6 text-primary" size={60} />
+        <section className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-2xl p-12 text-center text-white">
+          <Play className="mx-auto mb-6 text-orange-600" size={60} />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Regardez le Film JESUS</h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto text-white/90">
             Découvrez le film dans les langues locales du Bénin
           </p>
-          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition shadow-lg">
+          <button className="bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition shadow-lg">
             Voir le Film
           </button>
         </section>

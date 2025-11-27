@@ -46,8 +46,8 @@ const BlogAlogbe = () => {
         
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-12">
-            <Video className="mx-auto mb-4 text-primary" size={48} />
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <Video className="mx-auto mb-4 text-orange-600" size={48} />
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               Vidéos en Alogbé
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ const BlogAlogbe = () => {
                     className="w-full h-48 object-cover"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/40 transition">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
+                    <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition">
                       <Play className="text-white ml-1" size={24} />
                     </div>
                   </div>
@@ -76,7 +76,7 @@ const BlogAlogbe = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {video.titre}
                   </h3>
                   <p className="text-gray-700 mb-4">
@@ -86,7 +86,7 @@ const BlogAlogbe = () => {
                     <span className="text-sm text-gray-600">
                       {video.vues} vues
                     </span>
-                    <button className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group">
+                    <button className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group">
                       Regarder
                       <ArrowRight className="ml-1 group-hover:translate-x-1 transition-transform" size={16} />
                     </button>
@@ -99,8 +99,8 @@ const BlogAlogbe = () => {
 
         <ScrollAnimation animation="slideUp">
           <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-card p-12 text-center">
-            <Users className="mx-auto mb-6 text-primary" size={60} />
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+            <Users className="mx-auto mb-6 text-orange-600" size={60} />
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               50 000+ Personnes Sourdes au Bénin
             </h2>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -109,7 +109,7 @@ const BlogAlogbe = () => {
             </p>
             <Link
               to="/traduction-alogbe"
-              className="inline-flex items-center bg-primary text-white px-8 py-3 rounded-button font-semibold hover:bg-primary-600 transition shadow-lg"
+              className="inline-flex items-center bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
             >
               En Savoir Plus
               <ArrowRight className="ml-2" size={20} />

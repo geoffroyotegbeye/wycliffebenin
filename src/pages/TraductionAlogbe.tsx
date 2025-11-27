@@ -6,25 +6,25 @@ const TraductionAlogbe = () => {
     {
       titre: "Langue Visuelle",
       description: "L'Alogbé est la langue des signes utilisée par la communauté sourde du Bénin.",
-      icon: <Hand className="text-primary" size={40} />,
+      icon: <Hand className="text-orange-600" size={40} />,
       color: "primary"
     },
     {
       titre: "Traduction Vidéo",
       description: "La Bible est traduite en vidéos pour être accessible aux personnes sourdes.",
-      icon: <Video className="text-secondary" size={40} />,
+      icon: <Video className="text-blue-900" size={40} />,
       color: "secondary"
     },
     {
       titre: "Communauté Sourde",
       description: "Plus de 50,000 personnes sourdes au Bénin utilisent la langue des signes.",
-      icon: <Users className="text-primary" size={40} />,
+      icon: <Users className="text-orange-600" size={40} />,
       color: "primary"
     },
     {
       titre: "Accès aux Écritures",
       description: "Pour la première fois, les sourds peuvent comprendre la Bible dans leur langue.",
-      icon: <BookOpen className="text-secondary" size={40} />,
+      icon: <BookOpen className="text-blue-900" size={40} />,
       color: "secondary"
     }
   ];
@@ -66,22 +66,22 @@ const TraductionAlogbe = () => {
     {
       valeur: "50,000+",
       label: "Personnes sourdes au Bénin",
-      icon: <Users className="text-primary" size={32} />
+      icon: <Users className="text-orange-600" size={32} />
     },
     {
       valeur: "15",
       label: "Traducteurs formés",
-      icon: <Award className="text-secondary" size={32} />
+      icon: <Award className="text-blue-900" size={32} />
     },
     {
       valeur: "25%",
       label: "Progression du projet",
-      icon: <Target className="text-primary" size={32} />
+      icon: <Target className="text-orange-600" size={32} />
     },
     {
       valeur: "2020",
       label: "Année de lancement",
-      icon: <BookOpen className="text-secondary" size={32} />
+      icon: <BookOpen className="text-blue-900" size={32} />
     }
   ];
 
@@ -110,12 +110,12 @@ const TraductionAlogbe = () => {
           alt="Traduction Alogbé"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/95 to-blue-900/80"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-6">
-                <Hand className="text-primary" size={60} />
+                <Hand className="text-orange-600" size={60} />
                 <h1 className="text-5xl md:text-6xl font-bold text-white">
                   Traduction Alogbé
                 </h1>
@@ -142,12 +142,12 @@ const TraductionAlogbe = () => {
             {statistiques.map((stat, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition border-t-4 border-primary text-center"
+                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition border-t-4 border-orange-600 text-center"
               >
                 <div className="flex justify-center mb-4">
                   {stat.icon}
                 </div>
-                <div className="text-4xl font-bold text-secondary mb-2">
+                <div className="text-4xl font-bold text-blue-900 mb-2">
                   {stat.valeur}
                 </div>
                 <p className="text-gray-700 font-medium">
@@ -160,8 +160,8 @@ const TraductionAlogbe = () => {
 
         {/* Pourquoi l'Alogbé */}
         <section className="mb-20">
-          <div className="bg-primary-50 border-l-4 border-primary p-8 rounded-r-lg">
-            <h2 className="text-3xl font-bold text-secondary mb-4">
+          <div className="bg-primary-50 border-l-4 border-orange-600 p-8 rounded-r-lg">
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">
               Pourquoi la Langue des Signes ?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -180,7 +180,7 @@ const TraductionAlogbe = () => {
 
         {/* Caractéristiques */}
         <section className="mb-20">
-          <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
             Caractéristiques du Projet
           </h2>
           
@@ -189,13 +189,13 @@ const TraductionAlogbe = () => {
               <div 
                 key={index}
                 className={`bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition border-l-4 ${
-                  item.color === 'primary' ? 'border-primary' : 'border-secondary'
+                  item.color === 'primary' ? 'border-orange-600' : 'border-blue-900'
                 }`}
               >
                 <div className="mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-secondary mb-3">
+                <h3 className="text-2xl font-bold text-blue-900 mb-3">
                   {item.titre}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -209,7 +209,7 @@ const TraductionAlogbe = () => {
         {/* Étapes du Projet */}
         <section className="mb-20 bg-gray-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-secondary mb-12 text-center">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
               Processus de Traduction
             </h2>
             
@@ -220,7 +220,7 @@ const TraductionAlogbe = () => {
                   className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition"
                 >
                   <div className="text-5xl mb-4">{etape.icone}</div>
-                  <h3 className="text-xl font-bold text-secondary mb-3">
+                  <h3 className="text-xl font-bold text-blue-900 mb-3">
                     {etape.titre}
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
@@ -237,14 +237,14 @@ const TraductionAlogbe = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Défis */}
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Défis à Surmonter
               </h2>
-              <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-secondary">
+              <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-blue-900">
                 <ul className="space-y-3">
                   {defis.map((defi, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-secondary mt-1">⚠️</span>
+                      <span className="text-blue-900 mt-1">⚠️</span>
                       <span className="text-gray-700">{defi}</span>
                     </li>
                   ))}
@@ -254,14 +254,14 @@ const TraductionAlogbe = () => {
 
             {/* Réalisations */}
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Réalisations
               </h2>
-              <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-primary">
+              <div className="bg-white rounded-lg p-6 shadow-lg border-l-4 border-orange-600">
                 <ul className="space-y-3">
                   {realisations.map((realisation, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-primary mt-1">✓</span>
+                      <span className="text-orange-600 mt-1">✓</span>
                       <span className="text-gray-700">{realisation}</span>
                     </li>
                   ))}
@@ -280,7 +280,7 @@ const TraductionAlogbe = () => {
               className="rounded-lg shadow-2xl"
             />
             <div>
-              <h2 className="text-3xl font-bold text-secondary mb-6">
+              <h2 className="text-3xl font-bold text-blue-900 mb-6">
                 Un Projet Pionnier
               </h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -295,7 +295,7 @@ const TraductionAlogbe = () => {
               </p>
               <Link 
                 to="/blog-alogbe" 
-                className="inline-flex items-center text-primary font-semibold hover:text-primary-600 transition group"
+                className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition group"
               >
                 Suivre l'actualité du projet
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -306,8 +306,8 @@ const TraductionAlogbe = () => {
 
         {/* Vidéo Section */}
         <section className="mb-20">
-          <div className="bg-secondary rounded-2xl p-12 text-center text-white">
-            <Video className="mx-auto mb-6 text-primary" size={60} />
+          <div className="bg-blue-900 rounded-2xl p-12 text-center text-white">
+            <Video className="mx-auto mb-6 text-orange-600" size={60} />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Découvrez la Traduction en Action
             </h2>
@@ -315,14 +315,14 @@ const TraductionAlogbe = () => {
               Regardez des extraits de la traduction biblique en langue des signes Alogbé 
               et découvrez l'impact de ce projet sur la communauté sourde.
             </p>
-            <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-600 transition shadow-lg">
+            <button className="bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition shadow-lg">
               Voir les Vidéos
             </button>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-primary to-primary-600 rounded-2xl p-12 text-center text-white">
+        <section className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-2xl p-12 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Soutenez le Projet Alogbé
           </h2>
@@ -331,10 +331,10 @@ const TraductionAlogbe = () => {
             à la communauté sourde du Bénin. Chaque contribution fait une différence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
+            <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition shadow-lg">
               Faire un Don
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition">
               En Savoir Plus
             </button>
           </div>

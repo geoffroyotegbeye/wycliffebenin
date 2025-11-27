@@ -105,7 +105,7 @@ const NosRdv = () => {
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-secondary mb-6">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">
               Événements à Venir
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -120,12 +120,12 @@ const NosRdv = () => {
           {upcomingEvents.map((event, index) => (
             <ScrollAnimation key={index} animation="slideUp" delay={index * 0.1}>
               <div className={`bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 mb-6 ${
-                event.featured ? 'border-l-4 border-primary' : ''
+                event.featured ? 'border-l-4 border-orange-600' : ''
               }`}>
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Date Box */}
                   <div className="flex-shrink-0">
-                    <div className="bg-primary text-white rounded-card p-4 text-center w-32">
+                    <div className="bg-orange-600 text-white rounded-card p-4 text-center w-32">
                       <div className="text-3xl font-bold">
                         {event.date.split(' ')[0]}
                       </div>
@@ -135,7 +135,7 @@ const NosRdv = () => {
                     </div>
                     {event.featured && (
                       <div className="mt-2 text-center">
-                        <span className="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full font-medium">
+                        <span className="bg-primary-50 text-orange-600 text-xs px-2 py-1 rounded-full font-medium">
                           À NE PAS MANQUER
                         </span>
                       </div>
@@ -146,10 +146,10 @@ const NosRdv = () => {
                   <div className="flex-grow">
                     <div className="flex items-start justify-between mb-3">
                       <div>
-                        <h3 className="text-2xl font-bold text-secondary mb-2">
+                        <h3 className="text-2xl font-bold text-blue-900 mb-2">
                           {event.title}
                         </h3>
-                        <span className="inline-block bg-secondary-50 text-secondary text-xs px-3 py-1 rounded-full font-medium">
+                        <span className="inline-block bg-secondary-50 text-blue-900 text-xs px-3 py-1 rounded-full font-medium">
                           {event.category}
                         </span>
                       </div>
@@ -161,24 +161,24 @@ const NosRdv = () => {
 
                     <div className="grid md:grid-cols-3 gap-4 mb-4">
                       <div className="flex items-center gap-2 text-gray-700">
-                        <Clock className="text-primary flex-shrink-0" size={20} />
+                        <Clock className="text-orange-600 flex-shrink-0" size={20} />
                         <span className="text-sm">{event.time}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-700">
-                        <MapPin className="text-primary flex-shrink-0" size={20} />
+                        <MapPin className="text-orange-600 flex-shrink-0" size={20} />
                         <span className="text-sm">{event.location}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-700">
-                        <Users className="text-primary flex-shrink-0" size={20} />
+                        <Users className="text-orange-600 flex-shrink-0" size={20} />
                         <span className="text-sm">{event.attendees}</span>
                       </div>
                     </div>
 
                     <div className="flex gap-3">
-                      <button className="bg-primary text-white px-6 py-2 rounded-button font-semibold hover:bg-primary-600 transition">
+                      <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-2 rounded-button font-semibold hover:bg-orange-700 transition">
                         S'inscrire
                       </button>
-                      <button className="border-2 border-primary text-primary px-6 py-2 rounded-button font-semibold hover:bg-primary hover:text-white transition">
+                      <button className="border-2 border-orange-600 text-orange-600 px-6 py-2 rounded-button font-semibold hover:bg-orange-600 hover:text-white transition">
                         Plus d'infos
                       </button>
                     </div>
@@ -192,7 +192,7 @@ const NosRdv = () => {
         {/* Événements Récurrents */}
         <div className="mb-16">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-3xl font-bold text-secondary mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
               Événements Réguliers
             </h2>
           </ScrollAnimation>
@@ -201,28 +201,28 @@ const NosRdv = () => {
             {recurringEvents.map((event, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 0.1}>
                 <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6">
-                  <Calendar className="text-primary mb-4" size={40} />
-                  <h3 className="text-xl font-bold text-secondary mb-2">
+                  <Calendar className="text-orange-600 mb-4" size={40} />
+                  <h3 className="text-xl font-bold text-blue-900 mb-2">
                     {event.title}
                   </h3>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-start gap-2 text-gray-700 text-sm">
-                      <Bell className="text-primary flex-shrink-0 mt-1" size={16} />
+                      <Bell className="text-orange-600 flex-shrink-0 mt-1" size={16} />
                       <span>{event.frequency}</span>
                     </div>
                     <div className="flex items-start gap-2 text-gray-700 text-sm">
-                      <Clock className="text-primary flex-shrink-0 mt-1" size={16} />
+                      <Clock className="text-orange-600 flex-shrink-0 mt-1" size={16} />
                       <span>{event.time}</span>
                     </div>
                     <div className="flex items-start gap-2 text-gray-700 text-sm">
-                      <MapPin className="text-primary flex-shrink-0 mt-1" size={16} />
+                      <MapPin className="text-orange-600 flex-shrink-0 mt-1" size={16} />
                       <span>{event.location}</span>
                     </div>
                   </div>
                   <p className="text-gray-700 text-sm mb-4">
                     {event.description}
                   </p>
-                  <button className="text-primary font-semibold hover:text-primary-600 transition flex items-center gap-2">
+                  <button className="text-orange-600 font-semibold hover:text-orange-700 transition flex items-center gap-2">
                     En savoir plus
                     <ExternalLink size={16} />
                   </button>
@@ -234,7 +234,7 @@ const NosRdv = () => {
 
         {/* Newsletter */}
         <ScrollAnimation animation="scale">
-          <div className="bg-gradient-to-r from-primary to-primary-600 rounded-card shadow-elevated p-12 text-center">
+          <div className="bg-gradient-to-r from-orange-600 to-primary-600 rounded-card shadow-elevated p-12 text-center">
             <Bell className="mx-auto mb-6 text-white" size={64} />
             <h2 className="text-4xl font-bold text-white mb-6">
               Ne Manquez Aucun Événement
@@ -249,7 +249,7 @@ const NosRdv = () => {
                 placeholder="Votre email"
                 className="flex-1 px-4 py-3 rounded-button focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <button className="bg-white text-primary px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg">
+              <button className="bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg">
                 S'abonner
               </button>
             </div>

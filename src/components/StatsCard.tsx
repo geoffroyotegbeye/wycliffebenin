@@ -21,7 +21,7 @@ const StatsCard = ({
   color = 'primary',
   delay = 0
 }: StatsCardProps) => {
-  const borderColor = color === 'primary' ? 'border-primary' : 'border-secondary';
+  const borderColor = color === 'primary' ? 'border-orange-600' : 'border-secondary';
   
   return (
     <ScrollAnimation animation="scale" delay={delay}>
@@ -31,7 +31,7 @@ const StatsCard = ({
             {icon}
           </div>
         )}
-        <div className="text-4xl font-bold text-secondary mb-2">
+        <div className="text-4xl font-bold text-blue-900 mb-2">
           <AnimatedCounter end={value} suffix={suffix} prefix={prefix} />
         </div>
         <p className="text-gray-700 font-medium">{label}</p>
