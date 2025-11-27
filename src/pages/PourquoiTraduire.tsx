@@ -1,4 +1,4 @@
-import { Heart, Globe, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
+﻿import { Heart, Globe, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
@@ -123,7 +123,7 @@ const PourquoiTraduire = () => {
       <HeroSection
         title="Pourquoi et Comment Traduire ?"
         subtitle="Découvrez l'importance de la traduction biblique et le processus rigoureux que nous suivons pour apporter la Parole de Dieu dans chaque langue."
-        image="/images/images1.jpeg"
+        image='/images/projet-05.webp'
         height="large"
         overlay="dark"
       />
@@ -184,7 +184,7 @@ const PourquoiTraduire = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <LazyImage 
-                src="/images/images2.jpeg" 
+                src='/images/projet-06.webp' 
                 alt="Impact de la traduction"
                 className="rounded-card shadow-elevated h-96"
               />
@@ -293,7 +293,7 @@ const PourquoiTraduire = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
               <LazyImage 
-                src="/images/images3.jpeg" 
+                src='/images/projet-07.webp' 
                 alt="Principes de traduction"
                 className="rounded-card shadow-elevated h-96"
               />
@@ -330,7 +330,7 @@ const PourquoiTraduire = () => {
               </div>
               <div className="relative h-64 md:h-auto">
                 <LazyImage 
-                  src="/images/images1.jpeg" 
+                  src='/images/projet-05.webp' 
                   alt="Participez"
                   className="absolute inset-0 w-full h-full"
                 />

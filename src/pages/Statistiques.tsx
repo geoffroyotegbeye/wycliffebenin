@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+﻿import { useEffect, useRef } from 'react';
 import { TrendingUp, Users, BookOpen, Globe, Award, Target } from 'lucide-react';
 import { gsap } from 'gsap/dist/gsap';
 import SEO from '../components/SEO';
@@ -183,7 +183,7 @@ const Statistiques = () => {
       <HeroSection
         title="Statistiques"
         subtitle="L'impact mesurable de notre travail au Bénin"
-        image="/images/images3.jpeg"
+        image='/images/projet-12.webp'
         height="medium"
         overlay="dark"
       />
@@ -344,7 +344,7 @@ const Statistiques = () => {
             </ScrollAnimation>
             <ScrollAnimation animation="slideLeft">
               <LazyImage 
-                src="/images/images3.jpeg" 
+                src='/images/projet-12.webp' 
                 alt="Impact statistique"
                 className="rounded-card shadow-elevated h-80"
               />

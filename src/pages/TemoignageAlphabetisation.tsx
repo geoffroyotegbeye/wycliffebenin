@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { BookOpen, Heart, Star, Quote, ArrowRight, Users, TrendingUp } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -11,7 +11,7 @@ const TemoignageAlphabetisation = () => {
       age: 42,
       langue: "Fon",
       village: "Abomey",
-      photo: "/images/images1.jpeg",
+      photo: '/images/temoignage-01.webp',
       citation: "Avant le programme, je ne savais ni lire ni écrire. Aujourd'hui, je lis la Bible moi-même et j'aide mes enfants avec leurs devoirs. Ma vie a complètement changé !",
       histoire: "Marie était une mère de famille qui se sentait exclue parce qu'elle ne savait pas lire. Après 18 mois dans notre programme d'alphabétisation, elle lit couramment en Fon et a même ouvert un petit commerce de tissus qu'elle gère avec succès.",
       impact: [
@@ -27,7 +27,7 @@ const TemoignageAlphabetisation = () => {
       age: 55,
       langue: "Bariba",
       village: "Parakou",
-      photo: "/images/images2.jpeg",
+      photo: '/images/temoignage-02.webp',
       citation: "Grâce à l'alphabétisation, j'ai pu développer mon activité agricole. Je comprends maintenant les techniques modernes et je peux calculer mes bénéfices.",
       histoire: "Jean était agriculteur depuis 30 ans mais ne savait pas lire. Le programme lui a non seulement appris à lire et écrire, mais aussi des techniques agricoles améliorées et la gestion financière. Ses revenus ont augmenté de 60%.",
       impact: [
@@ -43,7 +43,7 @@ const TemoignageAlphabetisation = () => {
       age: 38,
       langue: "Dendi",
       village: "Malanville",
-      photo: "/images/images3.jpeg",
+      photo: '/images/temoignage-03.webp',
       citation: "Je suis devenue facilitatrice après avoir terminé le programme. Maintenant, j'aide d'autres femmes à apprendre à lire et écrire dans notre langue.",
       histoire: "Aïcha a non seulement appris à lire, mais elle est devenue une leader dans sa communauté. Elle facilite maintenant des classes d'alphabétisation et inspire d'autres femmes à se former.",
       impact: [
@@ -59,7 +59,7 @@ const TemoignageAlphabetisation = () => {
       age: 48,
       langue: "Mina",
       village: "Aného",
-      photo: "/images/images1.jpeg",
+      photo: '/images/temoignage-01.webp',
       citation: "L'alphabétisation m'a ouvert les yeux. Je peux maintenant lire les panneaux, comprendre les documents officiels et participer aux décisions de ma communauté.",
       histoire: "Thomas était pêcheur et se sentait marginalisé lors des réunions communautaires. Après le programme, il est devenu membre actif du conseil de village et aide à la prise de décisions importantes.",
       impact: [
@@ -75,7 +75,7 @@ const TemoignageAlphabetisation = () => {
       age: 35,
       langue: "Peulh",
       village: "Djougou",
-      photo: "/images/images2.jpeg",
+      photo: '/images/temoignage-02.webp',
       citation: "Mes enfants sont fiers de moi maintenant. Je peux les aider à faire leurs devoirs et je comprends ce qu'ils apprennent à l'école.",
       histoire: "Fatima avait honte de ne pas pouvoir aider ses enfants. Le programme d'alphabétisation lui a redonné confiance. Elle participe maintenant aux réunions parents-enseignants et suit la scolarité de ses enfants.",
       impact: [
@@ -91,7 +91,7 @@ const TemoignageAlphabetisation = () => {
       age: 60,
       langue: "Adja",
       village: "Lokossa",
-      photo: "/images/images3.jpeg",
+      photo: '/images/temoignage-03.webp',
       citation: "À 60 ans, j'ai appris à lire ! C'est le plus beau cadeau de ma vie. Je peux enfin lire la Parole de Dieu dans ma propre langue.",
       histoire: "Koffi pensait qu'il était trop vieux pour apprendre. Le programme lui a prouvé le contraire. Il est maintenant un exemple vivant que l'apprentissage n'a pas d'âge et inspire les personnes âgées de sa communauté.",
       impact: [
@@ -116,7 +116,7 @@ const TemoignageAlphabetisation = () => {
       <HeroSection
         title="Témoignages d'Alphabétisation"
         subtitle="Des vies transformées par l'apprentissage de la lecture et de l'écriture"
-        image="/images/images2.jpeg"
+        image='/images/temoignage-02.webp'
         height="medium"
         overlay="dark"
       />

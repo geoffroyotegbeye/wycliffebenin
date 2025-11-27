@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { ShoppingCart, BookOpen, Shirt, Music, Gift, CreditCard } from 'lucide-react';
 
@@ -51,7 +51,7 @@ const Boutique = () => {
       <HeroSection
         title="Boutique en Ligne"
         subtitle="Découvrez nos produits et soutenez notre mission"
-        image="/images/images1.jpeg"
+        image='/images/projet-04.webp'
         height="medium"
         overlay="dark"
       />

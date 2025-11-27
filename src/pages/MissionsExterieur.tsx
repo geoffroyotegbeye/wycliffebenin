@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Users, ArrowRight } from 'lucide-react';
+﻿import { MapPin, Calendar, Users, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -10,7 +10,7 @@ const MissionsExterieur = () => {
       titre: "Mission à Natitingou",
       lieu: "Natitingou, Atacora",
       date: "15-20 Octobre 2024",
-      image: "/images/images1.jpeg",
+      image: '/images/communaute-09.webp',
       description: "Formation de facilitateurs en alphabétisation Ditammari",
       participants: 25
     },
@@ -19,7 +19,7 @@ const MissionsExterieur = () => {
       titre: "Atelier Traduction Bariba",
       lieu: "Parakou, Borgou",
       date: "5-10 Septembre 2024",
-      image: "/images/images2.jpeg",
+      image: '/images/communaute-10.webp',
       description: "Révision de l'Ancien Testament en langue Bariba",
       participants: 12
     },
@@ -28,7 +28,7 @@ const MissionsExterieur = () => {
       titre: "Sensibilisation Dendi",
       lieu: "Malanville, Alibori",
       date: "22-25 Août 2024",
-      image: "/images/images3.jpeg",
+      image: '/images/communaute-11.webp',
       description: "Campagne de sensibilisation sur l'alphabétisation",
       participants: 150
     }
@@ -39,7 +39,7 @@ const MissionsExterieur = () => {
       <HeroSection
         title="Missions à l'Extérieur"
         subtitle="Nos équipes sur le terrain à travers le Bénin"
-        image="/images/images2.jpeg"
+        image='/images/communaute-10.webp'
         height="medium"
       />
 

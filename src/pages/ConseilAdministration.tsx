@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from 'lucide-react';
+﻿import { Mail, Linkedin } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -8,42 +8,42 @@ const ConseilAdministration = () => {
     {
       nom: "Dr. Jean AKPOVI",
       poste: "Président du Conseil",
-      photo: "/images/images1.jpeg",
+      photo: '/images/equipe-08.webp',
       bio: "Expert en développement communautaire avec plus de 20 ans d'expérience dans le secteur associatif.",
       email: "j.akpovi@wycliffebenin.org"
     },
     {
       nom: "Mme. Marie DOSSOU",
       poste: "Vice-Présidente",
-      photo: "/images/images2.jpeg",
+      photo: '/images/equipe-09.webp',
       bio: "Spécialiste en linguistique et traduction, passionnée par la préservation des langues locales.",
       email: "m.dossou@wycliffebenin.org"
     },
     {
       nom: "M. Paul KOUDJO",
       poste: "Trésorier",
-      photo: "/images/images3.jpeg",
+      photo: '/images/equipe-05.webp',
       bio: "Expert-comptable et gestionnaire financier avec une forte expérience dans les ONG.",
       email: "p.koudjo@wycliffebenin.org"
     },
     {
       nom: "Rév. Thomas AGBESSI",
       poste: "Secrétaire",
-      photo: "/images/images1.jpeg",
+      photo: '/images/equipe-08.webp',
       bio: "Pasteur et théologien, engagé dans l'évangélisation et la formation biblique.",
       email: "t.agbessi@wycliffebenin.org"
     },
     {
       nom: "Mme. Sophie HOUNGBO",
       poste: "Membre",
-      photo: "/images/images2.jpeg",
+      photo: '/images/equipe-09.webp',
       bio: "Éducatrice et formatrice en alphabétisation avec une passion pour l'éducation communautaire.",
       email: "s.houngbo@wycliffebenin.org"
     },
     {
       nom: "M. David AZONHIHO",
       poste: "Membre",
-      photo: "/images/images3.jpeg",
+      photo: '/images/equipe-05.webp',
       bio: "Juriste spécialisé dans le droit des associations et la gouvernance.",
       email: "d.azonhiho@wycliffebenin.org"
     }
@@ -54,7 +54,7 @@ const ConseilAdministration = () => {
       <HeroSection
         title="Conseil d'Administration"
         subtitle="Des leaders dévoués qui guident notre organisation vers l'accomplissement de sa mission"
-        image="/images/images1.jpeg"
+        image='/images/equipe-08.webp'
         height="medium"
         overlay="dark"
       />

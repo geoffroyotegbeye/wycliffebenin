@@ -1,4 +1,4 @@
-import { Heart, ArrowRight } from 'lucide-react';
+﻿import { Heart, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -9,7 +9,7 @@ const VieCommunautes = () => {
       id: 1,
       titre: "Transformation à Abomey",
       communaute: "Communauté Fon",
-      image: "/images/images1.jpeg",
+      image: '/images/communaute-10.webp',
       description: "Comment l'alphabétisation a transformé tout un village",
       impact: "120 personnes formées"
     },
@@ -17,7 +17,7 @@ const VieCommunautes = () => {
       id: 2,
       titre: "Célébration à Parakou",
       communaute: "Communauté Bariba",
-      image: "/images/images2.jpeg",
+      image: '/images/communaute-11.webp',
       description: "Dédicace de matériel pédagogique en langue Bariba",
       impact: "5 centres équipés"
     },
@@ -25,7 +25,7 @@ const VieCommunautes = () => {
       id: 3,
       titre: "Espoir à Malanville",
       communaute: "Communauté Dendi",
-      image: "/images/images3.jpeg",
+      image: '/images/communaute-12.webp',
       description: "Des femmes apprennent à lire et transforment leur vie",
       impact: "85 femmes alphabétisées"
     }
@@ -36,7 +36,7 @@ const VieCommunautes = () => {
       <HeroSection
         title="Vie des Communautés"
         subtitle="Histoires de transformation dans les communautés que nous servons"
-        image="/images/images3.jpeg"
+        image='/images/communaute-12.webp'
         height="medium"
       />
 

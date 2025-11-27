@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -70,7 +70,7 @@ const Contact = () => {
       {/* Hero Section */}
       <div className="relative h-[300px] overflow-hidden">
         <LazyImage 
-          src="/images/images1.jpeg" 
+          src='/images/communaute-03.webp' 
           alt="Contactez-nous"
           className="absolute inset-0 w-full h-full"
         />

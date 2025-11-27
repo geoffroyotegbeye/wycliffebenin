@@ -1,4 +1,4 @@
-import { MapPin, Users, BookOpen, TrendingUp } from 'lucide-react';
+﻿import { MapPin, Users, BookOpen, TrendingUp } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -108,7 +108,7 @@ const Cartographie = () => {
       <HeroSection
         title="Cartographie Linguistique du Bénin"
         subtitle="Découvrez la richesse linguistique du Bénin et l'état d'avancement des projets de traduction biblique"
-        image="/images/images1.jpeg"
+        image='/images/communaute-15.webp'
         height="medium"
       />
 
@@ -271,7 +271,7 @@ const Cartographie = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <LazyImage 
-                src="/images/images2.jpeg" 
+                src='/images/communaute-01.webp' 
                 alt="Diversité linguistique"
                 className="rounded-card shadow-elevated h-96"
               />

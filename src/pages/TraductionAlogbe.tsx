@@ -1,4 +1,4 @@
-import { Hand, Video, Users, BookOpen, Target, Award } from 'lucide-react';
+﻿import { Hand, Video, Users, BookOpen, Target, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const TraductionAlogbe = () => {
@@ -106,7 +106,7 @@ const TraductionAlogbe = () => {
       {/* Hero Section */}
       <div className="relative h-[500px] overflow-hidden">
         <img 
-          src="/images/images1.jpeg" 
+          src='/images/projet-14.webp' 
           alt="Traduction Alogbé"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -275,7 +275,7 @@ const TraductionAlogbe = () => {
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img 
-              src="/images/images2.jpeg" 
+              src='/images/projet-15.webp' 
               alt="Communauté sourde"
               className="rounded-lg shadow-2xl"
             />

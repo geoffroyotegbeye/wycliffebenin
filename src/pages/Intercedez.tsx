@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Heart, BookOpen, Users, Clock, Mail, Bell } from 'lucide-react';
 
@@ -55,7 +55,7 @@ const Intercedez = () => {
       <HeroSection
         title="Intercédez avec Nous"
         subtitle="Votre prière est essentielle pour l'avancement de la Parole de Dieu"
-        image="/images/images2.jpeg"
+        image='/images/communaute-08.webp'
         height="medium"
         overlay="dark"
       />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Handshake, Building, Church, Globe, Heart, Star, Quote, ArrowRight, Award, Users } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -12,7 +12,7 @@ const TemoignagePartenaires = () => {
       logo: <Church className="text-orange-600" size={40} />,
       responsable: "Pasteur Emmanuel KOFFI",
       fonction: "Pasteur Principal",
-      photo: "/images/images1.jpeg",
+      photo: '/images/temoignage-08.webp',
       partenariat: "Partenariat Financier",
       depuis: "2020",
       montant: "2 000 000 FCFA/an",
@@ -32,7 +32,7 @@ const TemoignagePartenaires = () => {
       logo: <Globe className="text-blue-900" size={40} />,
       responsable: "Dr. Sarah JOHNSON",
       fonction: "Directrice Régionale Afrique de l'Ouest",
-      photo: "/images/images2.jpeg",
+      photo: '/images/temoignage-09.webp',
       partenariat: "Partenariat Technique",
       depuis: "1981",
       montant: "Expertise technique",
@@ -52,7 +52,7 @@ const TemoignagePartenaires = () => {
       logo: <Building className="text-orange-600" size={40} />,
       responsable: "M. Didier ASSOGBA",
       fonction: "Directeur de l'Alphabétisation",
-      photo: "/images/images3.jpeg",
+      photo: '/images/temoignage-10.webp',
       partenariat: "Partenariat Institutionnel",
       depuis: "2018",
       montant: "Collaboration stratégique",
@@ -72,7 +72,7 @@ const TemoignagePartenaires = () => {
       logo: <Heart className="text-blue-900" size={40} />,
       responsable: "Mme. Claire DUBOIS",
       fonction: "Responsable Programmes Afrique",
-      photo: "/images/images1.jpeg",
+      photo: '/images/temoignage-08.webp',
       partenariat: "Partenariat Financier",
       depuis: "2019",
       montant: "5 000 000 FCFA/an",
@@ -92,7 +92,7 @@ const TemoignagePartenaires = () => {
       logo: <Church className="text-orange-600" size={40} />,
       responsable: "Révérend Pierre DOSSOU",
       fonction: "Président de l'Union",
-      photo: "/images/images2.jpeg",
+      photo: '/images/temoignage-09.webp',
       partenariat: "Partenariat Église",
       depuis: "2021",
       montant: "1 500 000 FCFA/an",
@@ -112,7 +112,7 @@ const TemoignagePartenaires = () => {
       logo: <Building className="text-blue-900" size={40} />,
       responsable: "M. Kossi AGBODJAN",
       fonction: "Directeur Général",
-      photo: "/images/images3.jpeg",
+      photo: '/images/temoignage-10.webp',
       partenariat: "Partenariat RSE",
       depuis: "2022",
       montant: "3 000 000 FCFA/an",
@@ -133,7 +133,7 @@ const TemoignagePartenaires = () => {
       <HeroSection
         title="Témoignages de Partenaires"
         subtitle="Ensemble, nous transformons des vies et des communautés"
-        image="/images/images2.jpeg"
+        image='/images/temoignage-09.webp'
         height="medium"
         overlay="dark"
       />

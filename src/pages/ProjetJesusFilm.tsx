@@ -1,4 +1,4 @@
-import { Film, Globe, Users, Play, Download } from 'lucide-react';
+﻿import { Film, Globe, Users, Play, Download } from 'lucide-react';
 
 const ProjetJesusFilm = () => {
   const languesDisponibles = [
@@ -58,7 +58,7 @@ const ProjetJesusFilm = () => {
   return (
     <div className="w-full">
       <div className="relative h-[500px] overflow-hidden">
-        <img src="/images/images1.jpeg" alt="Projet JESUS Film" className="absolute inset-0 w-full h-full object-cover" />
+        <img src='/images/projet-09.webp' alt="Projet JESUS Film" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/95 to-blue-900/80"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -145,7 +145,7 @@ const ProjetJesusFilm = () => {
 
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <img src="/images/images2.jpeg" alt="Projection" className="rounded-lg shadow-2xl" />
+            <img src='/images/projet-10.webp' alt="Projection" className="rounded-lg shadow-2xl" />
             <div>
               <h2 className="text-3xl font-bold text-blue-900 mb-6">Impact du Film</h2>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">

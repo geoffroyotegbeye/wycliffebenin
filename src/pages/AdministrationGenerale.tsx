@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+﻿import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
@@ -10,7 +10,7 @@ const AdministrationGenerale = () => {
     {
       nom: "M. Samuel KOFFI",
       poste: "Directeur Exécutif",
-      photo: "/images/images1.jpeg",
+      photo: '/images/equipe-01.webp',
       bio: "Responsable de la direction générale et de la mise en œuvre de la stratégie organisationnelle.",
       email: "s.koffi@wycliffebenin.org",
       phone: "+229 97 00 00 01"
@@ -18,7 +18,7 @@ const AdministrationGenerale = () => {
     {
       nom: "Mme. Rachelle ADJOVI",
       poste: "Directrice des Programmes",
-      photo: "/images/images2.jpeg",
+      photo: '/images/equipe-02.webp',
       bio: "Supervise tous les programmes de traduction et d'alphabétisation sur le terrain.",
       email: "r.adjovi@wycliffebenin.org",
       phone: "+229 97 00 00 02"
@@ -26,7 +26,7 @@ const AdministrationGenerale = () => {
     {
       nom: "M. Éric GBAGUIDI",
       poste: "Directeur Financier",
-      photo: "/images/images3.jpeg",
+      photo: '/images/equipe-03.webp',
       bio: "Gère les finances, la comptabilité et les rapports financiers de l'organisation.",
       email: "e.gbaguidi@wycliffebenin.org",
       phone: "+229 97 00 00 03"
@@ -34,7 +34,7 @@ const AdministrationGenerale = () => {
     {
       nom: "Mme. Claudine HOUNNOU",
       poste: "Responsable RH",
-      photo: "/images/images1.jpeg",
+      photo: '/images/equipe-01.webp',
       bio: "Gère le recrutement, la formation et le développement du personnel.",
       email: "c.hounnou@wycliffebenin.org",
       phone: "+229 97 00 00 04"
@@ -42,7 +42,7 @@ const AdministrationGenerale = () => {
     {
       nom: "M. Fabrice DANSOU",
       poste: "Coordinateur Traduction",
-      photo: "/images/images2.jpeg",
+      photo: '/images/equipe-02.webp',
       bio: "Coordonne les projets de traduction biblique dans les différentes langues.",
       email: "f.dansou@wycliffebenin.org",
       phone: "+229 97 00 00 05"
@@ -50,7 +50,7 @@ const AdministrationGenerale = () => {
     {
       nom: "Mme. Estelle ZINSOU",
       poste: "Responsable Communication",
-      photo: "/images/images3.jpeg",
+      photo: '/images/equipe-03.webp',
       bio: "Gère la communication interne et externe, les relations publiques et les médias.",
       email: "e.zinsou@wycliffebenin.org",
       phone: "+229 97 00 00 06"
@@ -107,7 +107,7 @@ const AdministrationGenerale = () => {
       <HeroSection
         title="Administration Générale"
         subtitle="Une équipe dévouée au service de la mission"
-        image="/images/images1.jpeg"
+        image='/images/equipe-01.webp'
         height="medium"
         overlay="dark"
       />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Target, Heart, Globe, Users, BookOpen, Lightbulb } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -11,7 +11,7 @@ const Vision = () => {
       <HeroSection
         title="Notre Vision"
         subtitle="Un monde où chaque personne a accès à la Parole de Dieu dans sa langue maternelle"
-        image="/images/images1.jpeg"
+        image='/images/hero-02.webp'
         height="medium"
       />
 
@@ -51,7 +51,7 @@ const Vision = () => {
             <ScrollAnimation animation="slideLeft">
               <div className="relative">
                 <LazyImage 
-                  src="/images/images2.jpeg" 
+                  src='/images/communaute-01.webp' 
                   alt="Vision de Wycliffe"
                   className="rounded-card shadow-elevated h-96"
                 />
@@ -164,7 +164,7 @@ const Vision = () => {
             <ScrollAnimation animation="slideRight" className="order-2 md:order-1">
               <div className="relative">
                 <LazyImage 
-                  src="/images/images3.jpeg" 
+                  src='/images/communaute-01.webp' 
                   alt="Notre Mission"
                   className="rounded-card shadow-elevated h-96"
                 />
@@ -292,7 +292,7 @@ const Vision = () => {
               </div>
               <div className="relative h-64 md:h-auto">
                 <LazyImage 
-                  src="/images/images1.jpeg" 
+                  src='/images/communaute-14.webp' 
                   alt="Rejoignez-nous"
                   className="absolute inset-0 w-full h-full"
                 />

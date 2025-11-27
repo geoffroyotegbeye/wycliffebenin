@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Heart, CreditCard, Building, Smartphone, Globe, CheckCircle } from 'lucide-react';
 
@@ -8,7 +8,7 @@ const Donnez = () => {
       <HeroSection
         title="Soutenez Notre Mission"
         subtitle="Votre générosité permet de rendre la Parole de Dieu accessible à tous"
-        image="/images/images1.jpeg"
+        image='/images/communaute-04.webp'
         height="medium"
         overlay="dark"
       />

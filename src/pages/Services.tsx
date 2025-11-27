@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { BookOpen, FileText, Printer, Languages, GraduationCap, Users, CheckCircle, Clock } from 'lucide-react';
 
@@ -89,7 +89,7 @@ const Services = () => {
       <HeroSection
         title="Services au Public"
         subtitle="Des services professionnels pour répondre à vos besoins linguistiques et éditoriaux"
-        image="/images/images1.jpeg"
+        image='/images/projet-11.webp'
         height="medium"
         overlay="dark"
       />

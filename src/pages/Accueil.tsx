@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { gsap } from 'gsap';
@@ -22,37 +22,37 @@ const ProjectsSection = () => {
     {
       name: 'Traduction Biblique Ogiek',
       category: 'Traduction Biblique',
-      image: '/images/images1.jpeg',
+      image: '/images/projet-01.webp',
       description: 'Projet de traduction de la Bible en langue Ogiek'
     },
     {
       name: 'Traduction Biblique Waata',
       category: 'Traduction Biblique',
-      image: '/images/images2.jpeg',
+      image: '/images/projet-02.webp',
       description: 'Projet de traduction de la Bible en langue Waata'
     },
     {
       name: 'Traduction Biblique Taveta',
       category: 'Traduction Biblique',
-      image: '/images/images3.jpeg',
+      image: '/images/projet-03.webp',
       description: 'Projet de traduction de la Bible en langue Taveta'
     },
     {
       name: 'Traduction Biblique Tugen',
       category: 'Traduction Biblique',
-      image: '/images/images1.jpeg',
+      image: '/images/projet-04.webp',
       description: 'Projet de traduction de la Bible en langue Tugen'
     },
     {
       name: 'Alphabétisation Chonyi',
       category: 'Alphabétisation',
-      image: '/images/images2.jpeg',
+      image: '/images/projet-05.webp',
       description: 'Programme d\'alphabétisation pour la communauté Chonyi'
     },
     {
       name: 'Développement Linguistique Daasanach',
       category: 'Développement Linguistique',
-      image: '/images/images3.jpeg',
+      image: '/images/projet-06.webp',
       description: 'Développement linguistique et traduction pour les Daasanach'
     }
   ];
@@ -150,17 +150,17 @@ const Accueil = () => {
 
   const heroSlides = [
     {
-      image: '/images/images1.jpeg',
+      image: '/images/projet-01.webp',
       title: "La Parole de Dieu pour les Peuples",
       subtitle: "Atteindre les non-atteints avec la Parole de Dieu dans leur langue!"
     },
     {
-      image: '/images/images2.jpeg',
+      image: '/images/projet-02.webp',
       title: "Traduction Biblique",
       subtitle: "Faciliter la traduction de la Bible dans les langues locales du Bénin"
     },
     {
-      image: '/images/images3.jpeg',
+      image: '/images/projet-03.webp',
       title: "Alphabétisation Holistique",
       subtitle: "Développer les compétences en lecture pour transformer les communautés"
     }
@@ -303,7 +303,7 @@ const Accueil = () => {
               <div className="bg-white rounded-card shadow-card overflow-hidden hover:shadow-card-hover transition border-t-4 border-orange-600 group">
                 <div className="w-full h-64 overflow-hidden">
                   <LazyImage
-                    src="/images/images1.jpeg"
+                    src='/images/projet-10.webp'
                     alt="Traduction Biblique"
                     className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
@@ -331,7 +331,7 @@ const Accueil = () => {
               <div className="bg-white rounded-card shadow-card overflow-hidden hover:shadow-card-hover transition border-t-4 border-blue-900 group">
                 <div className="w-full h-64 overflow-hidden">
                   <LazyImage
-                    src="/images/images2.jpeg"
+                    src='/images/projet-11.webp'
                     alt="Alphabétisation"
                     className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
@@ -360,7 +360,7 @@ const Accueil = () => {
               <div className="bg-white rounded-card shadow-card overflow-hidden hover:shadow-card-hover transition border-t-4 border-gray-800 group">
                 <div className="w-full h-64 overflow-hidden">
                   <LazyImage
-                    src="/images/images3.jpeg"
+                    src='/images/projet-12.webp'
                     alt="Développement Linguistique"
                     className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
@@ -402,7 +402,7 @@ const Accueil = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-l-4 border-orange-600">
               <div className="h-64 overflow-hidden">
                 <img
-                  src="/images/images1.jpeg"
+                  src='/images/projet-10.webp'
                   alt="Centre de conférence"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
@@ -434,7 +434,7 @@ const Accueil = () => {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition border-l-4 border-blue-900">
               <div className="h-64 overflow-hidden">
                 <img
-                  src="/images/images2.jpeg"
+                  src='/images/projet-11.webp'
                   alt="Entreprises Wycliffe"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
@@ -467,7 +467,7 @@ const Accueil = () => {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="h-full overflow-hidden min-h-[300px]">
                 <img
-                  src="/images/images3.jpeg"
+                  src='/images/projet-12.webp'
                   alt="Course pour les Sans-Bible"
                   className="w-full h-full object-cover"
                 />
@@ -508,7 +508,7 @@ const Accueil = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src="/images/images1.jpeg"
+                  src='/images/projet-10.webp'
                   alt="Transition de leadership"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -538,7 +538,7 @@ const Accueil = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src="/images/images2.jpeg"
+                  src='/images/projet-11.webp'
                   alt="Dédicace de Bible"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
@@ -568,7 +568,7 @@ const Accueil = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src="/images/images3.jpeg"
+                  src='/images/projet-12.webp'
                   alt="Témoignages"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />

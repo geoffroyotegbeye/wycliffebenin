@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Video, Users, ArrowRight, Play } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
@@ -10,7 +10,7 @@ const BlogAlogbe = () => {
       id: 1,
       titre: "Traduction de Jean 3:16",
       description: "Découvrez la traduction du verset le plus célèbre en Alogbé",
-      image: "/images/images1.jpeg",
+      image: '/images/communaute-10.webp',
       duree: "3:45",
       vues: "1.2K"
     },
@@ -18,7 +18,7 @@ const BlogAlogbe = () => {
       id: 2,
       titre: "Histoire de la Création",
       description: "Genèse 1 traduit en langue des signes du Bénin",
-      image: "/images/images2.jpeg",
+      image: '/images/communaute-11.webp',
       duree: "8:20",
       vues: "2.5K"
     },
@@ -26,7 +26,7 @@ const BlogAlogbe = () => {
       id: 3,
       titre: "Le Bon Samaritain",
       description: "Parabole du Bon Samaritain en Alogbé",
-      image: "/images/images3.jpeg",
+      image: '/images/communaute-12.webp',
       duree: "5:15",
       vues: "1.8K"
     }
@@ -37,7 +37,7 @@ const BlogAlogbe = () => {
       <HeroSection
         title="Traduction Visuelle Alogbé"
         subtitle="La Parole de Dieu en langue des signes du Bénin"
-        image="/images/images2.jpeg"
+        image='/images/communaute-11.webp'
         height="medium"
         overlay="dark"
       />

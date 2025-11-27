@@ -1,4 +1,4 @@
-import SEO from '../components/SEO';
+﻿import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Users, Heart, BookOpen, Globe, Briefcase, GraduationCap, HandHeart, Laptop } from 'lucide-react';
@@ -119,7 +119,7 @@ const EngagezVous = () => {
       <HeroSection
         title="Engagez-vous avec Nous"
         subtitle="Rejoignez notre mission de rendre la Parole de Dieu accessible à tous"
-        image="/images/images3.jpeg"
+        image='/images/communaute-05.webp'
         height="medium"
         overlay="dark"
       />

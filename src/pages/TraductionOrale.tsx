@@ -1,4 +1,4 @@
-import { Mic, Headphones, Radio, Users } from 'lucide-react';
+﻿import { Mic, Headphones, Radio, Users } from 'lucide-react';
 
 const TraductionOrale = () => {
   const avantages = [
@@ -34,7 +34,7 @@ const TraductionOrale = () => {
   return (
     <div className="w-full">
       <div className="relative h-[400px] overflow-hidden">
-        <img src="/images/images2.jpeg" alt="Traduction Orale" className="absolute inset-0 w-full h-full object-cover" />
+        <img src='/images/projet-03.webp' alt="Traduction Orale" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-secondary/90 to-transparent"></div>
         <div className="absolute inset-0 flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -103,7 +103,7 @@ const TraductionOrale = () => {
                 les moments de repos, intégrant ainsi la Parole dans la vie quotidienne.
               </p>
             </div>
-            <img src="/images/images3.jpeg" alt="Impact" className="rounded-lg shadow-2xl" />
+            <img src='/images/projet-04.webp' alt="Impact" className="rounded-lg shadow-2xl" />
           </div>
         </section>
 

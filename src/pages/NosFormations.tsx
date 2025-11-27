@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { GraduationCap, BookOpen, Users, Clock, Award, CheckCircle } from 'lucide-react';
 
@@ -101,7 +101,7 @@ const NosFormations = () => {
       <HeroSection
         title="Nos Formations"
         subtitle="Équipez-vous pour servir efficacement dans la traduction et l'alphabétisation"
-        image="/images/images2.jpeg"
+        image='/images/communaute-13.webp'
         height="medium"
         overlay="dark"
       />

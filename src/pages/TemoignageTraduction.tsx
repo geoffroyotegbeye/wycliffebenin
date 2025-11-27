@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Quote, BookOpen } from 'lucide-react';
 
@@ -71,7 +71,7 @@ const TemoignageTraduction = () => {
       <HeroSection
         title="Témoignages de Traduction"
         subtitle="La puissance de la Parole de Dieu dans la langue du cœur"
-        image="/images/images1.jpeg"
+        image='/images/temoignage-05.webp'
         height="medium"
         overlay="dark"
       />

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -84,7 +84,7 @@ const Partenariat = () => {
       <HeroSection
         title="Offres de Partenariat"
         subtitle="Ensemble, nous pouvons faire plus pour rendre la Parole de Dieu accessible à tous"
-        image="/images/images2.jpeg"
+        image='/images/communaute-15.webp'
         height="medium"
         overlay="dark"
       />
@@ -349,7 +349,7 @@ const Partenariat = () => {
               <ScrollAnimation animation="slideUp" delay={0.1}>
                 <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
                   <LazyImage 
-                    src="/images/images1.jpeg" 
+                    src='/images/communaute-01.webp' 
                     alt="Traduction Bariba"
                     className="w-full h-48 object-cover"
                   />
@@ -387,7 +387,7 @@ const Partenariat = () => {
               <ScrollAnimation animation="slideUp" delay={0.2}>
                 <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
                   <LazyImage 
-                    src="/images/images2.jpeg" 
+                    src='/images/communaute-15.webp' 
                     alt="Alphabétisation Dendi"
                     className="w-full h-48 object-cover"
                   />
@@ -425,7 +425,7 @@ const Partenariat = () => {
               <ScrollAnimation animation="slideUp" delay={0.3}>
                 <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition overflow-hidden">
                   <LazyImage 
-                    src="/images/images3.jpeg" 
+                    src='/images/communaute-03.webp' 
                     alt="Formation Traducteurs"
                     className="w-full h-48 object-cover"
                   />

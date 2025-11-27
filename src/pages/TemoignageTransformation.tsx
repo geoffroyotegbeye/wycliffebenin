@@ -1,4 +1,4 @@
-import SEO from '../components/SEO';
+﻿import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Quote, Heart, Users, TrendingUp } from 'lucide-react';
@@ -94,7 +94,7 @@ const TemoignageTransformation = () => {
       <HeroSection
         title="Témoignages de Transformation"
         subtitle="Des vies et des communautés transformées par la Parole de Dieu"
-        image="/images/images3.jpeg"
+        image='/images/temoignage-06.webp'
         height="medium"
         overlay="dark"
       />

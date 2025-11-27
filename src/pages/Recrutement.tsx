@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Briefcase, Heart, Globe, Users, CheckCircle, Send } from 'lucide-react';
 
@@ -63,7 +63,7 @@ const Recrutement = () => {
       <HeroSection
         title="Recrutement Missionnaire"
         subtitle="Rejoignez notre équipe et participez à une mission qui change des vies"
-        image="/images/images3.jpeg"
+        image='/images/equipe-05.webp'
         height="medium"
         overlay="dark"
       />

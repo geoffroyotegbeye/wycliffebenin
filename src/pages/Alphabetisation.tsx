@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+﻿import { Link } from 'react-router-dom';
 import { Users, GraduationCap, TrendingUp, Target, Heart, Lightbulb, Award, CheckCircle, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import StatsCard from '../components/StatsCard';
@@ -57,7 +57,7 @@ const Alphabetisation = () => {
       <HeroSection
         title="Alphabétisation Holistique"
         subtitle="Plus que lire et écrire : transformer des vies et des communautés"
-        image="/images/images2.jpeg"
+        image='/images/communaute-05.webp'
         height="medium"
       />
 
@@ -115,7 +115,7 @@ const Alphabetisation = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slideRight">
               <LazyImage
-                src="/images/images3.jpeg"
+                src='/images/communaute-06.webp'
                 alt="Apprenants"
                 className="rounded-card shadow-elevated h-96"
               />
@@ -270,7 +270,7 @@ const Alphabetisation = () => {
               <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition">
                 <div className="mb-4">
                   <LazyImage
-                    src="/images/images1.jpeg"
+                    src='/images/communaute-07.webp'
                     alt="Marie"
                     className="w-full h-48 rounded-button object-cover"
                   />
@@ -295,7 +295,7 @@ const Alphabetisation = () => {
               <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition">
                 <div className="mb-4">
                   <LazyImage
-                    src="/images/images2.jpeg"
+                    src='/images/communaute-05.webp'
                     alt="Jean"
                     className="w-full h-48 rounded-button object-cover"
                   />
@@ -320,7 +320,7 @@ const Alphabetisation = () => {
               <div className="bg-white rounded-card p-6 shadow-card hover:shadow-card-hover transition">
                 <div className="mb-4">
                   <LazyImage
-                    src="/images/images3.jpeg"
+                    src='/images/communaute-06.webp'
                     alt="Aïcha"
                     className="w-full h-48 rounded-button object-cover"
                   />

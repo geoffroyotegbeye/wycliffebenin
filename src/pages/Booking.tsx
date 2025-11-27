@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Calendar, Users, Coffee, Projector, Music, CheckCircle, Clock } from 'lucide-react';
 
@@ -76,7 +76,7 @@ const Booking = () => {
       <HeroSection
         title="Booking Live!"
         subtitle="Réservez nos espaces pour vos événements professionnels et privés"
-        image="/images/images2.jpeg"
+        image='/images/communaute-14.webp'
         height="medium"
         overlay="dark"
       />

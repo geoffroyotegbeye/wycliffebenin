@@ -1,4 +1,4 @@
-import { Heart, Home, GraduationCap, Sprout, Users, TrendingUp } from 'lucide-react';
+﻿import { Heart, Home, GraduationCap, Sprout, Users, TrendingUp } from 'lucide-react';
 
 const TransformationCommunautaire = () => {
   const domaines = [
@@ -80,17 +80,17 @@ const TransformationCommunautaire = () => {
     {
       texte: "Depuis que nous avons la Bible dans notre langue, notre communauté a changé. Les gens comprennent mieux la Parole de Dieu et vivent selon ses principes.",
       auteur: "Pasteur Jean, Communauté Bariba",
-      image: "/images/images1.jpeg"
+      image: '/images/communaute-04.webp'
     },
     {
       texte: "L'alphabétisation m'a permis de lire la Bible moi-même. Maintenant je peux aussi aider mes enfants avec leurs devoirs et gérer mon petit commerce.",
       auteur: "Marie, Apprenante en Fon",
-      image: "/images/images2.jpeg"
+      image: '/images/communaute-05.webp'
     },
     {
       texte: "Notre langue était en train de disparaître. Grâce au projet de traduction, les jeunes s'intéressent à nouveau à leur langue maternelle.",
       auteur: "Chef de village, Communauté Ditammari",
-      image: "/images/images3.jpeg"
+      image: '/images/communaute-06.webp'
     }
   ];
 
@@ -106,7 +106,7 @@ const TransformationCommunautaire = () => {
       {/* Hero Section */}
       <div className="relative h-[400px] overflow-hidden">
         <img 
-          src="/images/images1.jpeg" 
+          src='/images/communaute-04.webp' 
           alt="Transformation Communautaire"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -240,7 +240,7 @@ const TransformationCommunautaire = () => {
         <section className="mb-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <img 
-              src="/images/images2.jpeg" 
+              src='/images/communaute-05.webp' 
               alt="Processus de transformation"
               className="rounded-lg shadow-2xl"
             />
@@ -312,7 +312,7 @@ const TransformationCommunautaire = () => {
             </div>
             <div className="relative h-64 md:h-auto">
               <img 
-                src="/images/images3.jpeg" 
+                src='/images/communaute-06.webp' 
                 alt="Participez"
                 className="absolute inset-0 w-full h-full object-cover"
               />

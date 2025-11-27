@@ -1,4 +1,4 @@
-import { Target, Users, Globe, TrendingUp, ArrowRight } from 'lucide-react';
+﻿import { Target, Users, Globe, TrendingUp, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -8,21 +8,21 @@ const ZoomWycliffe = () => {
     {
       id: 1,
       titre: "40 Ans d'Impact",
-      image: "/images/images1.jpeg",
+      image: '/images/communaute-03.webp',
       description: "Retour sur 40 années de traduction biblique et d'alphabétisation au Bénin",
       date: "Octobre 2024"
     },
     {
       id: 2,
       titre: "Notre Équipe Grandit",
-      image: "/images/images2.jpeg",
+      image: '/images/communaute-04.webp',
       description: "Accueil de 15 nouveaux membres dans notre équipe nationale",
       date: "Septembre 2024"
     },
     {
       id: 3,
       titre: "Partenariat Stratégique",
-      image: "/images/images3.jpeg",
+      image: '/images/communaute-05.webp',
       description: "Signature d'un accord majeur avec le Ministère de l'Éducation",
       date: "Août 2024"
     }
@@ -33,7 +33,7 @@ const ZoomWycliffe = () => {
       <HeroSection
         title="Zoom sur Wycliffe BENIN"
         subtitle="Focus sur nos activités, notre équipe et notre impact"
-        image="/images/images1.jpeg"
+        image='/images/communaute-03.webp'
         height="medium"
       />
 

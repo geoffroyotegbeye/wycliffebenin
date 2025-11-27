@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp } from 'lucide-react';
+﻿import { ArrowRight, TrendingUp } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
@@ -10,7 +10,7 @@ const Actualites = () => {
       titre: "Transition de Leadership",
       categorie: "Administration",
       date: "9 Octobre 2024",
-      image: "/images/images1.jpeg",
+      image: '/images/communaute-01.webp',
       extrait: "Nomination d'un nouveau directeur exécutif pour Wycliffe Bénin."
     },
     {
@@ -18,7 +18,7 @@ const Actualites = () => {
       titre: "Dédicace Bible Alogbé",
       categorie: "Traduction",
       date: "12 Septembre 2024",
-      image: "/images/images2.jpeg",
+      image: '/images/communaute-02.webp',
       extrait: "Achèvement de la traduction du Nouveau Testament en Alogbé."
     },
     {
@@ -26,7 +26,7 @@ const Actualites = () => {
       titre: "Nouveau Centre à Parakou",
       categorie: "Alphabétisation",
       date: "5 Septembre 2024",
-      image: "/images/images3.jpeg",
+      image: '/images/communaute-03.webp',
       extrait: "Ouverture d'un centre d'alphabétisation à Parakou."
     }
   ];
@@ -36,7 +36,7 @@ const Actualites = () => {
       <HeroSection
         title="Actualités au Siège"
         subtitle="Les dernières nouvelles de Wycliffe Bénin"
-        image="/images/images1.jpeg"
+        image='/images/communaute-01.webp'
         height="medium"
       />
 

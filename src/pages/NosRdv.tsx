@@ -1,4 +1,4 @@
-import HeroSection from '../components/HeroSection';
+﻿import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Calendar, MapPin, Clock, Users, ExternalLink, Bell } from 'lucide-react';
 
@@ -95,7 +95,7 @@ const NosRdv = () => {
       <HeroSection
         title="Nos Rendez-vous"
         subtitle="Rejoignez-nous lors de nos événements et célébrations"
-        image="/images/images3.jpeg"
+        image='/images/communaute-14.webp'
         height="medium"
         overlay="dark"
       />

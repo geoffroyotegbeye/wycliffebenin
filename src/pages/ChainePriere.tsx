@@ -1,4 +1,4 @@
-import { Heart, Users, Send } from 'lucide-react';
+﻿import { Heart, Users, Send } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 
@@ -35,7 +35,7 @@ const ChainePriere = () => {
       <HeroSection
         title="Chaîne de Prière"
         subtitle="Rejoignez-nous dans la prière pour l'avancement de l'œuvre"
-        image="/images/images1.jpeg"
+        image='/images/communaute-02.webp'
         height="medium"
         overlay="dark"
       />
