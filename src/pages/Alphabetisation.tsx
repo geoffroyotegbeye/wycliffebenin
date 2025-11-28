@@ -71,7 +71,6 @@ const Alphabetisation = () => {
                 value={stat.valeur}
                 label={stat.label}
                 icon={stat.icon}
-                suffix={stat.suffix}
                 color={stat.color}
                 delay={index * 0.1}
               />

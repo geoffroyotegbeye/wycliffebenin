@@ -1,7 +1,7 @@
 ﻿import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { BookOpen, FileText, Printer, Languages, GraduationCap, Users, CheckCircle, Clock, Video, Car } from 'lucide-react';
+import { BookOpen, GraduationCap, Users, CheckCircle, Clock, Video, Car } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -96,7 +96,7 @@ const Services = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
+
         {/* Introduction */}
         <ScrollAnimation animation="fadeIn">
           <div className="text-center mb-16">
@@ -104,7 +104,7 @@ const Services = () => {
               Nos Services
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Wycliffe Bénin met son expertise linguistique et ses infrastructures 
+              Wycliffe Bénin met son expertise linguistique et ses infrastructures
               au service du public pour soutenir le développement des langues locales.
             </p>
           </div>
@@ -123,7 +123,7 @@ const Services = () => {
                     {service.title}
                   </h3>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4 flex-grow">
                   {service.description}
                 </p>
