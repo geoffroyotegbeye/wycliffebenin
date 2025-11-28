@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { ShoppingCart, BookOpen, Shirt, Music, Gift, CreditCard } from 'lucide-react';
 
@@ -164,17 +165,17 @@ const Boutique = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+22997000000"
+                href="tel:+22966393434"
                 className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Appeler Maintenant
               </a>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-blue-900 transition"
               >
                 Nous Contacter
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>

@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Heart, BookOpen, Users, Clock, Mail, Bell } from 'lucide-react';
 
@@ -139,12 +140,12 @@ const Intercedez = () => {
                 Recevez chaque semaine des sujets de prière spécifiques et des témoignages 
                 de réponses à la prière.
               </p>
-              <a
-                href="/chaine-priere"
+              <Link
+                to="/chaine-priere"
                 className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Rejoindre la Chaîne de Prière
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>
@@ -274,12 +275,12 @@ const Intercedez = () => {
               Vous avez une demande de prière spécifique ? Partagez-la avec nous et 
               notre équipe d'intercesseurs priera pour vous.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
             >
               Envoyer une Demande
-            </a>
+            </Link>
           </div>
         </ScrollAnimation>
 

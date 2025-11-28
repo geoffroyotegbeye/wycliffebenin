@@ -22,10 +22,10 @@ const HeroSection = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   const heightClasses = {
-    small: 'h-[300px]',
-    medium: 'h-[400px]',
-    large: 'h-[500px]',
-    full: 'h-[calc(100vh-4rem)]'
+    small: 'h-[250px] sm:h-[300px]',
+    medium: 'h-[300px] sm:h-[400px]',
+    large: 'h-[400px] sm:h-[500px]',
+    full: 'h-[60vh] sm:h-[calc(100vh-4rem)]'
   };
 
   const overlayClasses = {

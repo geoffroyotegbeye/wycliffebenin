@@ -95,10 +95,10 @@ const TransformationCommunautaire = () => {
   ];
 
   const statistiques = [
-    { valeur: "85%", label: "Amélioration de la cohésion sociale" },
-    { valeur: "70%", label: "Augmentation du taux d'alphabétisation" },
-    { valeur: "60%", label: "Réduction de la pauvreté" },
-    { valeur: "90%", label: "Satisfaction des communautés" }
+    { valeur: "1287", label: "Groupes holistiques actifs créés" },
+    { valeur: "976", label: "Facilitateurs formés" },
+    { valeur: "45,610", label: "Personnes impactées" },
+    { valeur: "2015", label: "Année de lancement du programme" }
   ];
 
   return (
@@ -136,10 +136,15 @@ const TransformationCommunautaire = () => {
               Un Impact Holistique
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              La traduction biblique et l'alphabétisation ne transforment pas seulement 
-              la vie spirituelle des gens. Elles ont un impact profond et durable sur tous 
-              les aspects de la vie communautaire : éducation, santé, économie, cohésion 
-              sociale et vie familiale.
+              Depuis 2015, notre Programme Holistique impulse le développement spirituel, social, 
+              économique et financier de l'individu et du groupe. La traduction biblique et 
+              l'alphabétisation ne transforment pas seulement la vie spirituelle des gens. 
+              Elles ont un impact profond et durable sur tous les aspects de la vie communautaire : 
+              éducation, santé, économie, cohésion sociale et vie familiale. Avec 1287 groupes 
+              holistiques actifs, 976 facilitateurs formés et 45 610 personnes impactées, 
+              notre approche intègre l'apprentissage des Activités Génératrices de Revenus (AGR) 
+              comme l'élevage, l'agriculture, la cosmétique, ainsi que la formation holistique 
+              et le renforcement de capacités.
             </p>
           </div>
         </section>

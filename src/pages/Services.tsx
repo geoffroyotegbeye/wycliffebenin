@@ -1,86 +1,87 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
-import { BookOpen, FileText, Printer, Languages, GraduationCap, Users, CheckCircle, Clock } from 'lucide-react';
+import { BookOpen, FileText, Printer, Languages, GraduationCap, Users, CheckCircle, Clock, Video, Car } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      title: "Traduction de Documents",
-      icon: <Languages className="text-orange-600" size={48} />,
-      description: "Services de traduction professionnelle dans plusieurs langues locales du Bénin.",
+      title: "Studio Multimédia",
+      icon: <Video className="text-orange-600" size={48} />,
+      description: "Équipé d'une des plus récentes cartes de son, il offre un cadre d'enregistrement audio et vidéo hors pair.",
       details: [
-        "Traduction français ↔ langues locales",
-        "Traduction de documents officiels",
-        "Traduction de contenus religieux",
-        "Révision et relecture"
+        "Enregistrement audio professionnel",
+        "Production vidéo de qualité",
+        "Équipement de pointe",
+        "Studio climatisé et insonorisé"
       ],
       tarif: "Sur devis",
-      delai: "3-7 jours"
+      delai: "Réservation à l'avance"
     },
     {
-      title: "Impression et Édition",
-      icon: <Printer className="text-blue-900" size={48} />,
-      description: "Services d'impression de qualité pour vos documents et publications.",
+      title: "Salles de Conférence",
+      icon: <Users className="text-blue-900" size={48} />,
+      description: "Salles climatisées et ventilées, spacieuses, éclairées, meublées et sonorisées, idéales pour séminaires, réunions et conférences.",
       details: [
-        "Impression offset et numérique",
-        "Reliure et finition",
-        "Design graphique",
-        "Impression de livres et brochures"
+        "Salles climatisées et ventilées",
+        "Équipement audiovisuel complet",
+        "Capacité variable selon besoins",
+        "Prix imbattables"
       ],
-      tarif: "À partir de 50 FCFA/page",
-      delai: "2-5 jours"
+      tarif: "Prix imbattables - Sur devis",
+      delai: "Réservation 7 jours à l'avance"
     },
     {
-      title: "Formation en Langues",
-      icon: <GraduationCap className="text-orange-600" size={48} />,
-      description: "Cours et formations dans les langues locales du Bénin.",
+      title: "Transport (Location 4x4)",
+      icon: <Car className="text-orange-600" size={48} />,
+      description: "Location de luxueuses 4x4 climatisées alliant confort, sécurité et fiabilité pour des déplacements avec prestige.",
       details: [
-        "Cours de langues locales",
+        "Véhicules 4x4 climatisés",
+        "Confort et sécurité garantis",
+        "Chauffeurs expérimentés",
+        "Déplacements avec prestige"
+      ],
+      tarif: "Sur devis",
+      delai: "Réservation à l'avance"
+    },
+    {
+      title: "Formation",
+      icon: <GraduationCap className="text-blue-900" size={48} />,
+      description: "Formations en traduction, alphabétisation, développement linguistique et transformation communautaire.",
+      details: [
+        "Formation en traduction biblique",
         "Formation en alphabétisation",
         "Ateliers linguistiques",
-        "Certification disponible"
+        "Renforcement de capacités"
       ],
-      tarif: "15 000 - 50 000 FCFA/session",
-      delai: "Sessions mensuelles"
+      tarif: "Sur devis",
+      delai: "Sessions programmées"
     },
     {
-      title: "Consultation Linguistique",
-      icon: <FileText className="text-blue-900" size={48} />,
-      description: "Expertise linguistique pour vos projets de développement.",
+      title: "Traduction Biblique",
+      icon: <BookOpen className="text-orange-600" size={48} />,
+      description: "Services de traduction biblique dans les langues locales du Bénin.",
       details: [
-        "Analyse linguistique",
-        "Développement d'orthographe",
-        "Création de matériel pédagogique",
-        "Conseil en communication"
+        "Traduction écrite",
+        "Traduction orale",
+        "Traduction en langue des signes",
+        "Révision et vérification"
+      ],
+      tarif: "Projets sur mesure",
+      delai: "Variable selon projet"
+    },
+    {
+      title: "Éducation Inclusive",
+      icon: <Users className="text-blue-900" size={48} />,
+      description: "Programmes d'éducation inclusive pour tous, y compris les personnes en situation de handicap.",
+      details: [
+        "Éducation en langue maternelle",
+        "Programmes pour sourds (Alogbé)",
+        "Matériel pédagogique adapté",
+        "Accompagnement personnalisé"
       ],
       tarif: "Sur devis",
       delai: "Variable"
-    },
-    {
-      title: "Bibliothèque et Ressources",
-      icon: <BookOpen className="text-orange-600" size={48} />,
-      description: "Accès à notre collection de livres et ressources linguistiques.",
-      details: [
-        "Consultation sur place",
-        "Prêt de livres",
-        "Ressources numériques",
-        "Salle de lecture"
-      ],
-      tarif: "Gratuit (adhésion 5 000 FCFA/an)",
-      delai: "Immédiat"
-    },
-    {
-      title: "Salle de Conférence",
-      icon: <Users className="text-blue-900" size={48} />,
-      description: "Location de salle équipée pour vos événements.",
-      details: [
-        "Capacité : 50-100 personnes",
-        "Équipement audiovisuel",
-        "Connexion internet",
-        "Service traiteur disponible"
-      ],
-      tarif: "25 000 - 50 000 FCFA/jour",
-      delai: "Réservation 7 jours à l'avance"
     }
   ];
 
@@ -199,12 +200,12 @@ const Services = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.
             </p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Nous Contacter
-            </a>
+            </Link>
           </div>
         </ScrollAnimation>
 

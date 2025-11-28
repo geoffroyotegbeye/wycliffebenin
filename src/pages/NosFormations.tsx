@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { GraduationCap, BookOpen, Users, Clock, Award, CheckCircle } from 'lucide-react';
 
@@ -275,18 +276,18 @@ const NosFormations = () => {
               pour servir efficacement dans la mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Demander des Informations
-              </a>
-              <a
-                href="/nos-rdv"
+              </Link>
+              <Link
+                to="/nos-rdv"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-blue-900 transition"
               >
                 Voir le Calendrier
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>

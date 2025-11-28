@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import FirstNav from './FirstNav';
 import SecondNav from './SecondNav';
+import Breadcrumb from './Breadcrumb';
 import Footer from './Footer';
 
 const Layout = () => {
@@ -16,6 +17,7 @@ const Layout = () => {
     <div className="min-h-screen bg-gray-50">
       <FirstNav />
       <SecondNav />
+      <Breadcrumb />
       <main>
         <Outlet />
       </main>

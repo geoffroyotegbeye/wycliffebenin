@@ -8,38 +8,40 @@ const FirstNav = () => {
   return (
     <>
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-      <div style={{ backgroundColor: '#001f5f' }} className="py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+      <div style={{ backgroundColor: '#001f5f' }} className="py-2 sm:py-3">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
 
             {/* Contact Info */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-white">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6 text-xs sm:text-sm text-white">
               <a
-                href="tel:+22997000000"
-                className="flex items-center gap-2 transition-colors"
+                href="tel:+22966393434"
+                className="flex items-center gap-1 sm:gap-2 transition-colors"
                 style={{ color: '#ffffff' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#ff6600'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
               >
-                <Phone size={16} />
-                <span>+229 97 00 00 00</span>
+                <Phone size={14} className="sm:w-4 sm:h-4" />
+                <span className="hidden sm:inline">+229 66 39 34 34</span>
+                <span className="sm:hidden">Appeler</span>
               </a>
               <a
-                href="mailto:info@wycliffebenin.org"
-                className="flex items-center gap-2 transition-colors"
+                href="mailto:infos@wycliffebenin.org"
+                className="flex items-center gap-1 sm:gap-2 transition-colors"
                 style={{ color: '#ffffff' }}
                 onMouseEnter={(e) => e.currentTarget.style.color = '#ff6600'}
                 onMouseLeave={(e) => e.currentTarget.style.color = '#ffffff'}
               >
-                <Mail size={16} />
-                <span>info@wycliffebenin.org</span>
+                <Mail size={14} className="sm:w-4 sm:h-4" />
+                <span className="hidden md:inline">infos@wycliffebenin.org</span>
+                <span className="md:hidden">Email</span>
               </a>
             </div>
 
             {/* Social Media & Search */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4">
               {/* Social Media Icons */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 sm:gap-4">
                 <a
                   href="https://facebook.com"
                   target="_blank"

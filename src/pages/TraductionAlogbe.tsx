@@ -69,19 +69,19 @@ const TraductionAlogbe = () => {
       icon: <Users className="text-orange-600" size={32} />
     },
     {
-      valeur: "15",
-      label: "Traducteurs formés",
+      valeur: "2023",
+      label: "Année de lancement",
       icon: <Award className="text-blue-900" size={32} />
     },
     {
-      valeur: "25%",
-      label: "Progression du projet",
+      valeur: "2024",
+      label: "Programme ALLOGBE lancé",
       icon: <Target className="text-orange-600" size={32} />
     },
     {
-      valeur: "2020",
-      label: "Année de lancement",
-      icon: <BookOpen className="text-blue-900" size={32} />
+      valeur: "1",
+      label: "Langue des signes",
+      icon: <Hand className="text-blue-900" size={32} />
     }
   ];
 
@@ -125,8 +125,10 @@ const TraductionAlogbe = () => {
               </p>
               <p className="text-lg text-white/80">
                 L'Alogbé est la langue des signes utilisée par les personnes sourdes au Bénin. 
-                Notre projet vise à traduire la Bible en vidéos pour rendre la Parole de Dieu 
-                accessible à cette communauté souvent négligée.
+                Lancé en 2023 et officiellement démarré en 2024 avec le programme ALLOGBE, 
+                notre projet vise à traduire la Bible en vidéos pour rendre la Parole de Dieu 
+                accessible à cette communauté souvent négligée. C'est l'un des nouveaux programmes 
+                de traduction dans plus d'une vingtaine de nouvelles langues.
               </p>
             </div>
           </div>

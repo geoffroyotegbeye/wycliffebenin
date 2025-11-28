@@ -1,4 +1,5 @@
-﻿import SEO from '../components/SEO';
+﻿import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Users, Heart, BookOpen, Globe, Briefcase, GraduationCap, HandHeart, Laptop } from 'lucide-react';
@@ -347,18 +348,18 @@ const EngagezVous = () => {
               pour l'éternité. Votre engagement compte !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
               >
                 Postuler Maintenant
-              </a>
-              <a
-                href="/nos-formations"
+              </Link>
+              <Link
+                to="/nos-formations"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-orange-600 transition"
               >
                 Découvrir les Formations
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>

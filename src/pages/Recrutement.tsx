@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Briefcase, Heart, Globe, Users, CheckCircle, Send } from 'lucide-react';
 
@@ -270,12 +271,12 @@ const Recrutement = () => {
               >
                 Envoyer ma Candidature
               </a>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-orange-600 transition"
               >
                 Poser une Question
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>

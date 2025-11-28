@@ -1,12 +1,33 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { navigationData } from '../data/navigationData';
 
 
 const Nav = () => {
+  const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [openNestedSubmenu, setOpenNestedSubmenu] = useState<string | null>(null);
+  
+  // Fonction pour vérifier si le lien est actif
+  const isActive = (link: string) => {
+    return location.pathname === link;
+  };
+  
+  // Fonction pour vérifier si un menu parent est actif (a un enfant actif)
+  const isParentActive = (item: any) => {
+    if (isActive(item.link)) return true;
+    if (item.children) {
+      return item.children.some((child: any) => {
+        if (isActive(child.link)) return true;
+        if (child.children) {
+          return child.children.some((grandchild: any) => isActive(grandchild.link));
+        }
+        return false;
+      });
+    }
+    return false;
+  };
 
   const toggleSubmenu = (label: string) => {
     setOpenSubmenu(openSubmenu === label ? null : label);
@@ -41,16 +62,11 @@ const Nav = () => {
               <div key={item.label} className="relative group">
                 <Link
                   to={item.link}
-                  className="px-3 py-2 text-sm font-medium transition-colors rounded-md"
-                  style={{ color: '#001f5f' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#ff6600';
-                    e.currentTarget.style.color = '#ffffff';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = '#001f5f';
-                  }}
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-md ${
+                    isParentActive(item) 
+                      ? 'bg-orange-600 text-white' 
+                      : 'text-blue-900 hover:bg-orange-600 hover:text-white'
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -170,16 +186,11 @@ const Nav = () => {
                 <div className="flex items-center justify-between">
                   <Link
                     to={item.link}
-                    className="flex-1 block px-3 py-2 text-base font-medium rounded-md"
-                    style={{ color: '#001f5f' }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#ff6600';
-                      e.currentTarget.style.color = '#ffffff';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = 'transparent';
-                      e.currentTarget.style.color = '#001f5f';
-                    }}
+                    className={`flex-1 block px-3 py-2 text-base font-medium rounded-md ${
+                      isParentActive(item) 
+                        ? 'bg-orange-600 text-white' 
+                        : 'text-blue-900 hover:bg-orange-600 hover:text-white'
+                    }`}
                     onClick={() => {
                       if (!item.children || item.children.length === 0) {
                         setMobileMenuOpen(false);
@@ -220,16 +231,11 @@ const Nav = () => {
                         <div className="flex items-center justify-between">
                           <Link
                             to={child.link}
-                            className="flex-1 block px-3 py-2 text-sm rounded-md"
-                            style={{ color: '#001f5f' }}
-                            onMouseEnter={(e) => {
-                              e.currentTarget.style.backgroundColor = '#ff6600';
-                              e.currentTarget.style.color = '#ffffff';
-                            }}
-                            onMouseLeave={(e) => {
-                              e.currentTarget.style.backgroundColor = 'transparent';
-                              e.currentTarget.style.color = '#001f5f';
-                            }}
+                            className={`flex-1 block px-3 py-2 text-sm rounded-md ${
+                              isActive(child.link) 
+                                ? 'bg-orange-600 text-white' 
+                                : 'text-blue-900 hover:bg-orange-600 hover:text-white'
+                            }`}
                             onClick={() => {
                               if (!child.hasSubmenu || !child.children || child.children.length === 0) {
                                 setMobileMenuOpen(false);
@@ -271,16 +277,11 @@ const Nav = () => {
                                 <Link
                                   key={grandchild.label}
                                   to={grandchild.link}
-                                  className="block px-3 py-2 text-sm rounded-md"
-                                  style={{ color: '#001f5f' }}
-                                  onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = '#ff6600';
-                                    e.currentTarget.style.color = '#ffffff';
-                                  }}
-                                  onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = 'transparent';
-                                    e.currentTarget.style.color = '#001f5f';
-                                  }}
+                                  className={`block px-3 py-2 text-sm rounded-md ${
+                                    isActive(grandchild.link) 
+                                      ? 'bg-orange-600 text-white' 
+                                      : 'text-blue-900 hover:bg-orange-600 hover:text-white'
+                                  }`}
                                   onClick={() => setMobileMenuOpen(false)}
                                 >
                                   {grandchild.label}

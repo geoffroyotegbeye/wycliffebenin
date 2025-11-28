@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Calendar, Users, Coffee, Projector, Music, CheckCircle, Clock } from 'lucide-react';
 
@@ -231,16 +232,16 @@ const Booking = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+22997000000"
+                href="tel:+22966393434"
                 className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
               >
-                Appeler : +229 97 00 00 00
+                Appeler : +229 66 39 34 34
               </a>
               <a
-                href="mailto:booking@wycliffebenin.org"
+                href="mailto:infos@wycliffebenin.org"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-orange-600 transition"
               >
-                Email : booking@wycliffebenin.org
+                Email : infos@wycliffebenin.org
               </a>
             </div>
           </div>

@@ -1,4 +1,5 @@
 ﻿import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { TrendingUp, Users, BookOpen, Globe, Award, Target } from 'lucide-react';
 import { gsap } from 'gsap/dist/gsap';
 import SEO from '../components/SEO';
@@ -12,28 +13,28 @@ const Statistiques = () => {
     {
       categorie: "Traduction Biblique",
       donnees: [
-        { label: "Langues en cours de traduction", valeur: 15, suffix: "", icon: <BookOpen className="text-orange-600" size={24} /> },
-        { label: "Traductions complétées", valeur: 8, suffix: "", icon: <Award className="text-blue-900" size={24} /> },
-        { label: "Traducteurs formés", valeur: 45, suffix: "", icon: <Users className="text-orange-600" size={24} /> },
-        { label: "Chapitres traduits (2024)", valeur: 320, suffix: "", icon: <Target className="text-blue-900" size={24} /> }
+        { label: "Langues en développement", valeur: 60, suffix: "+", icon: <BookOpen className="text-orange-600" size={24} /> },
+        { label: "Bibles entières complétées", valeur: 14, suffix: "", icon: <Award className="text-blue-900" size={24} /> },
+        { label: "Nouveaux Testaments", valeur: 13, suffix: "", icon: <BookOpen className="text-orange-600" size={24} /> },
+        { label: "Traduction écrite en cours", valeur: 12, suffix: "", icon: <Target className="text-blue-900" size={24} /> }
       ]
     },
     {
-      categorie: "Alphabétisation",
+      categorie: "Alphabétisation & Formation",
       donnees: [
-        { label: "Centres d'alphabétisation", valeur: 28, suffix: "", icon: <Globe className="text-orange-600" size={24} /> },
-        { label: "Apprenants actifs", valeur: 1250, suffix: "", icon: <Users className="text-blue-900" size={24} /> },
-        { label: "Formateurs certifiés", valeur: 62, suffix: "", icon: <Award className="text-orange-600" size={24} /> },
-        { label: "Taux de réussite", valeur: 87, suffix: "%", icon: <TrendingUp className="text-blue-900" size={24} /> }
+        { label: "Langues (syllabaires)", valeur: 5, suffix: "", icon: <Globe className="text-orange-600" size={24} /> },
+        { label: "Langues (harmonisation)", valeur: 2, suffix: "", icon: <Users className="text-blue-900" size={24} /> },
+        { label: "Facilitateurs formés", valeur: 976, suffix: "", icon: <Award className="text-orange-600" size={24} /> },
+        { label: "Groupes holistiques actifs", valeur: 1287, suffix: "", icon: <TrendingUp className="text-blue-900" size={24} /> }
       ]
     },
     {
       categorie: "Impact Communautaire",
       donnees: [
-        { label: "Communautés touchées", valeur: 85, suffix: "", icon: <Globe className="text-orange-600" size={24} /> },
-        { label: "Bénéficiaires directs", valeur: 50000, suffix: "+", icon: <Users className="text-blue-900" size={24} /> },
-        { label: "Églises partenaires", valeur: 120, suffix: "", icon: <Target className="text-orange-600" size={24} /> },
-        { label: "Bénévoles actifs", valeur: 180, suffix: "", icon: <Users className="text-blue-900" size={24} /> }
+        { label: "Personnes impactées", valeur: 45610, suffix: "", icon: <Users className="text-orange-600" size={24} /> },
+        { label: "Traduction orale en cours", valeur: 12, suffix: "", icon: <Globe className="text-blue-900" size={24} /> },
+        { label: "Langues développées (depuis 2012)", valeur: 18, suffix: "", icon: <Target className="text-orange-600" size={24} /> },
+        { label: "Années d'existence", valeur: 20, suffix: "", icon: <Award className="text-blue-900" size={24} /> }
       ]
     }
   ];
@@ -362,12 +363,12 @@ const Statistiques = () => {
               Votre soutien nous permet de continuer à étendre notre impact et à toucher 
               encore plus de communautés avec la Parole de Dieu.
             </p>
-            <a
-              href="/donnez"
+            <Link
+              to="/donnez"
               className="inline-block bg-white  px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Soutenir Notre Mission
-            </a>
+            </Link>
           </section>
         </ScrollAnimation>
 

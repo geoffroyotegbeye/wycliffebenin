@@ -7,10 +7,10 @@ import LazyImage from '../components/LazyImage';
 
 const Alphabetisation = () => {
   const statistiques = [
-    { valeur: 28, label: "Centres actifs", icon: <Target className="text-orange-600" size={32} />, color: 'primary' as const },
-    { valeur: 1250, label: "Apprenants", icon: <Users className="text-blue-900" size={32} />, color: 'secondary' as const },
-    { valeur: 62, label: "Formateurs", icon: <GraduationCap className="text-orange-600" size={32} />, color: 'primary' as const },
-    { valeur: 87, label: "Taux de réussite", icon: <TrendingUp className="text-blue-900" size={32} />, suffix: '%', color: 'secondary' as const }
+    { valeur: 1287, label: "Groupes holistiques actifs", icon: <Target className="text-orange-600" size={32} />, color: 'primary' as const },
+    { valeur: 45610, label: "Personnes impactées", icon: <Users className="text-blue-900" size={32} />, color: 'secondary' as const },
+    { valeur: 976, label: "Facilitateurs formés", icon: <GraduationCap className="text-orange-600" size={32} />, color: 'primary' as const },
+    { valeur: 5, label: "Langues (syllabaires)", icon: <TrendingUp className="text-blue-900" size={32} />, color: 'secondary' as const }
   ];
 
   const composantes = [
@@ -82,12 +82,16 @@ const Alphabetisation = () => {
         <ScrollAnimation animation="slideUp">
           <section className="mb-20">
             <div className="bg-primary-50 border-l-4 border-orange-600 p-8 rounded-r-card">
-              <h2 className="text-2xl font-bold text-blue-900 mb-4">Approche Holistique</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Notre programme d'alphabétisation va au-delà de l'apprentissage de la lecture et de l'écriture.
+              <h2 className="text-2xl font-bold text-blue-900 mb-4">Approche Holistique depuis 2015</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Démarré en 2008, notre programme d'alphabétisation va au-delà de l'apprentissage de la lecture et de l'écriture.
                 Il intègre des compétences pratiques pour la vie quotidienne : santé, agriculture, gestion
-                financière et éducation civique. Cette approche holistique transforme véritablement les
-                communautés en leur donnant les outils pour améliorer leur qualité de vie.
+                financière et éducation civique. Depuis 2015, cette approche holistique a créé 1287 groupes actifs,
+                formé 976 facilitateurs et impacté 45 610 personnes à travers les Activités Génératrices de Revenus (AGR).
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                <strong>Réalisations :</strong> Harmonisation orthographique dans 2 langues (Idaasha et Saxwè), 
+                rédaction de syllabaires dans 5 langues (Idaasha, Tofin, Ayizo, Agouna, Saxwè).
               </p>
             </div>
           </section>

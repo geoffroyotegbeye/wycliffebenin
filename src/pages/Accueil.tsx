@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { gsap } from 'gsap';
@@ -76,12 +76,12 @@ const ProjectsSection = () => {
       <h2 className="text-4xl font-bold text-blue-900 mb-6 text-center">Projets</h2>
 
       {/* Category Filters */}
-      <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 max-w-4xl mx-auto px-4">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md border-2 ${selectedCategory === category
+            className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md border-2 ${selectedCategory === category
               ? 'bg-orange-600 text-white border-orange-600 scale-105 shadow-lg'
               : 'bg-white border-gray-200 hover:bg-orange-600 hover:text-white hover:border-orange-600 hover:scale-105'
               }`}
@@ -96,25 +96,25 @@ const ProjectsSection = () => {
         {/* Scroll Left Button */}
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-blue-900 shadow-lg rounded-full p-3 hover:bg-orange-600 hover:text-white transition-all border-2 border-gray-200 hover:border-orange-600"
+          className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white text-blue-900 shadow-lg rounded-full p-2 sm:p-3 hover:bg-orange-600 hover:text-white transition-all border-2 border-gray-200 hover:border-orange-600"
           aria-label="Défiler vers la gauche"
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
         </button>
 
         {/* Scroll Right Button */}
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-blue-900 shadow-lg rounded-full p-3 hover:bg-orange-600 hover:text-white transition-all border-2 border-gray-200 hover:border-orange-600"
+          className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white text-blue-900 shadow-lg rounded-full p-2 sm:p-3 hover:bg-orange-600 hover:text-white transition-all border-2 border-gray-200 hover:border-orange-600"
           aria-label="Défiler vers la droite"
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={20} className="sm:w-6 sm:h-6" />
         </button>
 
         {/* Projects Container */}
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide px-12 py-4"
+          className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide px-4 sm:px-12 py-4"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {filteredProjects.map((project, index) => (
@@ -150,19 +150,19 @@ const Accueil = () => {
 
   const heroSlides = [
     {
-      image: '/images/projet-01.webp',
-      title: "La Parole de Dieu pour les Peuples",
-      subtitle: "Atteindre les non-atteints avec la Parole de Dieu dans leur langue!"
+      image: '/images/hero-01.webp',
+      title: "WYCLIFFE BÉNIN",
+      subtitle: "Contribuer au salut et au développement de tous les peuples à travers le recrutement de missionnaires, le développement des langues maternelles et les actions sociales"
     },
     {
-      image: '/images/projet-02.webp',
-      title: "Traduction Biblique",
-      subtitle: "Faciliter la traduction de la Bible dans les langues locales du Bénin"
+      image: '/images/hero-02.webp',
+      title: "Notre Vision 2030",
+      subtitle: "Bâtir une communauté épanouie et être une référence en matière de recrutement de missionnaires, de développement des langues maternelles et de transformation communautaire"
     },
     {
-      image: '/images/projet-03.webp',
-      title: "Alphabétisation Holistique",
-      subtitle: "Développer les compétences en lecture pour transformer les communautés"
+      image: '/images/hero-03.webp',
+      title: "Plus de 60 Langues",
+      subtitle: "Traduction totale ou partielle de la Bible en plus de 60 langues du Bénin - Membre de l'Alliance Mondiale Wycliffe"
     }
   ];
 
@@ -292,8 +292,9 @@ const Accueil = () => {
           <ScrollAnimation animation="slideUp">
             <h2 className="text-4xl font-bold text-blue-900 mb-6 text-center">Notre Travail</h2>
             <p className="text-lg text-gray-700 text-center mb-12 max-w-4xl mx-auto">
-              Traduction biblique, programmes d'alphabétisation durable et de développement linguistique
-              parmi les petits groupes linguistiques au Bénin et au-delà.
+              Association chrétienne autorisée depuis le 11 avril 2004, nous œuvrons à la traduction biblique, 
+              aux programmes d'alphabétisation holistique et au développement linguistique dans plus de 60 langues 
+              locales du Bénin.
             </p>
           </ScrollAnimation>
 

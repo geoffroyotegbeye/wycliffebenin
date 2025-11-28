@@ -1,4 +1,5 @@
-﻿import SEO from '../components/SEO';
+﻿import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Quote, Heart, Users, TrendingUp } from 'lucide-react';
@@ -205,18 +206,18 @@ const TemoignageTransformation = () => {
               Rejoignez-nous dans cette mission extraordinaire !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/donnez"
+              <Link
+                to="/donnez"
                 className="inline-block bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-orange-700 transition shadow-lg"
               >
                 Faire un Don
-              </a>
-              <a
-                href="/engagez-vous"
+              </Link>
+              <Link
+                to="/engagez-vous"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-button font-semibold hover:bg-white hover:text-blue-900 transition"
               >
                 S'Engager
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollAnimation>

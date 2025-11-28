@@ -9,8 +9,8 @@ const Vision = () => {
     <div className="w-full">
       {/* Hero Section */}
       <HeroSection
-        title="Notre Vision"
-        subtitle="Un monde où chaque personne a accès à la Parole de Dieu dans sa langue maternelle"
+        title="Notre Vision 2030"
+        subtitle="Contribuer à bâtir une communauté épanouie et être une référence en matière de recrutement de missionnaires, de développement des langues maternelles et de transformation communautaire"
         image='/images/hero-02.webp'
         height="medium"
       />
@@ -24,20 +24,21 @@ const Vision = () => {
             <ScrollAnimation animation="slideRight">
               <div>
                 <div className="inline-block bg-primary-50 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                  Notre Vision
+                  Depuis 2004
                 </div>
                 <h2 className="text-4xl font-bold text-blue-900 mb-6">
-                  Transformer des vies par la Parole de Dieu
+                  Notre Vision 2030
                 </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Wycliffe Bénin aspire à voir chaque communauté linguistique du Bénin avoir accès 
-                aux Écritures dans leur langue maternelle, permettant ainsi une compréhension 
-                profonde et personnelle de la Parole de Dieu.
+                <strong>WYCLIFFE-BÉNIN</strong> est une association chrétienne autorisée depuis le 11 avril 2004. 
+                Notre vision d'ici 2030 est de <strong>contribuer à bâtir une communauté épanouie</strong> et d'être 
+                une <strong>référence en matière de recrutement de missionnaires, de développement des langues 
+                maternelles et de transformation communautaire</strong>.
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Nous croyons que lorsque les gens peuvent lire, écouter et comprendre la Bible 
-                dans leur propre langue, cela transforme non seulement leur vie spirituelle, 
-                mais aussi leur communauté entière.
+                Nous aspirons à voir chaque communauté linguistique du Bénin avoir accès aux Écritures 
+                dans leur langue maternelle, permettant ainsi une compréhension profonde et personnelle 
+                de la Parole de Dieu qui transforme les vies et les communautés.
               </p>
               <Link 
                 to="/pourquoi-traduire" 
@@ -62,6 +63,42 @@ const Vision = () => {
               </div>
             </ScrollAnimation>
           </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="mb-20">
+          <ScrollAnimation animation="slideUp">
+            <div className="bg-gradient-to-r from-blue-900 to-secondary-600 rounded-card p-12 text-white text-center shadow-elevated">
+              <div className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                Notre Mission
+              </div>
+              <h2 className="text-4xl font-bold mb-6">
+                Contribuer au Salut et au Développement de Tous les Peuples
+              </h2>
+              <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-8">
+                À travers le <strong>recrutement de missionnaires</strong>, le <strong>développement 
+                des langues maternelles</strong> et les <strong>actions sociales</strong>, nous œuvrons 
+                pour transformer les vies et les communautés du Bénin.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <Users className="mx-auto mb-3" size={40} />
+                  <h3 className="font-bold text-lg mb-2">Recrutement</h3>
+                  <p className="text-sm">Missionnaires dévoués</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <BookOpen className="mx-auto mb-3" size={40} />
+                  <h3 className="font-bold text-lg mb-2">Langues</h3>
+                  <p className="text-sm">60+ langues maternelles</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <Heart className="mx-auto mb-3" size={40} />
+                  <h3 className="font-bold text-lg mb-2">Actions Sociales</h3>
+                  <p className="text-sm">Transformation communautaire</p>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
         </section>
 
         {/* Core Values */}

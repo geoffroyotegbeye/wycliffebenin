@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Quote, BookOpen } from 'lucide-react';
 
@@ -167,12 +168,12 @@ const TemoignageTraduction = () => {
               Chaque don contribue à rendre la Parole de Dieu accessible dans les langues 
               du cœur. Participez à cette œuvre extraordinaire !
             </p>
-            <a
-              href="/donnez"
+            <Link
+              to="/donnez"
               className="inline-block bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Faire un Don
-            </a>
+            </Link>
           </div>
         </ScrollAnimation>
 

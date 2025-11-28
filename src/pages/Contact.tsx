@@ -1,5 +1,5 @@
 ﻿import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Globe } from 'lucide-react';
 import ScrollAnimation from '../components/ScrollAnimation';
 import LazyImage from '../components/LazyImage';
 
@@ -42,26 +42,26 @@ const Contact = () => {
     {
       icon: <MapPin className="text-orange-600" size={28} />,
       title: 'Adresse',
-      content: 'Cotonou, Bénin',
+      content: '02 BP 348 Cotonou, Bénin',
       link: null
     },
     {
       icon: <Phone className="text-orange-600" size={28} />,
-      title: 'Téléphone',
-      content: '+229 97 00 00 00',
-      link: 'tel:+22997000000'
+      title: 'Téléphones',
+      content: '+229 66 39 34 34 / +229 64 23 18 08',
+      link: 'tel:+22966393434'
     },
     {
       icon: <Mail className="text-orange-600" size={28} />,
       title: 'Email',
-      content: 'info@wycliffebenin.org',
-      link: 'mailto:info@wycliffebenin.org'
+      content: 'infos@wycliffebenin.org',
+      link: 'mailto:infos@wycliffebenin.org'
     },
     {
-      icon: <Clock className="text-orange-600" size={28} />,
-      title: 'Horaires',
-      content: 'Lun - Ven: 8h00 - 16h30',
-      link: null
+      icon: <Globe className="text-orange-600" size={28} />,
+      title: 'Site Web',
+      content: 'www.wycliffebenin.com',
+      link: 'https://www.wycliffebenin.com'
     }
   ];
 

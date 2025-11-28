@@ -6,93 +6,79 @@ import LazyImage from '../components/LazyImage';
 const Historique = () => {
   const timeline = [
     {
-      annee: "1981",
-      titre: "Fondation",
-      description: "Création de Wycliffe Bénin pour faciliter la traduction de la Bible dans les langues locales.",
+      annee: "2004",
+      titre: "Naissance de Wycliffe BENIN",
+      description: "Association chrétienne autorisée le 11 avril 2004 pour contribuer au salut et au développement de tous les peuples.",
       icon: "🎯",
       color: "primary"
     },
     {
-      annee: "1985",
-      titre: "Premier Projet",
-      description: "Lancement du premier projet de traduction biblique en langue Fon.",
-      icon: "📖",
-      color: "secondary"
-    },
-    {
-      annee: "1992",
-      titre: "Expansion",
-      description: "Extension des activités à 5 nouvelles langues locales du Bénin.",
-      icon: "🌍",
-      color: "primary"
-    },
-    {
-      annee: "1998",
-      titre: "Programme d'Alphabétisation",
-      description: "Lancement du premier programme d'alphabétisation holistique.",
+      annee: "2008",
+      titre: "Démarrage des programmes d'Alphabétisation",
+      description: "Lancement des premiers programmes d'alphabétisation holistique dans les langues locales.",
       icon: "✏️",
       color: "secondary"
     },
     {
-      annee: "2005",
-      titre: "Première Dédicace",
-      description: "Dédicace du Nouveau Testament en langue Bariba, un moment historique.",
-      icon: "🎉",
+      annee: "2012",
+      titre: "Démarrage des programmes de traduction écrite",
+      description: "Début des projets de traduction écrite de la Bible dans les langues locales du Bénin.",
+      icon: "📖",
       color: "primary"
-    },
-    {
-      annee: "2010",
-      titre: "Partenariats Internationaux",
-      description: "Établissement de partenariats avec des organisations internationales.",
-      icon: "🤝",
-      color: "secondary"
     },
     {
       annee: "2015",
-      titre: "Innovation Technologique",
-      description: "Adoption de nouvelles technologies pour accélérer la traduction.",
-      icon: "💻",
+      titre: "Programme Holistique",
+      description: "Lancement de l'approche holistique de transformation communautaire avec les AGR.",
+      icon: "🌾",
+      color: "secondary"
+    },
+    {
+      annee: "2019",
+      titre: "Dédicace du nouveau siège",
+      description: "Dédicace du nouveau siège de Wycliffe BENIN à Houèto, marquant une nouvelle ère.",
+      icon: "🏢",
       color: "primary"
     },
     {
-      annee: "2020",
-      titre: "Traduction Alogbé",
-      description: "Lancement du projet de traduction en langue des signes (Alogbé).",
+      annee: "2023",
+      titre: "Programme de langue des signes",
+      description: "Démarrage du programme de développement de la langue des signes (ALOGBE).",
       icon: "👐",
       color: "secondary"
     },
     {
       annee: "2024",
-      titre: "Aujourd'hui",
-      description: "Plus de 15 projets actifs touchant des milliers de personnes à travers le Bénin.",
-      icon: "⭐",
+      titre: "Célébration des 20 ans",
+      description: "Célébration des 20 ans de Wycliffe BENIN avec plus de 60 langues en développement et 45 610 personnes impactées.",
+      icon: "🎉",
       color: "primary"
     }
   ];
 
   const realisations = [
     {
-      nombre: "15+",
-      titre: "Langues en Traduction",
-      description: "Projets de traduction biblique actifs",
+      nombre: "60+",
+      titre: "Langues en Développement",
+      description: "Traduction totale ou partielle de la Bible",
       icon: <BookOpen className="text-orange-600" size={32} />
     },
     {
-      nombre: "40+",
+      nombre: "20",
       titre: "Années d'Expérience",
-      description: "Au service des communautés",
+      description: "Depuis 2004 au service des communautés",
       icon: <Calendar className="text-blue-900" size={32} />
     },
     {
-      nombre: "50,000+",
-      titre: "Personnes Touchées",
-      description: "Bénéficiaires de nos programmes",
+      nombre: "45,610",
+      titre: "Personnes Impactées",
+      description: "Bénéficiaires de nos programmes holistiques",
       icon: <Users className="text-orange-600" size={32} />
     },
     {
-      nombre: "8",
-      titre: "Dédicaces Bibliques",
-      description: "Nouveaux Testaments dédiés",
+      nombre: "27",
+      titre: "Bibles Complètes",
+      description: "14 Bibles entières + 13 Nouveaux Testaments",
       icon: <Award className="text-blue-900" size={32} />
     }
   ];
@@ -137,9 +123,12 @@ const Historique = () => {
         {/* Timeline */}
         <section className="mb-20">
           <ScrollAnimation animation="slideUp">
-            <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center">
-              Notre Parcours
+            <h2 className="text-4xl font-bold text-blue-900 mb-6 text-center">
+              Au Fil du Temps
             </h2>
+            <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+              Depuis 2004, Wycliffe BENIN œuvre pour la traduction biblique, l'alphabétisation et la transformation communautaire au Bénin.
+            </p>
           </ScrollAnimation>
           
           <div className="relative">

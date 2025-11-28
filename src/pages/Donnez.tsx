@@ -1,4 +1,5 @@
-﻿import HeroSection from '../components/HeroSection';
+﻿import { Link } from 'react-router-dom';
+import HeroSection from '../components/HeroSection';
 import ScrollAnimation from '../components/ScrollAnimation';
 import { Heart, CreditCard, Building, Smartphone, Globe, CheckCircle } from 'lucide-react';
 
@@ -39,9 +40,9 @@ const Donnez = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <ScrollAnimation animation="scale" delay={0.1}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 text-center border-t-4 border-orange-600">
-                <div className="text-5xl font-bold text-orange-600 mb-2">25€</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">10 000 FCFA</div>
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
-                  Formation d'un Apprenant
+                  Matériel Pédagogique
                 </h3>
                 <p className="text-gray-700">
                   Financez le matériel pédagogique pour un apprenant en alphabétisation pendant 1 mois
@@ -51,24 +52,24 @@ const Donnez = () => {
 
             <ScrollAnimation animation="scale" delay={0.2}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 text-center border-t-4 border-orange-600">
-                <div className="text-5xl font-bold text-orange-600 mb-2">100€</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">50 000 FCFA</div>
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
-                  Traduction d'un Chapitre
+                  Formation Annuelle
                 </h3>
                 <p className="text-gray-700">
-                  Contribuez à la traduction d'un chapitre biblique dans une langue locale
+                  Parrainez la formation complète d'un apprenant en alphabétisation pendant 1 an
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animation="scale" delay={0.3}>
               <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 text-center border-t-4 border-orange-600">
-                <div className="text-5xl font-bold text-orange-600 mb-2">500€</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">500 000 FCFA</div>
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
                   Équipement d'un Centre
                 </h3>
                 <p className="text-gray-700">
-                  Équipez un centre d'alphabétisation avec du matériel informatique et pédagogique
+                  Équipez un centre d'alphabétisation complet avec du matériel pédagogique et informatique
                 </p>
               </div>
             </ScrollAnimation>
@@ -105,12 +106,18 @@ const Donnez = () => {
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
                   Virement Bancaire
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 mb-2 text-sm">
                   Virement direct sur notre compte bancaire
                 </p>
-                <button className="bg-white text-blue-900 border-2 border-blue-900 px-6 py-2 rounded-button font-semibold hover:bg-blue-950 transition w-full">
-                  Coordonnées
-                </button>
+                <p className="text-gray-600 text-xs mb-4">
+                  Contactez-nous pour les coordonnées bancaires
+                </p>
+                <Link 
+                  to="/contact"
+                  className="inline-block bg-white text-blue-900 border-2 border-blue-900 px-6 py-2 rounded-button font-semibold hover:bg-blue-950 hover:text-white transition w-full"
+                >
+                  Nous Contacter
+                </Link>
               </div>
             </ScrollAnimation>
 
@@ -120,11 +127,14 @@ const Donnez = () => {
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
                   Mobile Money
                 </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Momo:</strong> +229 66 39 34 34
+                </p>
                 <p className="text-gray-700 mb-4">
-                  Paiement via MTN, Moov ou autres services mobiles
+                  <strong>Flooz:</strong> +229 64 23 18 08
                 </p>
                 <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-2 rounded-button font-semibold hover:bg-orange-700 transition w-full">
-                  Numéros
+                  Envoyer
                 </button>
               </div>
             </ScrollAnimation>
@@ -159,14 +169,54 @@ const Donnez = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg">
-                Don Mensuel de 10€
+                5 000 FCFA/mois
               </button>
               <button className="bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg">
-                Don Mensuel de 25€
+                10 000 FCFA/mois
               </button>
               <button className="bg-white text-orange-600 px-8 py-3 rounded-button font-semibold hover:bg-gray-100 transition shadow-lg">
-                Don Mensuel de 50€
+                25 000 FCFA/mois
               </button>
+            </div>
+          </div>
+        </ScrollAnimation>
+
+        {/* Coordonnées Complètes pour Dons */}
+        <ScrollAnimation animation="fadeIn">
+          <div className="bg-gradient-to-br from-blue-900 to-secondary-600 rounded-card p-8 mb-16 text-white">
+            <h2 className="text-3xl font-bold mb-6 text-center">
+              Coordonnées pour Vos Dons
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-card p-6">
+                <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
+                  <Smartphone size={24} className="text-orange-600" />
+                  Mobile Money
+                </h3>
+                <div className="space-y-2">
+                  <p className="flex justify-between">
+                    <span className="font-semibold">Momo (MTN):</span>
+                    <span>+229 66 39 34 34</span>
+                  </p>
+                  <p className="flex justify-between">
+                    <span className="font-semibold">Flooz (Moov):</span>
+                    <span>+229 64 23 18 08</span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-card p-6">
+                <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
+                  <Globe size={24} className="text-orange-600" />
+                  Contact
+                </h3>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-semibold">Téléphone:</span> +229 66 39 34 34</p>
+                  <p><span className="font-semibold">Email:</span> infos@wycliffebenin.org</p>
+                  <p><span className="font-semibold">Site:</span> www.wycliffebenin.com</p>
+                  <p><span className="font-semibold">Adresse:</span> 02 BP 348 Cotonou</p>
+                </div>
+              </div>
             </div>
           </div>
         </ScrollAnimation>
@@ -211,6 +261,65 @@ const Donnez = () => {
             </div>
           </div>
         </ScrollAnimation>
+
+        {/* Projets à Soutenir */}
+        <div className="mb-16">
+          <ScrollAnimation animation="slideUp">
+            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
+              Projets à Soutenir
+            </h2>
+          </ScrollAnimation>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <ScrollAnimation animation="scale" delay={0.1}>
+              <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 border-t-4 border-orange-600">
+                <div className="text-4xl mb-4">🏢</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                  Centre d'Hébergement et de Retraite
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Construction d'un centre d'hébergement et de retraite pour les missionnaires, 
+                  offrant un lieu de repos et de ressourcement.
+                </p>
+                <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-2 rounded-button font-semibold hover:bg-orange-700 transition w-full">
+                  Soutenir ce projet
+                </button>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="scale" delay={0.2}>
+              <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 border-t-4 border-blue-900">
+                <div className="text-4xl mb-4">🎥</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                  Studio Multimédia Plus Équipé
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Construction d'un studio multimédia plus équipé avec les dernières technologies 
+                  pour la production audio et vidéo de qualité professionnelle.
+                </p>
+                <button className="bg-white text-blue-900 border-2 border-blue-900 px-6 py-2 rounded-button font-semibold hover:bg-blue-950 transition w-full">
+                  Soutenir ce projet
+                </button>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation animation="scale" delay={0.3}>
+              <div className="bg-white rounded-card shadow-card hover:shadow-card-hover transition p-6 border-t-4 border-orange-600">
+                <div className="text-4xl mb-4">🖨️</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                  Imprimerie Numérique
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Création d'une imprimerie numérique moderne pour produire des matériels 
+                  pédagogiques, des Bibles et des livres en langues locales.
+                </p>
+                <button className="bg-white text-orange-600 border-2 border-orange-600 px-6 py-2 rounded-button font-semibold hover:bg-orange-700 transition w-full">
+                  Soutenir ce projet
+                </button>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
 
         {/* Témoignages */}
         <div className="mb-16">
